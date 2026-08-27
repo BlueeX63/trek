@@ -29,7 +29,7 @@ export default function TrekCard({ trek, index }: { trek: Trek; index: number })
           className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full flex items-center justify-center bg-[var(--color-paper)]/80 backdrop-blur-md border border-[var(--color-ink)]/10 hover:bg-[var(--color-paper)] hover:scale-105 transition-all duration-300 shadow-sm"
         >
           <Heart 
-            className={`w-4 h-4 transition-colors duration-300 ${isWishlisted ? 'fill-[var(--color-terracotta)] text-[var(--color-terracotta)]' : 'text-[var(--color-ink)]'}`} 
+            className={`w-4 h-4 transition-colors duration-300 ${isWishlisted ? 'fill-[var(--color-primary)] text-[var(--color-primary)]' : 'text-[var(--color-ink)]'}`} 
             strokeWidth={1.5}
           />
         </button>
@@ -52,8 +52,8 @@ export default function TrekCard({ trek, index }: { trek: Trek; index: number })
       <div className="flex flex-col flex-1">
         <div className="flex justify-between items-start mb-5">
           <div className="flex flex-col">
-            <span className="text-[var(--color-terracotta)] text-[10px] font-sans font-bold uppercase tracking-[0.2em] mb-3 border-b border-[var(--color-terracotta)]/30 pb-1 w-fit">{trek.region}</span>
-            <h3 className="text-[32px] font-serif text-[var(--color-ink)] line-clamp-2 leading-[1.1] tracking-tight group-hover:text-[var(--color-terracotta)] transition-colors duration-300">{trek.name}</h3>
+            <span className="text-[var(--color-primary)] text-[10px] font-sans font-bold uppercase tracking-[0.2em] mb-3 border-b border-[var(--color-primary)]/30 pb-1 w-fit">{trek.region}</span>
+            <h3 className="text-[32px] font-serif text-[var(--color-ink)] line-clamp-2 leading-[1.1] tracking-tight group-hover:text-[var(--color-primary)] transition-colors duration-300">{trek.name}</h3>
           </div>
         </div>
 

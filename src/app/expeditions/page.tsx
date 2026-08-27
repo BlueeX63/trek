@@ -1,4 +1,4 @@
-import TrekExplorer from "@/components/TrekExplorer";
+import ExpeditionCategories from "@/components/ExpeditionCategories";
 import Image from "next/image";
 
 export default function ExpeditionsPage() {
@@ -39,9 +39,9 @@ export default function ExpeditionsPage() {
         </div>
       </section>
 
-      {/* Explorer Component */}
+      {/* Categories / Folders Component */}
       <div className="border-t border-[var(--color-ink)]/10">
-        <TrekExplorer />
+        <ExpeditionCategories />
       </div>
     </main>
   );

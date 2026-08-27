@@ -46,10 +46,10 @@ function FAQItem({ faq }: { faq: FAQ }) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between py-8 text-left focus:outline-none group"
       >
-        <span className={`font-serif text-xl md:text-2xl transition-colors ${isOpen ? 'text-[var(--color-terracotta)]' : 'text-[var(--color-ink)] group-hover:text-[var(--color-ink)]/70'}`}>
+        <span className={`font-serif text-xl md:text-2xl transition-colors ${isOpen ? 'text-[var(--color-primary)]' : 'text-[var(--color-ink)] group-hover:text-[var(--color-ink)]/70'}`}>
           {faq.question}
         </span>
-        <div className={`shrink-0 ml-4 transition-transform duration-500 ${isOpen ? 'rotate-180 text-[var(--color-terracotta)]' : 'text-[var(--color-ink)]/30'}`}>
+        <div className={`shrink-0 ml-4 transition-transform duration-500 ${isOpen ? 'rotate-180 text-[var(--color-primary)]' : 'text-[var(--color-ink)]/30'}`}>
           <ChevronDown className="w-6 h-6" strokeWidth={1} />
         </div>
       </button>

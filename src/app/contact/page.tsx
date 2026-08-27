@@ -19,15 +19,19 @@ export default function ContactPage() {
             <div className="flex flex-col gap-8 mb-16">
               <div>
                 <h4 className="text-[10px] font-sans font-semibold tracking-[0.2em] uppercase text-[var(--color-ink)]/50 mb-2">Basecamp</h4>
-                <p className="font-serif text-lg text-[var(--color-ink)]">Kathmandu, Nepal</p>
+                <a href="https://maps.google.com/?q=GMS+Road+Dehradun+248001" target="_blank" rel="noopener noreferrer" className="font-serif text-lg text-[var(--color-ink)] hover:text-[var(--color-primary)] transition-colors">GMS Road, Dehradun 248001</a>
               </div>
               <div>
                 <h4 className="text-[10px] font-sans font-semibold tracking-[0.2em] uppercase text-[var(--color-ink)]/50 mb-2">Direct Line</h4>
-                <p className="font-serif text-lg text-[var(--color-ink)]">+977 1-4000000</p>
+                <div className="flex gap-2 items-center">
+                  <a href="tel:+919520557784" className="font-serif text-lg text-[var(--color-ink)] hover:text-[var(--color-primary)] transition-colors">9520557784</a>
+                  <span className="font-serif text-lg text-[var(--color-ink)]">/</span>
+                  <a href="tel:+919520547784" className="font-serif text-lg text-[var(--color-ink)] hover:text-[var(--color-primary)] transition-colors">9520547784</a>
+                </div>
               </div>
               <div>
                 <h4 className="text-[10px] font-sans font-semibold tracking-[0.2em] uppercase text-[var(--color-ink)]/50 mb-2">Email</h4>
-                <p className="font-serif text-lg text-[var(--color-ink)]">expeditions@xplorethedreams.com</p>
+                <a href="mailto:xplorethedreams@gmail.com" className="font-serif text-lg text-[var(--color-ink)] hover:text-[var(--color-primary)] transition-colors">xplorethedreams@gmail.com</a>
               </div>
             </div>
           </div>

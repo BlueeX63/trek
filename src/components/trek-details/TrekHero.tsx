@@ -32,7 +32,7 @@ export default function TrekHero({ title, image, subtitle }: TrekHeroProps) {
         <div className="max-w-5xl">
           {subtitle && (
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-8 h-[1px] bg-[var(--color-terracotta)]"></div>
+              <div className="w-8 h-[1px] bg-[var(--color-primary)]"></div>
               <span className="text-[10px] font-sans font-semibold tracking-[0.3em] uppercase text-[var(--color-paper)]">
                 {subtitle}
               </span>

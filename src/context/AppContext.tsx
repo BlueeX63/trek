@@ -45,7 +45,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     });
 
     // Listen for changes on auth state
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      
+      // Clean up the URL hash if Supabase just logged in via OAuth
+      if (event === 'SIGNED_IN' && typeof window !== 'undefined' && window.location.hash.includes('access_token')) {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
       setUser(session?.user ?? null);
       if (session?.user) {
         fetchWishlist(session.user.id);

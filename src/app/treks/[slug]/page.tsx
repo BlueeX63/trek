@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { Metadata, ResolvingMetadata } from "next";
+import ScrollToTop from "@/components/ScrollToTop";
 import { valleyOfFlowersDetails } from "@/data/valley-of-flowers-details";
 import { rupinPassDetails } from "@/data/rupin-pass-details";
 import { kedarkanthaDetails } from "@/data/kedarkantha-details";
@@ -253,7 +254,8 @@ export default async function TrekDetailsPage({ params }: { params: Promise<{ sl
   ];
 
   return (
-    <div className="bg-[var(--color-paper)] min-h-screen">
+    <main className="flex min-h-screen flex-col w-full bg-[var(--color-paper)]">
+      <ScrollToTop />
       <TrekHero 
         title={trekData.name}
         subtitle="Himalayan Standard"
@@ -313,6 +315,6 @@ export default async function TrekDetailsPage({ params }: { params: Promise<{ sl
       
       {/* Spacer before footer if needed */}
       <div className="h-24 bg-[var(--color-paper)] border-t border-[var(--color-ink)]/10"></div>
-    </div>
+    </main>
   );
 }

@@ -24,7 +24,7 @@ export default function TrekOverview({ description, highlights, stats }: TrekOve
         {/* Left Column: Description & Highlights */}
         <div className="lg:w-2/3 pr-0 lg:pr-16">
           <div>
-            <div className="text-[10px] font-sans tracking-[0.2em] uppercase text-[var(--color-ink)]/50 mb-8 border-l border-[var(--color-terracotta)] pl-4">
+            <div className="text-[10px] font-sans tracking-[0.2em] uppercase text-[var(--color-ink)]/50 mb-8 border-l border-[var(--color-primary)] pl-4">
               Overview
             </div>
             
@@ -39,7 +39,7 @@ export default function TrekOverview({ description, highlights, stats }: TrekOve
             </div>
             
             <div className="border border-[var(--color-ink)]/10 p-8 lg:p-12 relative">
-              <div className="absolute top-0 left-0 w-2 h-2 bg-[var(--color-terracotta)] -translate-x-1/2 -translate-y-1/2"></div>
+              <div className="absolute top-0 left-0 w-2 h-2 bg-[var(--color-primary)] -translate-x-1/2 -translate-y-1/2"></div>
               
               <h3 className="text-3xl font-serif text-[var(--color-ink)] mb-8">
                 Highlights
@@ -48,7 +48,7 @@ export default function TrekOverview({ description, highlights, stats }: TrekOve
               <ul className="grid md:grid-cols-2 gap-y-6 gap-x-8">
                 {highlights.map((highlight, idx) => (
                   <li key={idx} className="flex items-start gap-4">
-                    <CheckCircle2 className="w-4 h-4 text-[var(--color-terracotta)] shrink-0 mt-1" strokeWidth={1.5} />
+                    <CheckCircle2 className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-1" strokeWidth={1.5} />
                     <div className="flex flex-col">
                       {highlight.title && (
                         <span className="text-[var(--color-ink)] font-sans font-medium text-sm mb-1">{highlight.title}</span>

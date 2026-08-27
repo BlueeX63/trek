@@ -71,7 +71,7 @@ export default function TrekExplorer({ limit, showViewMore }: { limit?: number, 
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
         <div>
           <div className="flex items-center gap-4 mb-4">
-             <div className="w-8 h-[1px] bg-[var(--color-terracotta)]"></div>
+             <div className="w-8 h-[1px] bg-[var(--color-primary)]"></div>
              <span className="text-[10px] font-sans font-semibold tracking-[0.3em] uppercase text-[var(--color-ink)]/50">
                The Expeditions
              </span>
@@ -146,7 +146,7 @@ export default function TrekExplorer({ limit, showViewMore }: { limit?: number, 
             onClick={() => setActiveFilter(filter)}
             className={`whitespace-nowrap pb-2 text-xs font-sans font-bold uppercase tracking-widest transition-all duration-300 border-b-2 ${
               activeFilter === filter 
-                ? "text-[var(--color-ink)] border-[var(--color-terracotta)]" 
+                ? "text-[var(--color-ink)] border-[var(--color-primary)]" 
                 : "text-[var(--color-ink)]/40 border-transparent hover:text-[var(--color-ink)]"
             }`}
           >
@@ -187,7 +187,7 @@ export default function TrekExplorer({ limit, showViewMore }: { limit?: number, 
               setSearchQuery("");
               setActiveFilter("All Treks");
             }}
-            className="mt-8 text-[10px] font-sans font-bold uppercase tracking-widest text-[var(--color-terracotta)] hover:text-[var(--color-ink)] transition-colors border-b border-[var(--color-terracotta)]/30 pb-1"
+            className="mt-8 text-[10px] font-sans font-bold uppercase tracking-widest text-[var(--color-primary)] hover:text-[var(--color-ink)] transition-colors border-b border-[var(--color-primary)]/30 pb-1"
           >
             Clear Search & Filters
           </button>
@@ -203,7 +203,7 @@ export default function TrekExplorer({ limit, showViewMore }: { limit?: number, 
             <span className="relative z-10 text-[10px] font-sans font-bold tracking-[0.2em] uppercase">
               View All Expeditions
             </span>
-            <div className="absolute inset-0 bg-[var(--color-terracotta)] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
+            <div className="absolute inset-0 bg-[var(--color-primary)] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
           </Link>
         </div>
       )}

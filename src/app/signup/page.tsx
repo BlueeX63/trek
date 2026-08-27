@@ -113,7 +113,7 @@ export default function SignUp() {
         </div>
 
         {error && (
-          <div className="mb-6 p-4 border border-[var(--color-terracotta)]/30 bg-[var(--color-terracotta)]/5 text-[var(--color-terracotta)] text-sm font-sans text-center">
+          <div className="mb-6 p-4 border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/5 text-[var(--color-primary)] text-sm font-sans text-center">
             {error}
           </div>
         )}
@@ -134,11 +134,11 @@ export default function SignUp() {
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full bg-transparent border-b-2 border-[var(--color-ink)]/20 py-4 text-[var(--color-ink)] text-lg focus:outline-none focus:border-[var(--color-terracotta)] transition-colors peer placeholder-transparent"
+                  className="w-full bg-transparent border-b-2 border-[var(--color-ink)]/20 py-4 text-[var(--color-ink)] text-lg focus:outline-none focus:border-[var(--color-primary)] transition-colors peer placeholder-transparent"
                   placeholder="Full Name"
                   id="name"
                 />
-                <label htmlFor="name" className="absolute left-0 top-4 text-[var(--color-ink)]/50 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[var(--color-terracotta)] peer-focus:font-bold peer-focus:tracking-widest peer-focus:uppercase peer-valid:-top-4 peer-valid:text-xs peer-valid:text-[var(--color-ink)] peer-valid:font-bold peer-valid:tracking-widest peer-valid:uppercase cursor-text">
+                <label htmlFor="name" className="absolute left-0 top-4 text-[var(--color-ink)]/50 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[var(--color-primary)] peer-focus:font-bold peer-focus:tracking-widest peer-focus:uppercase peer-valid:-top-4 peer-valid:text-xs peer-valid:text-[var(--color-ink)] peer-valid:font-bold peer-valid:tracking-widest peer-valid:uppercase cursor-text">
                   Full Name
                 </label>
               </div>
@@ -149,11 +149,11 @@ export default function SignUp() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-transparent border-b-2 border-[var(--color-ink)]/20 py-4 text-[var(--color-ink)] text-lg focus:outline-none focus:border-[var(--color-terracotta)] transition-colors peer placeholder-transparent"
+                  className="w-full bg-transparent border-b-2 border-[var(--color-ink)]/20 py-4 text-[var(--color-ink)] text-lg focus:outline-none focus:border-[var(--color-primary)] transition-colors peer placeholder-transparent"
                   placeholder="Email"
                   id="email"
                 />
-                <label htmlFor="email" className="absolute left-0 top-4 text-[var(--color-ink)]/50 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[var(--color-terracotta)] peer-focus:font-bold peer-focus:tracking-widest peer-focus:uppercase peer-valid:-top-4 peer-valid:text-xs peer-valid:text-[var(--color-ink)] peer-valid:font-bold peer-valid:tracking-widest peer-valid:uppercase cursor-text">
+                <label htmlFor="email" className="absolute left-0 top-4 text-[var(--color-ink)]/50 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[var(--color-primary)] peer-focus:font-bold peer-focus:tracking-widest peer-focus:uppercase peer-valid:-top-4 peer-valid:text-xs peer-valid:text-[var(--color-ink)] peer-valid:font-bold peer-valid:tracking-widest peer-valid:uppercase cursor-text">
                   Email Address
                 </label>
               </div>
@@ -164,11 +164,11 @@ export default function SignUp() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full bg-transparent border-b-2 border-[var(--color-ink)]/20 py-4 text-[var(--color-ink)] text-lg focus:outline-none focus:border-[var(--color-terracotta)] transition-colors peer placeholder-transparent"
+                  className="w-full bg-transparent border-b-2 border-[var(--color-ink)]/20 py-4 text-[var(--color-ink)] text-lg focus:outline-none focus:border-[var(--color-primary)] transition-colors peer placeholder-transparent"
                   placeholder="Password"
                   id="password"
                 />
-                <label htmlFor="password" className="absolute left-0 top-4 text-[var(--color-ink)]/50 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[var(--color-terracotta)] peer-focus:font-bold peer-focus:tracking-widest peer-focus:uppercase peer-valid:-top-4 peer-valid:text-xs peer-valid:text-[var(--color-ink)] peer-valid:font-bold peer-valid:tracking-widest peer-valid:uppercase cursor-text">
+                <label htmlFor="password" className="absolute left-0 top-4 text-[var(--color-ink)]/50 text-lg transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[var(--color-primary)] peer-focus:font-bold peer-focus:tracking-widest peer-focus:uppercase peer-valid:-top-4 peer-valid:text-xs peer-valid:text-[var(--color-ink)] peer-valid:font-bold peer-valid:tracking-widest peer-valid:uppercase cursor-text">
                   Password
                 </label>
               </div>
@@ -182,7 +182,7 @@ export default function SignUp() {
                   {loading ? "Processing..." : "Create Account"}
                 </span>
                 {!loading && <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-2 transition-transform" />}
-                <div className="absolute inset-0 bg-[var(--color-terracotta)] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
+                <div className="absolute inset-0 bg-[var(--color-primary)] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
               </button>
 
               <div className="flex items-center gap-4 my-2">
@@ -220,7 +220,7 @@ export default function SignUp() {
                   required
                   value={otp}
                   onChange={(e) => setOtp(e.target.value)}
-                  className="w-full bg-transparent border-b-2 border-[var(--color-ink)]/20 py-4 text-[var(--color-ink)] text-center text-3xl tracking-[1em] focus:outline-none focus:border-[var(--color-terracotta)] transition-colors peer placeholder-transparent"
+                  className="w-full bg-transparent border-b-2 border-[var(--color-ink)]/20 py-4 text-[var(--color-ink)] text-center text-3xl tracking-[1em] focus:outline-none focus:border-[var(--color-primary)] transition-colors peer placeholder-transparent"
                   placeholder="000000"
                   maxLength={6}
                   id="otp"
@@ -236,7 +236,7 @@ export default function SignUp() {
                   {loading ? "Verifying..." : "Confirm & Enter"}
                 </span>
                 {!loading && <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-2 transition-transform" />}
-                <div className="absolute inset-0 bg-[var(--color-terracotta)] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
+                <div className="absolute inset-0 bg-[var(--color-primary)] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
               </button>
             </motion.form>
           )}
@@ -245,7 +245,7 @@ export default function SignUp() {
         <div className="mt-12 text-center text-sm font-sans text-[var(--color-ink)]/60">
           <p>
             Already have an account?{" "}
-            <Link href="/signin" className="text-[var(--color-ink)] font-bold tracking-widest uppercase text-[10px] hover:text-[var(--color-terracotta)] transition-colors ml-2 underline underline-offset-4 decoration-[var(--color-ink)]/30">
+            <Link href="/signin" className="text-[var(--color-ink)] font-bold tracking-widest uppercase text-[10px] hover:text-[var(--color-primary)] transition-colors ml-2 underline underline-offset-4 decoration-[var(--color-ink)]/30">
               Sign In
             </Link>
           </p>

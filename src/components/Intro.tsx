@@ -35,24 +35,13 @@ export default function Intro() {
               <motion.span 
                 key={i} 
                 style={{ opacity, y }}
-                className={word.includes(".") ? "text-[var(--color-terracotta)] mr-4" : ""}
+                className={word.includes(".") ? "text-[var(--color-primary)] mr-4" : ""}
               >
                 {word}
               </motion.span>
             );
           })}
         </h2>
-        
-        <motion.div 
-          style={{ opacity: useTransform(scrollYProgress, [0.8, 1], [0, 1]) }}
-          className="mt-24 flex flex-col items-center gap-6"
-        >
-          <div className="w-[1px] h-32 bg-[var(--color-ink)]/30" />
-          <h3 className="text-[10px] font-sans font-bold tracking-[0.3em] uppercase text-[var(--color-ink)] mt-4">Xplore The Dreams</h3>
-          <p className="text-sm font-sans font-light max-w-md text-center text-[var(--color-ink)]/70 leading-relaxed">
-            We don't just organize treks. We curate premium high-altitude experiences designed for those who seek the extraordinary.
-          </p>
-        </motion.div>
       </div>
     </section>
   );

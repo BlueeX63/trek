@@ -19,7 +19,7 @@ export default function WishlistPage() {
         
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-4">
-             <div className="w-8 h-[1px] bg-[var(--color-terracotta)]"></div>
+             <div className="w-8 h-[1px] bg-[var(--color-primary)]"></div>
              <span className="text-[10px] font-sans font-semibold tracking-[0.3em] uppercase text-[var(--color-ink)]/50">
                {user ? `${user.user_metadata?.full_name?.split(' ')[0] || user.email?.split('@')[0] || 'Explorer'}'s Collection` : "Your Collection"}
              </span>
@@ -65,7 +65,7 @@ export default function WishlistPage() {
                 Explore Treks
               </span>
               <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-2 transition-transform" />
-              <div className="absolute inset-0 bg-[var(--color-terracotta)] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
+              <div className="absolute inset-0 bg-[var(--color-primary)] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
             </Link>
           </motion.div>
         )}

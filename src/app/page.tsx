@@ -13,10 +13,10 @@ export default function Home() {
     <main className="flex min-h-screen flex-col w-full overflow-hidden">
       <Hero />
       <Intro />
-      <ExpeditionStats />
+      {/* <ExpeditionStats /> */}
       <ExpeditionCategories />
-      <TrekExplorer limit={8} showViewMore={true} />
-      <FeaturedExpedition />
+      {/* <TrekExplorer limit={8} showViewMore={true} /> */}
+      {/* <FeaturedExpedition /> */}
       <ProcessTimeline />
       <Testimonials />
       <ExpeditionFAQ />

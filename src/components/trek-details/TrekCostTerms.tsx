@@ -34,7 +34,7 @@ export default function TrekCostTerms({ inclusions, exclusions }: TrekCostTermsP
           <ul className="space-y-4">
             {inclusions.map((item, idx) => (
               <li key={idx} className="flex gap-4 items-start pb-4 border-b border-[var(--color-ink)]/5 last:border-0">
-                <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-terracotta)] mt-2 shrink-0"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] mt-2 shrink-0"></div>
                 <span className="text-[var(--color-ink)]/70 font-sans font-light text-sm leading-relaxed">{item}</span>
               </li>
             ))}
@@ -45,7 +45,7 @@ export default function TrekCostTerms({ inclusions, exclusions }: TrekCostTermsP
         <div>
           <h3 className="text-3xl font-serif text-[var(--color-ink)] mb-8 flex items-center gap-4">
             <span className="w-10 h-10 rounded-full bg-[var(--color-stone)] flex items-center justify-center">
-              <X className="w-5 h-5 text-[var(--color-terracotta)]" />
+              <X className="w-5 h-5 text-[var(--color-primary)]" />
             </span>
             Exclusions
           </h3>

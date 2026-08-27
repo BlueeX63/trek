@@ -27,9 +27,9 @@ export default function TrekEligibility({ eligibility }: TrekEligibilityProps) {
 
   const getBmiCategory = (value: number) => {
     if (value < 16.5) return { category: "Severely Underweight", color: "text-red-500" };
-    if (value < 18.5) return { category: "Underweight", color: "text-[var(--color-terracotta)]" };
+    if (value < 18.5) return { category: "Underweight", color: "text-[var(--color-primary)]" };
     if (value <= 25) return { category: "Normal", color: "text-[var(--color-ink)]" };
-    if (value <= 30) return { category: "Overweight", color: "text-[var(--color-terracotta)]" };
+    if (value <= 30) return { category: "Overweight", color: "text-[var(--color-primary)]" };
     return { category: "Obese", color: "text-red-500" };
   };
 
@@ -92,7 +92,7 @@ export default function TrekEligibility({ eligibility }: TrekEligibilityProps) {
                 value={weight}
                 onChange={(e) => setWeight(e.target.value)}
                 placeholder="e.g. 75"
-                className="bg-transparent border-b border-[var(--color-paper)]/30 py-3 text-2xl font-serif text-[var(--color-paper)] placeholder:text-[var(--color-paper)]/20 focus:outline-none focus:border-[var(--color-terracotta)] transition-colors"
+                className="bg-transparent border-b border-[var(--color-paper)]/30 py-3 text-2xl font-serif text-[var(--color-paper)] placeholder:text-[var(--color-paper)]/20 focus:outline-none focus:border-[var(--color-primary)] transition-colors"
               />
             </div>
             
@@ -103,7 +103,7 @@ export default function TrekEligibility({ eligibility }: TrekEligibilityProps) {
                 value={height}
                 onChange={(e) => setHeight(e.target.value)}
                 placeholder="e.g. 175"
-                className="bg-transparent border-b border-[var(--color-paper)]/30 py-3 text-2xl font-serif text-[var(--color-paper)] placeholder:text-[var(--color-paper)]/20 focus:outline-none focus:border-[var(--color-terracotta)] transition-colors"
+                className="bg-transparent border-b border-[var(--color-paper)]/30 py-3 text-2xl font-serif text-[var(--color-paper)] placeholder:text-[var(--color-paper)]/20 focus:outline-none focus:border-[var(--color-primary)] transition-colors"
               />
             </div>
 

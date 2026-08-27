@@ -46,7 +46,7 @@ export default function TrekHowToReach({ howToReach }: TrekHowToReachProps) {
         <div className="lg:col-span-2">
           <div className="bg-[var(--color-paper)] border border-[var(--color-ink)]/10 p-8 md:p-12 h-full">
             <h3 className="text-2xl font-serif text-[var(--color-ink)] mb-8 flex items-center gap-4 border-b border-[var(--color-ink)]/10 pb-4">
-              <Navigation className="w-5 h-5 text-[var(--color-terracotta)]" />
+              <Navigation className="w-5 h-5 text-[var(--color-primary)]" />
               Travel Options
             </h3>
             

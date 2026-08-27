@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 import { Menu, X, Heart, User, LogOut } from "lucide-react";
 import { useAppContext } from "@/context/AppContext";
 
@@ -28,14 +29,14 @@ export default function Navbar() {
   const getLinkClass = (path: string) => {
     const isActive = pathname === path || (path === "/expeditions" && pathname?.startsWith("/treks"));
     return `text-[10px] font-sans font-semibold tracking-[0.2em] uppercase transition-colors ${
-      isActive ? "text-[var(--color-terracotta)]" : `hover:text-[var(--color-terracotta)] ${textClass}`
+      isActive ? "text-[var(--color-primary)]" : `hover:text-[var(--color-primary)] ${textClass}`
     }`;
   };
 
   const getMobileLinkClass = (path: string) => {
     const isActive = pathname === path || (path === "/expeditions" && pathname?.startsWith("/treks"));
     return `text-4xl font-serif font-medium tracking-wide transition-colors ${
-      isActive ? "text-[var(--color-terracotta)]" : "text-[var(--color-ink)]"
+      isActive ? "text-[var(--color-primary)]" : "text-[var(--color-ink)]"
     }`;
   };
 
@@ -48,27 +49,15 @@ export default function Navbar() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center">
         
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group z-50">
-          <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 bg-[var(--color-ink)] rounded-lg transition-transform group-hover:scale-105 duration-300">
-            <svg 
-              className="w-5 h-5 md:w-6 md:h-6 text-[var(--color-terracotta)]" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="1.5" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            >
-              <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
-            </svg>
-          </div>
-          <div className="flex flex-col justify-center">
-            <span className={`font-serif text-xl md:text-2xl font-medium tracking-tight leading-none ${textClass}`}>
-              Xplore
-            </span>
-            <span className={`font-sans text-[8px] md:text-[10px] font-semibold tracking-[0.2em] uppercase opacity-80 mt-1 ${textClass}`}>
-              The <span className="text-[var(--color-terracotta)]">Dreams</span>
-            </span>
+        <Link href="/" className="flex items-center group z-50">
+          <div className="relative w-40 h-12 md:w-56 md:h-16 transition-transform group-hover:scale-105 duration-300">
+            <Image
+              src="/logo.png"
+              alt="Xplore The Dreams Logo"
+              fill
+              className="object-contain object-left"
+              priority
+            />
           </div>
         </Link>
 
@@ -88,7 +77,7 @@ export default function Navbar() {
           <div className="flex items-center gap-6 border-l border-[var(--color-ink)]/10 pl-6 ml-2">
             <button 
               onClick={() => router.push(user ? '/wishlist' : '/signin')}
-              className={`hover:text-[var(--color-terracotta)] transition-colors ${textClass}`} 
+              className={`hover:text-[var(--color-primary)] transition-colors ${textClass}`} 
               title="Wishlist"
             >
               <Heart className="w-[18px] h-[18px]" strokeWidth={1.5} />
@@ -96,7 +85,7 @@ export default function Navbar() {
             {user ? (
               <button 
                 onClick={logout}
-                className={`hover:text-[var(--color-terracotta)] transition-colors ${textClass} flex items-center gap-2`} 
+                className={`hover:text-[var(--color-primary)] transition-colors ${textClass} flex items-center gap-2`} 
                 title="Logout"
               >
                 <LogOut className="w-[18px] h-[18px]" strokeWidth={1.5} />
@@ -107,7 +96,7 @@ export default function Navbar() {
             ) : (
               <button 
                 onClick={() => router.push('/signin')}
-                className={`hover:text-[var(--color-terracotta)] transition-colors ${textClass}`} 
+                className={`hover:text-[var(--color-primary)] transition-colors ${textClass}`} 
                 title="Profile"
               >
                 <User className="w-[18px] h-[18px]" strokeWidth={1.5} />

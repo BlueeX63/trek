@@ -5,10 +5,11 @@ import Image from "next/image";
 import { Compass, Users, Tent, Sparkles } from "lucide-react";
 
 const CATEGORIES = [
-  { id: "premium", title: "Premium Ascents", description: "Luxury service at extreme altitudes.", icon: Sparkles, image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2000", link: "/categories/premium", size: "large" },
-  { id: "family", title: "Family Trails", description: "Safe, guided experiences.", icon: Users, image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000", link: "/categories/family", size: "small" },
-  { id: "summer", title: "Alpine Camps", description: "Learn mountaineering basics.", icon: Tent, image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=2000", link: "/categories/summer", size: "small" },
-  { id: "suggest", title: "Curate My Journey", description: "Let our experts decide.", icon: Compass, image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000", link: "/contact", size: "wide" }
+  { id: "uttarakhand", title: "Uttarakhand", description: "The land of gods and legendary trails.", icon: Compass, image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2000", link: "/categories/uttarakhand", size: "large" },
+  { id: "himachal", title: "Himachal Pradesh", description: "Lush forests & alpine passes.", icon: Tent, image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000", link: "/categories/himachal", size: "small" },
+  { id: "kashmir", title: "Kashmir", description: "Paradise on earth.", icon: Sparkles, image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=2000", link: "/categories/kashmir", size: "small" },
+  { id: "ladakh", title: "Ladakh", description: "The cold desert and high passes.", icon: Users, image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2000", link: "/categories/ladakh", size: "wide" },
+  { id: "spiritual", title: "Spiritual", description: "Journeys of inner awakening.", icon: Sparkles, image: "https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000", link: "/categories/spiritual", size: "small" }
 ];
 
 export default function ExpeditionCategories() {
@@ -18,13 +19,13 @@ export default function ExpeditionCategories() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div>
             <div className="flex items-center gap-4 mb-4">
-               <div className="w-8 h-[1px] bg-[var(--color-terracotta)]"></div>
+               <div className="w-8 h-[1px] bg-[var(--color-primary)]"></div>
                <span className="text-[10px] font-sans font-semibold tracking-[0.3em] uppercase text-[var(--color-ink)]/50">
                  The Collection
                </span>
             </div>
             <h2 className="text-5xl md:text-7xl font-serif text-[var(--color-ink)] leading-none">
-              Curated <span className="italic font-light">Experiences</span>
+              Explore by <span className="italic font-light">Region</span>
             </h2>
           </div>
         </div>
@@ -58,10 +59,10 @@ export default function ExpeditionCategories() {
 
                 <div className="absolute inset-0 p-8 flex flex-col justify-end z-10 text-[var(--color-paper)]">
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="text-[var(--color-terracotta)] transition-transform">
+                    <div className="text-[var(--color-primary)] transition-transform">
                       <category.icon className="w-6 h-6" strokeWidth={1.5} />
                     </div>
-                    <h3 className={`font-serif ${isLarge ? 'text-4xl' : 'text-2xl'} group-hover:text-[var(--color-terracotta)] transition-colors duration-300`}>
+                    <h3 className={`font-serif ${isLarge ? 'text-4xl' : 'text-2xl'} group-hover:text-[var(--color-primary)] transition-colors duration-300`}>
                       {category.title}
                     </h3>
                   </div>

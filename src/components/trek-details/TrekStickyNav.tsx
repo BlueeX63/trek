@@ -62,7 +62,7 @@ export default function TrekStickyNav() {
             >
               {item.label}
               {activeSection === item.id && (
-                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-[var(--color-terracotta)]" />
+                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-[var(--color-primary)]" />
               )}
             </button>
           ))}

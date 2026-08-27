@@ -67,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${inter.variable} antialiased bg-[#F0EFEA] text-[#0D0D0D] min-h-screen flex flex-col font-sans selection:bg-[#C84B31] selection:text-white relative`}
+        className={`${playfair.variable} ${inter.variable} antialiased bg-[#F0EFEA] text-[#0D0D0D] min-h-screen flex flex-col font-sans selection:bg-[#FFC000] selection:text-black relative`}
       >
         <div className="noise-overlay pointer-events-none fixed inset-0 z-50 opacity-[0.03]"></div>
         <AppProvider>

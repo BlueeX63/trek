@@ -38,11 +38,11 @@ export default function TrekQuickInfo({
           
           <div className="flex flex-col justify-center p-6 lg:p-8 border-r md:border-r border-b md:border-b-0 border-[var(--color-ink)]/10 bg-[var(--color-stone)]/30 min-h-full">
             <span className="text-[10px] font-bold text-[var(--color-ink)]/50 uppercase tracking-[0.2em] mb-4">Support</span>
-            <div className="flex items-center gap-3 text-xs text-[var(--color-ink)] font-medium font-sans mb-3 hover:text-[var(--color-terracotta)] transition-colors cursor-pointer">
+            <div className="flex items-center gap-3 text-xs text-[var(--color-ink)] font-medium font-sans mb-3 hover:text-[var(--color-primary)] transition-colors cursor-pointer">
               <Phone className="w-3 h-3" />
               <span>+91 8265906135</span>
             </div>
-            <div className="flex items-center gap-3 text-xs text-[var(--color-ink)] font-medium font-sans hover:text-[var(--color-terracotta)] transition-colors cursor-pointer">
+            <div className="flex items-center gap-3 text-xs text-[var(--color-ink)] font-medium font-sans hover:text-[var(--color-primary)] transition-colors cursor-pointer">
               <Mail className="w-3 h-3" />
               <span>info@xplorethedreams</span>
             </div>

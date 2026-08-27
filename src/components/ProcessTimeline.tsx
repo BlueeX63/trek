@@ -32,7 +32,7 @@ export default function ProcessTimeline() {
           
           <motion.div 
             style={{ height: lineHeight }}
-            className="absolute left-[36px] md:left-[44px] top-0 w-[1px] bg-[var(--color-terracotta)] origin-top"
+            className="absolute left-[36px] md:left-[44px] top-0 w-[1px] bg-[var(--color-primary)] origin-top"
           />
 
           <div className="flex flex-col gap-24">
@@ -50,7 +50,7 @@ export default function ProcessTimeline() {
                   style={{ opacity: stageOpacity }}
                   className="flex items-start gap-12 md:gap-16 relative z-10"
                 >
-                  <div className="flex-shrink-0 font-serif text-5xl md:text-7xl text-[var(--color-paper)]/20 group-hover:text-[var(--color-terracotta)] transition-colors duration-500 w-20 text-center bg-[var(--color-ink)] py-2">
+                  <div className="flex-shrink-0 font-serif text-5xl md:text-7xl text-[var(--color-paper)]/20 group-hover:text-[var(--color-primary)] transition-colors duration-500 w-20 text-center bg-[var(--color-ink)] py-2">
                     {stage.num}
                   </div>
                   <div className="pt-2">

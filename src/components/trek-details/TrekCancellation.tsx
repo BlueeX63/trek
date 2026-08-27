@@ -41,7 +41,7 @@ export default function TrekCancellation({ cancellation }: TrekCancellationProps
               <ul className="space-y-3">
                 {policy.refundOptions.map((option, oIdx) => (
                   <li key={oIdx} className="flex gap-3 items-start">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-terracotta)] mt-1.5 shrink-0"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] mt-1.5 shrink-0"></div>
                     <span className="text-[var(--color-ink)]/70 font-sans font-light text-sm">{option}</span>
                   </li>
                 ))}
@@ -55,7 +55,7 @@ export default function TrekCancellation({ cancellation }: TrekCancellationProps
           
           <div className="bg-[var(--color-stone)]/30 border border-[var(--color-ink)]/10 p-8 relative">
             <div className="flex items-center gap-3 mb-6">
-              <AlertTriangle className="w-5 h-5 text-[var(--color-terracotta)]" />
+              <AlertTriangle className="w-5 h-5 text-[var(--color-primary)]" />
               <h3 className="font-serif text-2xl text-[var(--color-ink)]">Emergency Cases</h3>
             </div>
             <p className="text-[var(--color-ink)]/70 font-sans font-light text-sm leading-relaxed">

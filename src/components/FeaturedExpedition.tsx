@@ -15,7 +15,7 @@ export default function FeaturedExpedition() {
           
           {/* Left Text Side - Minimalist */}
           <div className="w-full md:w-5/12 flex flex-col justify-center pr-0 lg:pr-16 relative z-20">
-            <div className="text-[10px] font-sans tracking-[0.2em] uppercase text-[var(--color-ink)]/50 mb-8 border-l border-[var(--color-terracotta)] pl-4">
+            <div className="text-[10px] font-sans tracking-[0.2em] uppercase text-[var(--color-ink)]/50 mb-8 border-l border-[var(--color-primary)] pl-4">
               Featured Expedition
             </div>
             

@@ -56,7 +56,7 @@ export async function POST(req: Request) {
         <div style="font-family: sans-serif; text-align: center; padding: 20px;">
           <h2>Verify Your Email</h2>
           <p>Your authentication code is:</p>
-          <h1 style="letter-spacing: 5px; color: #C84B31;">${otp}</h1>
+          <h1 style="letter-spacing: 5px; color: #FFC000;">${otp}</h1>
           <p>This code will expire in 10 minutes.</p>
         </div>
       `,

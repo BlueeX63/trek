@@ -15,7 +15,7 @@ export default function TrekItinerary({ itinerary }: TrekItineraryProps) {
     <section id="itinerary" className="w-full bg-[var(--color-ink)] py-24 scroll-mt-24">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         
-        <div className="mb-24 flex flex-col items-start border-l border-[var(--color-terracotta)] pl-6">
+        <div className="mb-24 flex flex-col items-start border-l border-[var(--color-primary)] pl-6">
           <span className="text-[10px] font-sans font-semibold tracking-[0.2em] uppercase text-[var(--color-paper)]/50 mb-4">
             Day by Day
           </span>
@@ -48,7 +48,7 @@ function ItineraryRow({ dayData, isLast }: { dayData: ItineraryDay; isLast: bool
       
       {/* Timeline Column */}
       <div className="w-full md:w-32 flex-shrink-0 flex md:flex-col items-center md:items-start relative border-t md:border-t-0 border-[var(--color-paper)]/10 pt-8 md:pt-0 pb-8 md:pb-0">
-        <div className="font-serif text-5xl md:text-7xl text-[var(--color-paper)]/10 group-hover:text-[var(--color-terracotta)] transition-colors duration-500 mr-6 md:mr-0">
+        <div className="font-serif text-5xl md:text-7xl text-[var(--color-paper)]/10 group-hover:text-[var(--color-primary)] transition-colors duration-500 mr-6 md:mr-0">
           {String(dayData.day).padStart(2, '0')}
         </div>
         {!isLast && (
@@ -64,7 +64,7 @@ function ItineraryRow({ dayData, isLast }: { dayData: ItineraryDay; isLast: bool
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
           {dayData.details.map((detail, idx) => (
             <div key={idx} className="flex items-start gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-terracotta)] mt-2 shrink-0"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] mt-2 shrink-0"></span>
               <span className="text-[var(--color-paper)]/60 text-sm md:text-base font-sans font-light leading-relaxed">{detail}</span>
             </div>
           ))}

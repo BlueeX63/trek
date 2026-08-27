@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Mail, Phone } from "lucide-react";
 
 // Inline SVGs for social icons to avoid lucide-react export issues
@@ -10,9 +11,11 @@ const InstagramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const TwitterIcon = ({ className }: { className?: string }) => (
+const LinkedinIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
   </svg>
 );
 
@@ -32,59 +35,65 @@ export default function Footer() {
           
           {/* Brand Column */}
           <div className="lg:col-span-5 pr-8">
-            <Link href="/" className="flex flex-col mb-8">
-              <span className="font-serif text-4xl leading-none">
-                Xplore The
-              </span>
-              <span className="font-serif text-4xl leading-none italic font-light text-[var(--color-terracotta)] mt-1">
-                Dreams
-              </span>
+            <Link href="/" className="flex mb-8">
+              <div className="relative w-48 h-16 md:w-56 md:h-20 grayscale brightness-200 opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <Image
+                  src="/logo.png"
+                  alt="Xplore The Dreams Logo"
+                  fill
+                  className="object-contain object-left"
+                />
+              </div>
             </Link>
             <p className="text-[var(--color-paper)]/60 font-sans font-light text-sm leading-relaxed max-w-sm mb-12">
               We craft premium high-altitude expeditions for those seeking extraordinary landscapes without compromising on safety or comfort.
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-terracotta)] hover:text-[var(--color-terracotta)] transition-colors">
+              <a href="https://www.instagram.com/xplorethedreams" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
                 <InstagramIcon className="w-4 h-4" />
-              </Link>
-              <Link href="#" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-terracotta)] hover:text-[var(--color-terracotta)] transition-colors">
-                <TwitterIcon className="w-4 h-4" />
-              </Link>
-              <Link href="#" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-terracotta)] hover:text-[var(--color-terracotta)] transition-colors">
+              </a>
+              <a href="https://www.linkedin.com/in/xplore-the-dreams-6977b3329?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
+                <LinkedinIcon className="w-4 h-4" />
+              </a>
+              <a href="https://www.youtube.com/xplorethedreams" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
                 <YoutubeIcon className="w-4 h-4" />
-              </Link>
+              </a>
             </div>
           </div>
 
           {/* Expeditions */}
           <div className="lg:col-span-3">
-            <h4 className="font-sans font-semibold text-[10px] mb-8 uppercase tracking-[0.3em] text-[var(--color-terracotta)]">Expeditions</h4>
+            <h4 className="font-sans font-semibold text-[10px] mb-8 uppercase tracking-[0.3em] text-[var(--color-primary)]">Expeditions</h4>
             <ul className="flex flex-col gap-5">
-              <li><Link href="#" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Premium Ascents</Link></li>
-              <li><Link href="#" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Family Trails</Link></li>
-              <li><Link href="#" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Alpine Camps</Link></li>
-              <li><Link href="#" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Custom Journeys</Link></li>
-              <li><Link href="#" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">View All Regions</Link></li>
+              <li><Link href="/categories/uttarakhand" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Uttarakhand Treks</Link></li>
+              <li><Link href="/categories/himachal" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Himachal Pradesh</Link></li>
+              <li><Link href="/categories/kashmir" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Kashmir Trails</Link></li>
+              <li><Link href="/categories/ladakh" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Ladakh Expeditions</Link></li>
+              <li><Link href="/categories/spiritual" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Spiritual Journeys</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div className="lg:col-span-4">
-            <h4 className="font-sans font-semibold text-[10px] mb-8 uppercase tracking-[0.3em] text-[var(--color-terracotta)]">Basecamp</h4>
+            <h4 className="font-sans font-semibold text-[10px] mb-8 uppercase tracking-[0.3em] text-[var(--color-primary)]">Basecamp</h4>
             <ul className="flex flex-col gap-6">
               <li className="flex gap-4 items-start">
-                <MapPin className="w-4 h-4 text-[var(--color-terracotta)] shrink-0 mt-1" strokeWidth={1.5} />
-                <span className="text-[var(--color-paper)]/60 text-sm font-sans font-light leading-relaxed">
-                  144 Alpine Way, Mountaineer's District<br />Manali, HP 175131, India
-                </span>
+                <MapPin className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-1" strokeWidth={1.5} />
+                <a href="https://maps.google.com/?q=GMS+Road+Dehradun+248001" target="_blank" rel="noopener noreferrer" className="text-[var(--color-paper)]/60 text-sm font-sans font-light leading-relaxed hover:text-[var(--color-primary)] transition-colors">
+                  GMS Road<br />Dehradun 248001
+                </a>
               </li>
               <li className="flex gap-4 items-center">
-                <Phone className="w-4 h-4 text-[var(--color-terracotta)] shrink-0" strokeWidth={1.5} />
-                <span className="text-[var(--color-paper)]/60 text-sm font-sans font-light">+91 98765 43210</span>
+                <Phone className="w-4 h-4 text-[var(--color-primary)] shrink-0" strokeWidth={1.5} />
+                <div className="flex gap-2">
+                  <a href="tel:+919520557784" className="text-[var(--color-paper)]/60 text-sm font-sans font-light hover:text-[var(--color-primary)] transition-colors">9520557784</a>
+                  <span className="text-[var(--color-paper)]/60 text-sm font-sans font-light">/</span>
+                  <a href="tel:+919520547784" className="text-[var(--color-paper)]/60 text-sm font-sans font-light hover:text-[var(--color-primary)] transition-colors">9520547784</a>
+                </div>
               </li>
               <li className="flex gap-4 items-center">
-                <Mail className="w-4 h-4 text-[var(--color-terracotta)] shrink-0" strokeWidth={1.5} />
-                <span className="text-[var(--color-paper)]/60 text-sm font-sans font-light">expeditions@xplorethedreams.com</span>
+                <Mail className="w-4 h-4 text-[var(--color-primary)] shrink-0" strokeWidth={1.5} />
+                <a href="mailto:xplorethedreams@gmail.com" className="text-[var(--color-paper)]/60 text-sm font-sans font-light hover:text-[var(--color-primary)] transition-colors">xplorethedreams@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -97,9 +106,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Xplore The Dreams. All Rights Reserved.
           </p>
           <div className="flex gap-8">
-            <Link href="#" className="text-[var(--color-paper)]/40 hover:text-[var(--color-paper)] text-[10px] font-sans font-semibold uppercase tracking-widest transition-colors">Privacy</Link>
-            <Link href="#" className="text-[var(--color-paper)]/40 hover:text-[var(--color-paper)] text-[10px] font-sans font-semibold uppercase tracking-widest transition-colors">Terms</Link>
-            <Link href="#" className="text-[var(--color-paper)]/40 hover:text-[var(--color-paper)] text-[10px] font-sans font-semibold uppercase tracking-widest transition-colors">Sitemap</Link>
+            <Link href="/privacy" className="text-[var(--color-paper)]/40 hover:text-[var(--color-paper)] text-[10px] font-sans font-semibold uppercase tracking-widest transition-colors">Privacy</Link>
+            <Link href="/terms" className="text-[var(--color-paper)]/40 hover:text-[var(--color-paper)] text-[10px] font-sans font-semibold uppercase tracking-widest transition-colors">Terms</Link>
           </div>
         </div>
       </div>

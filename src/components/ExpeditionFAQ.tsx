@@ -31,11 +31,11 @@ export default function ExpeditionFAQ() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 flex flex-col items-center">
           <div className="flex items-center gap-4 mb-4">
-             <div className="w-8 h-[1px] bg-[var(--color-terracotta)]"></div>
+             <div className="w-8 h-[1px] bg-[var(--color-primary)]"></div>
              <span className="text-[10px] font-sans font-semibold tracking-[0.3em] uppercase text-[var(--color-ink)]/50">
                Briefing
              </span>
-             <div className="w-8 h-[1px] bg-[var(--color-terracotta)]"></div>
+             <div className="w-8 h-[1px] bg-[var(--color-primary)]"></div>
           </div>
           <h2 className="text-5xl md:text-7xl font-serif text-[var(--color-ink)] mb-6">
             FAQ
@@ -69,10 +69,10 @@ export default function ExpeditionFAQ() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full py-8 flex items-center justify-between text-left group cursor-pointer hover:cursor-pointer"
               >
-                <span className={`text-xl md:text-2xl font-serif transition-colors pr-8 ${openIndex === index ? 'text-[var(--color-terracotta)]' : 'text-[var(--color-ink)] group-hover:text-[var(--color-ink)]/70'}`}>
+                <span className={`text-xl md:text-2xl font-serif transition-colors pr-8 ${openIndex === index ? 'text-[var(--color-primary)]' : 'text-[var(--color-ink)] group-hover:text-[var(--color-ink)]/70'}`}>
                   {faq.question}
                 </span>
-                <div className={`flex-shrink-0 transition-colors ${openIndex === index ? 'text-[var(--color-terracotta)]' : 'text-[var(--color-ink)]/30 group-hover:text-[var(--color-ink)]/50'}`}>
+                <div className={`flex-shrink-0 transition-colors ${openIndex === index ? 'text-[var(--color-primary)]' : 'text-[var(--color-ink)]/30 group-hover:text-[var(--color-ink)]/50'}`}>
                   {openIndex === index ? <Minus className="w-5 h-5" strokeWidth={1} /> : <Plus className="w-5 h-5" strokeWidth={1} />}
                 </div>
               </button>
