@@ -4,6 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 
+const WhatsappIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+  </svg>
+);
+
 export default function Hero() {
   return (
     <section className="relative h-screen min-h-[700px] w-full bg-[var(--color-ink)] overflow-hidden flex flex-col justify-end">
@@ -61,16 +67,30 @@ export default function Hero() {
             Curated high-altitude expeditions for those seeking raw wilderness without compromising the aesthetic.
           </p>
 
-          <Link
-            href="#featured"
-            className="group flex items-center gap-4 text-[var(--color-paper)] text-xs uppercase tracking-widest font-semibold"
-            aria-label="Scroll down to Featured Expeditions"
-          >
-            <span aria-hidden="true" className="w-12 h-12 border border-[var(--color-paper)]/30 rounded-full flex items-center justify-center group-hover:bg-[var(--color-paper)] group-hover:text-[var(--color-ink)] transition-all duration-500">
-              <ArrowDown className="w-4 h-4" />
-            </span>
-            Begin Journey
-          </Link>
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+            <a
+              href="https://wa.me/919520557784"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 text-[var(--color-paper)] text-xs uppercase tracking-widest font-semibold"
+            >
+              <span className="w-12 h-12 border border-[var(--color-paper)]/30 rounded-full flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:border-[var(--color-primary)] group-hover:text-[var(--color-ink)] transition-all duration-500">
+                <WhatsappIcon className="w-4 h-4" />
+              </span>
+              WhatsApp
+            </a>
+
+            <Link
+              href="#featured"
+              className="group flex items-center gap-4 text-[var(--color-paper)] text-xs uppercase tracking-widest font-semibold"
+              aria-label="Scroll down to Featured Expeditions"
+            >
+              <span aria-hidden="true" className="w-12 h-12 border border-[var(--color-paper)]/30 rounded-full flex items-center justify-center group-hover:bg-[var(--color-paper)] group-hover:text-[var(--color-ink)] transition-all duration-500">
+                <ArrowDown className="w-4 h-4" />
+              </span>
+              Begin Journey
+            </Link>
+          </div>
         </div>
 
       </div>
