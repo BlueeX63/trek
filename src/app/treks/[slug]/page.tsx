@@ -58,6 +58,11 @@ import { adiKailashDetails } from "@/data/adi-kailash-details";
 import { yogaMeditationRetreatDetails } from "@/data/yoga-meditation-retreat-details";
 import { rudragairaPeakDetails } from "@/data/rudragaira-peak-details";
 import { pindariGlacierDetails } from "@/data/pindari-glacier-details";
+import { doDhamDetails } from "@/data/do-dham-details";
+import { charDhamDetails } from "@/data/char-dham-details";
+import { kedarnathDetails } from "@/data/kedarnath-details";
+import { chadarTrekDetails } from "@/data/chadar-trek-details";
+import { ladakhBikeTourDetails } from "@/data/ladakh-bike-tour-details";
 import { treks } from "@/data/treks";
 import { DetailedTrek } from "@/types/detailed-trek";
 
@@ -123,6 +128,16 @@ export default async function TrekDetailsPage({ params }: { params: Promise<{ sl
     trekData = kedarkanthaDetails;
   } else if (slug === "surya-top") {
     trekData = suryaTopDetails;
+  } else if (slug === "do-dham-yatra") {
+    trekData = doDhamDetails;
+  } else if (slug === "char-dham-yatra") {
+    trekData = charDhamDetails;
+  } else if (slug === "kedarnath-yatra") {
+    trekData = kedarnathDetails;
+  } else if (slug === "chadar-trek") {
+    trekData = chadarTrekDetails;
+  } else if (slug === "ladakh-bike-tour") {
+    trekData = ladakhBikeTourDetails;
   } else {
     // Look up basic info from treks.ts
     const basicTrek = treks.find(t => t.slug === slug);
