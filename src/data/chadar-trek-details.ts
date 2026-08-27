@@ -15,7 +15,7 @@ export const chadarTrekDetails: DetailedTrek = {
   railHead: "Jammu Tawi (very far, flying to Leh is mandatory in winter)",
   airport: "Kushok Bakula Rimpochee Airport, Leh",
   trailType: "Frozen River Expedition | Trekking on sheet ice.",
-  image: "https://images.unsplash.com/photo-1544198365-f5d60b6d819c?q=80&w=2500",
+  image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2000",
   overview: {
     description: [
       "The Chadar Trek is one of the most unique, thrilling, and glamorous treks in the world. 'Chadar' refers to the blanket of ice that forms over the Zanskar River in the dead of winter, creating the only viable route connecting the isolated Zanskar valley with Leh.",

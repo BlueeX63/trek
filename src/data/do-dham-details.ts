@@ -15,7 +15,7 @@ export const doDhamDetails: DetailedTrek = {
   railHead: "Haridwar/Rishikesh",
   airport: "Jolly Grant Airport, Dehradun",
   trailType: "Pilgrimage Route | Mix of driving and high-altitude trekking.",
-  image: "https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500",
+  image: "https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000",
   overview: {
     description: [
       "The Do Dham Yatra focuses on two of the most revered and spiritually significant shrines in the Indian Himalayas: Kedarnath (dedicated to Lord Shiva) and Badrinath (dedicated to Lord Vishnu).",
