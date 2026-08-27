@@ -25,8 +25,6 @@ export default function ContactPage() {
                 <h4 className="text-[10px] font-sans font-semibold tracking-[0.2em] uppercase text-[var(--color-ink)]/50 mb-2">Direct Line</h4>
                 <div className="flex gap-2 items-center">
                   <a href="tel:+919520557784" className="font-serif text-lg text-[var(--color-ink)] hover:text-[var(--color-primary)] transition-colors">9520557784</a>
-                  <span className="font-serif text-lg text-[var(--color-ink)]">/</span>
-                  <a href="tel:+919520547784" className="font-serif text-lg text-[var(--color-ink)] hover:text-[var(--color-primary)] transition-colors">9520547784</a>
                 </div>
               </div>
               <div>

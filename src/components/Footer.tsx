@@ -87,8 +87,6 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-[var(--color-primary)] shrink-0" strokeWidth={1.5} />
                 <div className="flex gap-2">
                   <a href="tel:+919520557784" className="text-[var(--color-paper)]/60 text-sm font-sans font-light hover:text-[var(--color-primary)] transition-colors">9520557784</a>
-                  <span className="text-[var(--color-paper)]/60 text-sm font-sans font-light">/</span>
-                  <a href="tel:+919520547784" className="text-[var(--color-paper)]/60 text-sm font-sans font-light hover:text-[var(--color-primary)] transition-colors">9520547784</a>
                 </div>
               </li>
               <li className="flex gap-4 items-center">

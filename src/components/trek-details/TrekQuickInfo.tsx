@@ -40,7 +40,7 @@ export default function TrekQuickInfo({
             <span className="text-[10px] font-bold text-[var(--color-ink)]/50 uppercase tracking-[0.2em] mb-4">Support</span>
             <a href="tel:+919520557784" className="flex items-center gap-3 text-xs text-[var(--color-ink)] font-medium font-sans mb-3 hover:text-[var(--color-primary)] transition-colors cursor-pointer">
               <Phone className="w-3 h-3" />
-              <span>9520557784 / 9520547784</span>
+              <span>9520557784</span>
             </a>
             <a href="mailto:xplorethedreams@gmail.com" className="flex items-center gap-3 text-xs text-[var(--color-ink)] font-medium font-sans hover:text-[var(--color-primary)] transition-colors cursor-pointer">
               <Mail className="w-3 h-3" />
