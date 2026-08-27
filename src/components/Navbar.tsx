@@ -48,12 +48,25 @@ export default function Navbar() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center">
         
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group z-50">
-          <div className="flex items-center gap-2">
-            <span className={`font-serif text-2xl md:text-3xl font-medium tracking-tight leading-none ${textClass}`}>
+        <Link href="/" className="flex items-center gap-3 group z-50">
+          <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 bg-[var(--color-ink)] rounded-lg transition-transform group-hover:scale-105 duration-300">
+            <svg 
+              className="w-5 h-5 md:w-6 md:h-6 text-[var(--color-terracotta)]" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="1.5" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            >
+              <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
+            </svg>
+          </div>
+          <div className="flex flex-col justify-center">
+            <span className={`font-serif text-xl md:text-2xl font-medium tracking-tight leading-none ${textClass}`}>
               Xplore
             </span>
-            <span className={`font-sans text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase opacity-80 mt-1 ${textClass}`}>
+            <span className={`font-sans text-[8px] md:text-[10px] font-semibold tracking-[0.2em] uppercase opacity-80 mt-1 ${textClass}`}>
               The <span className="text-[var(--color-terracotta)]">Dreams</span>
             </span>
           </div>
