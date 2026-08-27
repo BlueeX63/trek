@@ -1009,6 +1009,99 @@ export const treks: Trek[] = [
     gallery: [],
     categories: ['Himachal', 'Summer', 'Autumn', 'May', 'June', 'September', 'October']
   },
-
-
+  {
+    id: 'sp-1',
+    slug: 'do-dham-yatra',
+    name: 'Do Dham Yatra',
+    location: 'Uttarakhand',
+    country: 'India',
+    region: 'Uttarakhand',
+    coordinates: "30°44' N 79°03' E",
+    altitude: 11755,
+    duration: { days: 7, nights: 6 },
+    difficulty: 'Moderate',
+    season: ['Summer', 'Autumn'],
+    price: 22000,
+    heroImage: 'https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500',
+    gallery: [
+      'https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500'
+    ],
+    categories: ['Uttarakhand', 'Spiritual', 'Summer', 'Autumn', 'May', 'June', 'September', 'October', 'November']
+  },
+  {
+    id: 'sp-2',
+    slug: 'char-dham-yatra',
+    name: 'Char Dham Yatra',
+    location: 'Uttarakhand',
+    country: 'India',
+    region: 'Uttarakhand',
+    coordinates: "30°44' N 79°03' E",
+    altitude: 11755,
+    duration: { days: 11, nights: 10 },
+    difficulty: 'Moderate',
+    season: ['Summer', 'Autumn'],
+    price: 35000,
+    heroImage: 'https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500',
+    gallery: [
+      'https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500'
+    ],
+    categories: ['Uttarakhand', 'Spiritual', 'Summer', 'Autumn', 'May', 'June', 'September', 'October', 'November']
+  },
+  {
+    id: 'sp-3',
+    slug: 'kedarnath-yatra',
+    name: 'Kedarnath Yatra',
+    location: 'Uttarakhand',
+    country: 'India',
+    region: 'Uttarakhand',
+    coordinates: "30°44' N 79°03' E",
+    altitude: 11755,
+    duration: { days: 4, nights: 3 },
+    difficulty: 'Moderate to Difficult',
+    season: ['Summer', 'Autumn'],
+    price: 12000,
+    heroImage: 'https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500',
+    gallery: [
+      'https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500'
+    ],
+    categories: ['Uttarakhand', 'Spiritual', 'Summer', 'Autumn', 'May', 'June', 'September', 'October', 'November']
+  },
+  {
+    id: 'ld-1',
+    slug: 'chadar-trek',
+    name: 'Chadar Trek',
+    location: 'Ladakh',
+    country: 'India',
+    region: 'Ladakh',
+    coordinates: "33°46' N 76°58' E",
+    altitude: 11123,
+    duration: { days: 9, nights: 8 },
+    difficulty: 'Difficult',
+    season: ['Winter'],
+    price: 25000,
+    heroImage: 'https://images.unsplash.com/photo-1544198365-f5d60b6d819c?q=80&w=2500',
+    gallery: [
+      'https://images.unsplash.com/photo-1544198365-f5d60b6d819c?q=80&w=2500'
+    ],
+    categories: ['Ladakh', 'Winter', 'January', 'February']
+  },
+  {
+    id: 'ld-2',
+    slug: 'ladakh-bike-tour',
+    name: 'Leh Ladakh Bike Tour',
+    location: 'Ladakh',
+    country: 'India',
+    region: 'Ladakh',
+    coordinates: "34°09' N 77°34' E",
+    altitude: 18380,
+    duration: { days: 7, nights: 6 },
+    difficulty: 'Moderate to Difficult',
+    season: ['Summer'],
+    price: 28000,
+    heroImage: 'https://images.unsplash.com/photo-1598583492589-9a1d13fbeba2?q=80&w=2500',
+    gallery: [
+      'https://images.unsplash.com/photo-1598583492589-9a1d13fbeba2?q=80&w=2500'
+    ],
+    categories: ['Ladakh', 'Summer', 'June', 'July', 'August', 'September']
+  }
 ];
