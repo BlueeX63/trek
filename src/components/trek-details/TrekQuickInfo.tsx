@@ -38,14 +38,14 @@ export default function TrekQuickInfo({
           
           <div className="flex flex-col justify-center p-6 lg:p-8 border-r md:border-r border-b md:border-b-0 border-[var(--color-ink)]/10 bg-[var(--color-stone)]/30 min-h-full">
             <span className="text-[10px] font-bold text-[var(--color-ink)]/50 uppercase tracking-[0.2em] mb-4">Support</span>
-            <div className="flex items-center gap-3 text-xs text-[var(--color-ink)] font-medium font-sans mb-3 hover:text-[var(--color-primary)] transition-colors cursor-pointer">
+            <a href="tel:+919520557784" className="flex items-center gap-3 text-xs text-[var(--color-ink)] font-medium font-sans mb-3 hover:text-[var(--color-primary)] transition-colors cursor-pointer">
               <Phone className="w-3 h-3" />
-              <span>+91 8265906135</span>
-            </div>
-            <div className="flex items-center gap-3 text-xs text-[var(--color-ink)] font-medium font-sans hover:text-[var(--color-primary)] transition-colors cursor-pointer">
+              <span>9520557784 / 9520547784</span>
+            </a>
+            <a href="mailto:xplorethedreams@gmail.com" className="flex items-center gap-3 text-xs text-[var(--color-ink)] font-medium font-sans hover:text-[var(--color-primary)] transition-colors cursor-pointer">
               <Mail className="w-3 h-3" />
-              <span>info@xplorethedreams</span>
-            </div>
+              <span>xplorethedreams@gmail.com</span>
+            </a>
           </div>
 
           <div className="flex flex-col justify-center items-center p-6 lg:p-10 min-h-full">
@@ -53,10 +53,15 @@ export default function TrekQuickInfo({
             <div className="text-3xl md:text-5xl font-serif text-[var(--color-ink)] leading-none mb-6">
               ₹{price.toLocaleString()}
             </div>
-            <button className="group flex items-center justify-center gap-3 w-full border border-[var(--color-ink)] px-6 py-4 text-xs font-sans font-semibold uppercase tracking-widest text-[var(--color-ink)] hover:bg-[var(--color-ink)] hover:text-[var(--color-paper)] transition-all duration-300">
-              View Dates
+            <a 
+              href="https://wa.me/919520557784" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center gap-3 w-full border border-[var(--color-ink)] px-6 py-4 text-xs font-sans font-semibold uppercase tracking-widest text-[var(--color-ink)] hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all duration-300"
+            >
+              Chat on WhatsApp
               <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
 
         </div>
