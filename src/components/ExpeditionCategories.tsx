@@ -9,7 +9,8 @@ const CATEGORIES = [
   { id: "himachal", title: "Himachal Pradesh", description: "Lush forests & alpine passes.", icon: Tent, image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000", link: "/categories/himachal", size: "small" },
   { id: "kashmir", title: "Kashmir", description: "Paradise on earth.", icon: Sparkles, image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=2000", link: "/categories/kashmir", size: "small" },
   { id: "ladakh", title: "Ladakh", description: "The cold desert and high passes.", icon: Users, image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2000", link: "/categories/ladakh", size: "wide" },
-  { id: "spiritual", title: "Spiritual", description: "Journeys of inner awakening.", icon: Sparkles, image: "https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000", link: "/categories/spiritual", size: "small" }
+  { id: "spiritual", title: "Spiritual", description: "Journeys of inner awakening.", icon: Sparkles, image: "https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000", link: "/categories/spiritual", size: "small" },
+  { id: "customize", title: "Customize Your Trip", description: "Bespoke itineraries for hand-picked destinations.", icon: Compass, image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2000", link: "/customize-trip", size: "full" }
 ];
 
 export default function ExpeditionCategories() {
@@ -35,12 +36,14 @@ export default function ExpeditionCategories() {
           {CATEGORIES.map((category) => {
             const isLarge = category.size === "large";
             const isWide = category.size === "wide";
+            const isFull = category.size === "full";
             
             return (
               <Link 
                 key={category.id} 
                 href={category.link}
                 className={`group relative overflow-hidden bg-[var(--color-stone)] border border-[var(--color-ink)]/20 transition-all duration-500 ${
+                  isFull ? "md:col-span-3 md:row-span-1" :
                   isLarge ? "md:col-span-2 md:row-span-2" : 
                   isWide ? "md:col-span-2 md:row-span-1" : 
                   "md:col-span-1 md:row-span-1"

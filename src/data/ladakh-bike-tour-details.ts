@@ -148,6 +148,26 @@ export const ladakhBikeTourDetails: DetailedTrek = {
   },
   faqs: [
     {
+      question: "What is the best time to do the Leh Ladakh Bike Tour?",
+      answer: "The best time to do the Leh Ladakh Bike Tour is typically during the Summer season. It offers the most stable weather and clearest views."
+    },
+    {
+      question: "How difficult is the Leh Ladakh Bike Tour?",
+      answer: "The Leh Ladakh Bike Tour is graded as Moderate to Difficult. Prior fitness preparation is highly recommended to comfortably enjoy the trail."
+    },
+    {
+      question: "What is the maximum altitude reached?",
+      answer: "The maximum altitude reached during the Leh Ladakh Bike Tour is 18380 FT (Khardung La)."
+    },
+    {
+      question: "Is this trek safe for beginners?",
+      answer: "For a Moderate to Difficult trek, fit beginners can attempt it if it's easy-moderate. However, difficult grades require prior trekking experience and good physical stamina."
+    },
+    {
+      question: "Do I need to carry my own food?",
+      answer: "No, nutritious meals are provided during the trek as part of the inclusions. We ensure you are well-fed and energized."
+    },
+    {
       question: "Can I bring my pillion?",
       answer: "Yes, pillion riders are welcome. The cost for a pillion is lower as the bike cost is shared."
     },

@@ -165,6 +165,14 @@ export const suryaTopDetails: DetailedTrek = {
   },
   faqs: [
     {
+      question: "What is the best time to do the Surya Top Trek?",
+      answer: "The best time to do the Surya Top Trek is typically during the Summer | Autumn season. It offers the most stable weather and clearest views."
+    },
+    {
+      question: "How difficult is the Surya Top Trek?",
+      answer: "The Surya Top Trek is graded as Moderate. Prior fitness preparation is highly recommended to comfortably enjoy the trail."
+    },
+    {
       question: "What is the total trekking distance for Surya Top?",
       answer: "The total trekking distance covers approximately 32 kilometers over the 6-day journey."
     },

@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { MapPin, Mail, Phone } from "lucide-react";
 
 // Inline SVGs for social icons to avoid lucide-react export issues
@@ -27,16 +30,22 @@ const YoutubeIcon = ({ className }: { className?: string }) => (
 );
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  if (pathname?.startsWith("/admin")) {
+    return null;
+  }
+
   return (
-    <footer className="bg-[var(--color-ink)] text-[var(--color-paper)] pt-32 pb-12 px-6 md:px-12 relative overflow-hidden z-20">
+    <footer className="bg-[#2A2A2A] text-[var(--color-paper)] pt-32 pb-12 px-6 md:px-12 relative overflow-hidden z-20">
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12 mb-32">
           
           {/* Brand Column */}
           <div className="lg:col-span-5 pr-8">
-            <Link href="/" className="flex mb-8">
-              <div className="relative w-48 h-16 md:w-56 md:h-20 grayscale brightness-200 opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+            <Link href="/" className="inline-flex mb-8">
+              <div className="relative w-40 h-14 md:w-48 md:h-16">
                 <Image
                   src="/logo.png"
                   alt="Xplore The Dreams Logo"
@@ -75,7 +84,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="lg:col-span-4">
-            <h4 className="font-sans font-semibold text-[10px] mb-8 uppercase tracking-[0.3em] text-[var(--color-primary)]">Basecamp</h4>
+            <h4 className="font-sans font-semibold text-[10px] mb-8 uppercase tracking-[0.3em] text-[var(--color-primary)]">Office Address</h4>
             <ul className="flex flex-col gap-6">
               <li className="flex gap-4 items-start">
                 <MapPin className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-1" strokeWidth={1.5} />
@@ -104,6 +113,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Xplore The Dreams. All Rights Reserved.
           </p>
           <div className="flex gap-8">
+            <Link href="/cancellation-policy" className="text-[var(--color-paper)]/40 hover:text-[var(--color-paper)] text-[10px] font-sans font-semibold uppercase tracking-widest transition-colors">Cancellation Policy</Link>
             <Link href="/privacy" className="text-[var(--color-paper)]/40 hover:text-[var(--color-paper)] text-[10px] font-sans font-semibold uppercase tracking-widest transition-colors">Privacy</Link>
             <Link href="/terms" className="text-[var(--color-paper)]/40 hover:text-[var(--color-paper)] text-[10px] font-sans font-semibold uppercase tracking-widest transition-colors">Terms</Link>
           </div>

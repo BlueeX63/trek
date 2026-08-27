@@ -165,6 +165,26 @@ export const charDhamDetails: DetailedTrek = {
   },
   faqs: [
     {
+      question: "What is the best time to do the Char Dham Yatra?",
+      answer: "The best time to do the Char Dham Yatra is typically during the Summer | Autumn season. It offers the most stable weather and clearest views."
+    },
+    {
+      question: "How difficult is the Char Dham Yatra?",
+      answer: "The Char Dham Yatra is graded as Moderate. Prior fitness preparation is highly recommended to comfortably enjoy the trail."
+    },
+    {
+      question: "What is the maximum altitude reached?",
+      answer: "The maximum altitude reached during the Char Dham Yatra is 11755 FT."
+    },
+    {
+      question: "Is this trek safe for beginners?",
+      answer: "For a Moderate trek, fit beginners can attempt it if it's easy-moderate. However, difficult grades require prior trekking experience and good physical stamina."
+    },
+    {
+      question: "Do I need to carry my own food?",
+      answer: "No, nutritious meals are provided during the trek as part of the inclusions. We ensure you are well-fed and energized."
+    },
+    {
       question: "Is it safe for elderly people?",
       answer: "Elderly people frequently complete the Char Dham Yatra. However, they must use mules, palkis, or helicopters for the trekking portions and consult a doctor prior to the trip."
     },

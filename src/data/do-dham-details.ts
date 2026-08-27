@@ -132,6 +132,26 @@ export const doDhamDetails: DetailedTrek = {
   },
   faqs: [
     {
+      question: "What is the best time to do the Do Dham Yatra (Kedarnath & Badrinath)?",
+      answer: "The best time to do the Do Dham Yatra (Kedarnath & Badrinath) is typically during the Summer | Autumn season. It offers the most stable weather and clearest views."
+    },
+    {
+      question: "How difficult is the Do Dham Yatra (Kedarnath & Badrinath)?",
+      answer: "The Do Dham Yatra (Kedarnath & Badrinath) is graded as Moderate. Prior fitness preparation is highly recommended to comfortably enjoy the trail."
+    },
+    {
+      question: "What is the maximum altitude reached?",
+      answer: "The maximum altitude reached during the Do Dham Yatra (Kedarnath & Badrinath) is 11755 FT."
+    },
+    {
+      question: "Is this trek safe for beginners?",
+      answer: "For a Moderate trek, fit beginners can attempt it if it's easy-moderate. However, difficult grades require prior trekking experience and good physical stamina."
+    },
+    {
+      question: "Do I need to carry my own food?",
+      answer: "No, nutritious meals are provided during the trek as part of the inclusions. We ensure you are well-fed and energized."
+    },
+    {
       question: "Is there a helicopter service available for Kedarnath?",
       answer: "Yes, helicopter services fly from Guptkashi, Phata, and Sirsi. However, tickets must be booked months in advance via the IRCTC portal."
     },

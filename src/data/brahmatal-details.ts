@@ -121,6 +121,26 @@ export const brahmatalDetails: DetailedTrek = {
   },
   faqs: [
     {
+      question: "What is the best time to do the Brahmatal Trek?",
+      answer: "The best time to do the Brahmatal Trek is typically during the Spring | Autumn | Winter season. It offers the most stable weather and clearest views."
+    },
+    {
+      question: "How difficult is the Brahmatal Trek?",
+      answer: "The Brahmatal Trek is graded as Easy to Moderate. Prior fitness preparation is highly recommended to comfortably enjoy the trail."
+    },
+    {
+      question: "What is the maximum altitude reached?",
+      answer: "The maximum altitude reached during the Brahmatal Trek is 12300 FT."
+    },
+    {
+      question: "Is this trek safe for beginners?",
+      answer: "For a Easy to Moderate trek, fit beginners can attempt it if it's easy-moderate. However, difficult grades require prior trekking experience and good physical stamina."
+    },
+    {
+      question: "Do I need to carry my own food?",
+      answer: "No, nutritious meals are provided during the trek as part of the inclusions. We ensure you are well-fed and energized."
+    },
+    {
       question: "How difficult is the Brahmatal Trek?",
       answer: "The trek is graded as Easy to Moderate. Ensure you meet the fitness criteria before booking."
     },

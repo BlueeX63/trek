@@ -121,6 +121,26 @@ export const kanamoPeakDetails: DetailedTrek = {
   },
   faqs: [
     {
+      question: "What is the best time to do the Kanamo Peak Trek Expedition?",
+      answer: "The best time to do the Kanamo Peak Trek Expedition is typically during the Monsoon season. It offers the most stable weather and clearest views."
+    },
+    {
+      question: "How difficult is the Kanamo Peak Trek Expedition?",
+      answer: "The Kanamo Peak Trek Expedition is graded as Difficult. Prior fitness preparation is highly recommended to comfortably enjoy the trail."
+    },
+    {
+      question: "What is the maximum altitude reached?",
+      answer: "The maximum altitude reached during the Kanamo Peak Trek Expedition is 19553 FT."
+    },
+    {
+      question: "Is this trek safe for beginners?",
+      answer: "For a Difficult trek, fit beginners can attempt it if it's easy-moderate. However, difficult grades require prior trekking experience and good physical stamina."
+    },
+    {
+      question: "Do I need to carry my own food?",
+      answer: "No, nutritious meals are provided during the trek as part of the inclusions. We ensure you are well-fed and energized."
+    },
+    {
       question: "How difficult is the Kanamo Peak Trek Expedition?",
       answer: "The trek is graded as Difficult. Ensure you meet the fitness criteria before booking."
     },

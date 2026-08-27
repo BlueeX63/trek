@@ -121,6 +121,26 @@ export const kedarTalDetails: DetailedTrek = {
   },
   faqs: [
     {
+      question: "What is the best time to do the Kedar Tal Trek?",
+      answer: "The best time to do the Kedar Tal Trek is typically during the Summer | Autumn season. It offers the most stable weather and clearest views."
+    },
+    {
+      question: "How difficult is the Kedar Tal Trek?",
+      answer: "The Kedar Tal Trek is graded as Difficult. Prior fitness preparation is highly recommended to comfortably enjoy the trail."
+    },
+    {
+      question: "What is the maximum altitude reached?",
+      answer: "The maximum altitude reached during the Kedar Tal Trek is 15500 FT."
+    },
+    {
+      question: "Is this trek safe for beginners?",
+      answer: "For a Difficult trek, fit beginners can attempt it if it's easy-moderate. However, difficult grades require prior trekking experience and good physical stamina."
+    },
+    {
+      question: "Do I need to carry my own food?",
+      answer: "No, nutritious meals are provided during the trek as part of the inclusions. We ensure you are well-fed and energized."
+    },
+    {
       question: "How difficult is the Kedar Tal Trek?",
       answer: "The trek is graded as Difficult. Ensure you meet the fitness criteria before booking."
     },

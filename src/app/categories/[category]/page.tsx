@@ -1,4 +1,4 @@
-import { treks } from "@/data/treks";
+import { supabase } from "@/lib/supabase";
 import CategoryTrekGrid from "@/components/CategoryTrekGrid";
 import { Sparkles, Users, Tent, Compass } from "lucide-react";
 
@@ -8,35 +8,35 @@ const CATEGORY_DATA: Record<string, any> = {
     title: "Uttarakhand Treks",
     description: "Explore the legendary Garhwal and Kumaon Himalayas. Home to pristine meadows, ancient temples, and some of the most iconic trekking trails in India.",
     icon: Compass,
-    filterFn: (trek: any) => trek.region === 'Uttarakhand',
+    filterFn: (query: any) => query.eq('region', 'Uttarakhand'),
     image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2000"
   },
   himachal: {
     title: "Himachal Treks",
     description: "Journey through lush pine forests, dramatic alpine passes, and the rugged terrain of Spiti and Lahaul.",
     icon: Tent,
-    filterFn: (trek: any) => trek.region === 'Himachal Pradesh',
+    filterFn: (query: any) => query.eq('region', 'Himachal Pradesh'),
     image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000"
   },
   kashmir: {
     title: "Kashmir Treks",
     description: "Trek the paradise on earth. Discover alpine lakes, vast meadows, and the unparalleled beauty of the Kashmir valley.",
     icon: Sparkles,
-    filterFn: (trek: any) => trek.region === 'Kashmir',
+    filterFn: (query: any) => query.eq('region', 'Kashmir'),
     image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=2000"
   },
   ladakh: {
     title: "Ladakh Treks",
     description: "Venture into the cold desert. Experience stark lunar landscapes, high altitude passes, and deep Buddhist culture.",
     icon: Users,
-    filterFn: (trek: any) => trek.region === 'Ladakh',
+    filterFn: (query: any) => query.eq('region', 'Ladakh'),
     image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2000"
   },
   spiritual: {
     title: "Spiritual Journeys",
     description: "Follow the ancient pilgrimage routes. Treks that offer both physical challenge and profound spiritual awakening.",
     icon: Sparkles,
-    filterFn: (trek: any) => trek.categories?.includes('Spiritual'),
+    filterFn: (query: any) => query.contains('categories', '["Spiritual"]'),
     image: "https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000"
   }
 };
@@ -55,7 +55,34 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   }
 
   const Icon = categoryInfo.icon;
-  const filteredTreks = treks.filter(categoryInfo.filterFn);
+  
+  let query = supabase.from('treks').select('*');
+  query = categoryInfo.filterFn(query);
+  
+  const { data: dbTreks, error } = await query;
+  
+  if (error) {
+    console.error("Error fetching treks for category:", error);
+  }
+
+  // Map DB format to local Trek format expected by CategoryTrekGrid
+  const filteredTreks = (dbTreks || []).map((dbTrek: any) => ({
+    id: dbTrek.id,
+    slug: dbTrek.slug,
+    name: dbTrek.name,
+    location: dbTrek.location,
+    country: dbTrek.country,
+    region: dbTrek.region,
+    altitude: dbTrek.altitude,
+    duration: { days: dbTrek.duration_days, nights: dbTrek.duration_nights },
+    difficulty: dbTrek.difficulty,
+    season: dbTrek.season || [],
+    price: dbTrek.price,
+    heroImage: dbTrek.hero_image,
+    categories: dbTrek.categories || [],
+    coordinates: dbTrek.coordinates || "",
+    gallery: dbTrek.gallery || []
+  }));
 
   return (
     <main className="min-h-screen bg-[var(--color-paper)]">

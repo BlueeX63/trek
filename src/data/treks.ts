@@ -765,6 +765,109 @@ export const treks: Trek[] = [
     categories: ['Kashmir', 'Summer', 'Monsoon', 'July', 'August']
   },
 
+  {
+    id: 'ka-5',
+    slug: 'guraz-valley',
+    name: 'Gurez Valley Trek',
+    location: 'Bandipora',
+    country: 'India',
+    region: 'Kashmir',
+    coordinates: "34°38' N 74°50' E",
+    altitude: 13000,
+    duration: { days: 6, nights: 5 },
+    difficulty: 'Moderate',
+    season: ['Summer', 'Autumn'],
+    price: 16000,
+    heroImage: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    gallery: [],
+    categories: ['Kashmir', 'Summer', 'Autumn', 'July', 'August', 'September']
+  },
+  {
+    id: 'ka-6',
+    slug: 'bodpathri-trek',
+    name: 'Bodpathri Trek',
+    location: 'Budgam',
+    country: 'India',
+    region: 'Kashmir',
+    coordinates: "33°50' N 74°35' E",
+    altitude: 13500,
+    duration: { days: 5, nights: 4 },
+    difficulty: 'Moderate',
+    season: ['Summer', 'Autumn'],
+    price: 13000,
+    heroImage: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    gallery: [],
+    categories: ['Kashmir', 'Summer', 'Autumn', 'July', 'August', 'September']
+  },
+  {
+    id: 'ka-7',
+    slug: 'tulian-lake',
+    name: 'Tulian Lake Trek',
+    location: 'Pahalgam',
+    country: 'India',
+    region: 'Kashmir',
+    coordinates: "34°00' N 75°18' E",
+    altitude: 12000,
+    duration: { days: 3, nights: 2 },
+    difficulty: 'Easy to Moderate',
+    season: ['Summer'],
+    price: 7500,
+    heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    gallery: [],
+    categories: ['Kashmir', 'Summer', 'June', 'July', 'August', 'September']
+  },
+  {
+    id: 'ka-8',
+    slug: 'warwan-valley',
+    name: 'Warwan Valley Trek',
+    location: 'Kishtwar',
+    country: 'India',
+    region: 'Kashmir',
+    coordinates: "33°52' N 75°45' E",
+    altitude: 14500,
+    duration: { days: 9, nights: 8 },
+    difficulty: 'Difficult',
+    season: ['Summer'],
+    price: 22000,
+    heroImage: 'https://images.unsplash.com/photo-1527842891421-42eec6e703ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    gallery: [],
+    categories: ['Kashmir', 'Summer', 'July', 'August', 'September']
+  },
+  {
+    id: 'ka-9',
+    slug: 'brammah-valley',
+    name: 'Brammah Valley Trek',
+    location: 'Kishtwar',
+    country: 'India',
+    region: 'Kashmir',
+    coordinates: "33°20' N 76°05' E",
+    altitude: 13500,
+    duration: { days: 7, nights: 6 },
+    difficulty: 'Moderate to Difficult',
+    season: ['Summer', 'Autumn'],
+    price: 18000,
+    heroImage: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    gallery: [],
+    categories: ['Kashmir', 'Summer', 'Autumn', 'July', 'August', 'September']
+  },
+  {
+    id: 'ka-10',
+    slug: 'marchoi-trek',
+    name: 'Marchoi Trek',
+    location: 'Naranag',
+    country: 'India',
+    region: 'Kashmir',
+    coordinates: "34°22' N 74°57' E",
+    altitude: 10500,
+    duration: { days: 3, nights: 2 },
+    difficulty: 'Easy to Moderate',
+    season: ['Winter', 'Spring'],
+    price: 6500,
+    heroImage: 'https://images.unsplash.com/photo-1542317148-8b4eec4cb396?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    gallery: [],
+    categories: ['Kashmir', 'Winter', 'Spring', 'January', 'February', 'March', 'April', 'November', 'December']
+  },
+
   // Himachal Pradesh
   {
     id: 'hp-1',
@@ -1022,9 +1125,9 @@ export const treks: Trek[] = [
     difficulty: 'Moderate',
     season: ['Summer', 'Autumn'],
     price: 22000,
-    heroImage: 'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000',
+    heroImage: 'https://images.unsplash.com/photo-1544365558-35aa4afcf11f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000'
+      'https://images.unsplash.com/photo-1544365558-35aa4afcf11f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'
     ],
     categories: ['Uttarakhand', 'Spiritual', 'Summer', 'Autumn', 'May', 'June', 'September', 'October', 'November']
   },
@@ -1041,9 +1144,9 @@ export const treks: Trek[] = [
     difficulty: 'Moderate',
     season: ['Summer', 'Autumn'],
     price: 35000,
-    heroImage: 'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000',
+    heroImage: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000'
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'
     ],
     categories: ['Uttarakhand', 'Spiritual', 'Summer', 'Autumn', 'May', 'June', 'September', 'October', 'November']
   },
@@ -1060,11 +1163,45 @@ export const treks: Trek[] = [
     difficulty: 'Moderate to Difficult',
     season: ['Summer', 'Autumn'],
     price: 12000,
-    heroImage: 'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000',
+    heroImage: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000'
+      'https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'
     ],
     categories: ['Uttarakhand', 'Spiritual', 'Summer', 'Autumn', 'May', 'June', 'September', 'October', 'November']
+  },
+  {
+    id: 'sp-4',
+    slug: 'amarnath-yatra',
+    name: 'Amarnath Yatra',
+    location: 'Pahalgam / Baltal',
+    country: 'India',
+    region: 'Kashmir',
+    coordinates: "34°12' N 75°30' E",
+    altitude: 12756,
+    duration: { days: 4, nights: 3 },
+    difficulty: 'Moderate',
+    season: ['Summer'],
+    price: 15000,
+    heroImage: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    gallery: [],
+    categories: ['Kashmir', 'Spiritual', 'Summer', 'July', 'August']
+  },
+  {
+    id: 'sp-5',
+    slug: 'do-dham-chopta-chandrashila',
+    name: 'Do Dham with Chopta Chandrashila',
+    location: 'Uttarakhand',
+    country: 'India',
+    region: 'Uttarakhand',
+    coordinates: "30°29' N 79°13' E",
+    altitude: 12083,
+    duration: { days: 8, nights: 7 },
+    difficulty: 'Moderate',
+    season: ['Summer', 'Autumn'],
+    price: 21000,
+    heroImage: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80',
+    gallery: [],
+    categories: ['Uttarakhand', 'Spiritual', 'Summer', 'Autumn', 'May', 'June', 'September', 'October']
   },
   {
     id: 'ld-1',

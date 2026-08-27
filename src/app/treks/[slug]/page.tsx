@@ -1,69 +1,7 @@
 import { notFound } from "next/navigation";
 import { Metadata, ResolvingMetadata } from "next";
 import ScrollToTop from "@/components/ScrollToTop";
-import { valleyOfFlowersDetails } from "@/data/valley-of-flowers-details";
-import { rupinPassDetails } from "@/data/rupin-pass-details";
-import { kedarkanthaDetails } from "@/data/kedarkantha-details";
-import { suryaTopDetails } from "@/data/surya-top-details";
-import { pinBhabaPassDetails } from "@/data/pin-bhaba-pass-details";
-import { hamptaPassDetails } from "@/data/hampta-pass-details";
-import { bhriguLakeDetails } from "@/data/bhrigu-lake-details";
-import { buranGhatiDetails } from "@/data/buran-ghati-details";
-import { friendshipPeakDetails } from "@/data/friendship-peak-details";
-import { pinParvatiDetails } from "@/data/pin-parvati-details";
-import { kanamoPeakDetails } from "@/data/kanamo-peak-details";
-import { chandrakhaniPassDetails } from "@/data/chandrakhani-pass-details";
-import { yunamPeakDetails } from "@/data/yunam-peak-details";
-import { beasKundDetails } from "@/data/beas-kund-details";
-import { kareriLakeDetails } from "@/data/kareri-lake-details";
-import { sarPassDetails } from "@/data/sar-pass-details";
-import { deoTibbaDetails } from "@/data/deo-tibba-details";
-import { kashmirGreatLakesDetails } from "@/data/kashmir-great-lakes-details";
-import { tarsarMarsarDetails } from "@/data/tarsar-marsar-details";
-import { doodhpathriTrekDetails } from "@/data/doodhpathri-trek-details";
-import { nafranValleyDetails } from "@/data/nafran-valley-details";
-import { roopkundDetails } from "@/data/roopkund-details";
-import { panwaliKanthaDetails } from "@/data/panwali-kantha-details";
-import { gulabiKanthaDetails } from "@/data/gulabi-kantha-details";
-import { brahmatalDetails } from "@/data/brahmatal-details";
-import { pangarchullaPeakDetails } from "@/data/pangarchulla-peak-details";
-import { gaumukhTapovanDetails } from "@/data/gaumukh-tapovan-details";
-import { kuariPassDetails } from "@/data/kuari-pass-details";
-import { ranthanKharakDetails } from "@/data/ranthan-kharak-details";
-import { choptaChandrashilaDeoriatalDetails } from "@/data/chopta-chandrashila-deoriatal-details";
-import { choptaChandrashila3DayDetails } from "@/data/chopta-chandrashila-3-day-details";
-import { gaumukhGangotriDetails } from "@/data/gaumukh-gangotri-details";
-import { baliPassDetails } from "@/data/bali-pass-details";
-import { dayaraBugyalDetails } from "@/data/dayara-bugyal-details";
-import { aliBedniBugyalDetails } from "@/data/ali-bedni-bugyal-details";
-import { harKiDunDetails } from "@/data/har-ki-dun-details";
-import { aanchaTopDetails } from "@/data/aancha-top-details";
-import { nagTibbaDetails } from "@/data/nag-tibba-details";
-import { deobanDetails } from "@/data/deoban-details";
-import { chirbatiyaDetails } from "@/data/chirbatiya-details";
-import { binsarDetails } from "@/data/binsar-details";
-import { bagjiBugyalDetails } from "@/data/bagji-bugyal-details";
-import { phularaRidgeDetails } from "@/data/phulara-ridge-details";
-import { dudhatoliDetails } from "@/data/dudhatoli-details";
-import { satopanthLakeDetails } from "@/data/satopanth-lake-details";
-import { satopanthPeakDetails } from "@/data/satopanth-peak-details";
-import { kedarTalDetails } from "@/data/kedar-tal-details";
-import { audensColDetails } from "@/data/audens-col-details";
-import { panchkedarDetails } from "@/data/panchkedar-details";
-import { muktaTopDetails } from "@/data/mukta-top-details";
-import { doditalDarwaPassDetails } from "@/data/dodital-darwa-pass-details";
-import { blackPeakDetails } from "@/data/black-peak-details";
-import { baginiGlacierDetails } from "@/data/bagini-glacier-details";
-import { adiKailashDetails } from "@/data/adi-kailash-details";
-import { yogaMeditationRetreatDetails } from "@/data/yoga-meditation-retreat-details";
-import { rudragairaPeakDetails } from "@/data/rudragaira-peak-details";
-import { pindariGlacierDetails } from "@/data/pindari-glacier-details";
-import { doDhamDetails } from "@/data/do-dham-details";
-import { charDhamDetails } from "@/data/char-dham-details";
-import { kedarnathDetails } from "@/data/kedarnath-details";
-import { chadarTrekDetails } from "@/data/chadar-trek-details";
-import { ladakhBikeTourDetails } from "@/data/ladakh-bike-tour-details";
-import { treks } from "@/data/treks";
+import { supabase } from "@/lib/supabase";
 import { DetailedTrek } from "@/types/detailed-trek";
 
 import TrekHero from "@/components/trek-details/TrekHero";
@@ -78,12 +16,19 @@ import TrekEssentials from "@/components/trek-details/TrekEssentials";
 import TrekCancellation from "@/components/trek-details/TrekCancellation";
 import TrekFAQ from "@/components/trek-details/TrekFAQ";
 
+export const revalidate = 0;
+
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { slug } = await params;
-  const basicTrek = treks.find(t => t.slug === slug);
+  
+  const { data: basicTrek } = await supabase
+    .from('treks')
+    .select('name, region, duration_days, altitude, hero_image')
+    .eq('slug', slug)
+    .single();
   
   if (!basicTrek) {
     return { title: 'Trek Not Found' };
@@ -93,96 +38,104 @@ export async function generateMetadata(
 
   return {
     title: `${basicTrek.name} Trek`,
-    description: `Join the ${basicTrek.name} expedition in ${basicTrek.region}. A ${basicTrek.duration.days}-day trek reaching ${basicTrek.altitude} ft.`,
+    description: `Join the ${basicTrek.name} expedition in ${basicTrek.region}. A ${basicTrek.duration_days}-day trek reaching ${basicTrek.altitude} ft.`,
     openGraph: {
       title: `${basicTrek.name} | Xplore The Dreams`,
       description: `Experience the ${basicTrek.name} trek in ${basicTrek.region}.`,
-      images: [basicTrek.heroImage, ...previousImages],
+      images: [basicTrek.hero_image, ...previousImages],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${basicTrek.name} | Xplore The Dreams`,
       description: `Experience the ${basicTrek.name} trek in ${basicTrek.region}.`,
-      images: [basicTrek.heroImage],
+      images: [basicTrek.hero_image],
     },
   };
 }
 
 export default async function TrekDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  
+  const { data: dbTrek } = await supabase
+    .from('treks')
+    .select('*')
+    .eq('slug', slug)
+    .single();
+
+  if (!dbTrek) {
+    notFound();
+  }
+
+  // Generate fallback detailed info if it's not present
+  const isBasicOnly = !dbTrek.overview || (Array.isArray(dbTrek.overview) && dbTrek.overview.length === 0) || (Object.keys(dbTrek.overview).length === 0);
+  
   let trekData: DetailedTrek;
 
-  if (slug === "valley-of-flowers") {
-    const vof: any = { ...valleyOfFlowersDetails };
-    trekData = { 
-      ...vof,
-      image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2500&auto=format&fit=crop",
-      overview: {
-        description: [vof.overview.description],
-        highlights: vof.overview.highlights.map((h: string) => ({ description: h }))
-      }
+  if (!isBasicOnly) {
+    trekData = {
+      slug: dbTrek.slug,
+      name: dbTrek.name,
+      location: dbTrek.location,
+      duration: `${dbTrek.duration_days} days`,
+      maxAltitude: `${dbTrek.altitude} ft`,
+      distance: dbTrek.distance,
+      grade: dbTrek.difficulty,
+      price: dbTrek.price,
+      baseCamp: dbTrek.base_camp,
+      season: dbTrek.season?.join(', '),
+      months: dbTrek.months,
+      railHead: dbTrek.rail_head,
+      airport: dbTrek.airport,
+      trailType: dbTrek.trail_type,
+      image: dbTrek.hero_image,
+      overview: dbTrek.overview,
+      itinerary: dbTrek.itinerary,
+      eligibility: dbTrek.eligibility,
+      howToReach: dbTrek.how_to_reach,
+      costTerms: dbTrek.cost_terms,
+      essentials: dbTrek.essentials,
+      cancellation: dbTrek.cancellation,
+      faqs: dbTrek.faqs
     };
-  } else if (slug === "rupin-pass") {
-    trekData = rupinPassDetails;
-  } else if (slug === "kedarkantha") {
-    trekData = kedarkanthaDetails;
-  } else if (slug === "surya-top") {
-    trekData = suryaTopDetails;
-  } else if (slug === "do-dham-yatra") {
-    trekData = doDhamDetails;
-  } else if (slug === "char-dham-yatra") {
-    trekData = charDhamDetails;
-  } else if (slug === "kedarnath-yatra") {
-    trekData = kedarnathDetails;
-  } else if (slug === "chadar-trek") {
-    trekData = chadarTrekDetails;
-  } else if (slug === "ladakh-bike-tour") {
-    trekData = ladakhBikeTourDetails;
   } else {
-    // Look up basic info from treks.ts
-    const basicTrek = treks.find(t => t.slug === slug);
-    if (!basicTrek) {
-      notFound();
-    }
-    
-    // Generic itinerary generator based on duration
-    const genItinerary = Array.from({ length: basicTrek.duration.days }).map((_, i) => ({
+    // Generic fallback itinerary generator based on duration
+    const genItinerary = Array.from({ length: dbTrek.duration_days }).map((_, i) => ({
       day: i + 1,
-      title: i === 0 ? `Arrival at ${basicTrek.location} Base Camp` : i === basicTrek.duration.days - 1 ? "Departure and Journey Back" : `Trekking Day ${i}`,
+      title: i === 0 ? `Arrival at ${dbTrek.location} Base Camp` : i === dbTrek.duration_days - 1 ? "Departure and Journey Back" : `Trekking Day ${i}`,
       details: [
-        i === 0 ? "Acclimatization, team briefing, and preparation." : i === basicTrek.duration.days - 1 ? "Descent and departure to onward destinations." : "Trek through scenic trails, ascending towards the next campsite.",
+        i === 0 ? "Acclimatization, team briefing, and preparation." : i === dbTrek.duration_days - 1 ? "Descent and departure to onward destinations." : "Trek through scenic trails, ascending towards the next campsite.",
         "Enjoy panoramic views of the Himalayan ranges.",
         "Overnight stay in camps or local homestays."
       ]
     }));
 
-    // Create a fallback detailed object mapping basicTrek to the detailed schema
+    // Create a fallback detailed object
     trekData = {
-      slug: basicTrek.slug,
-      name: basicTrek.name,
-      location: basicTrek.location,
-      duration: `${basicTrek.duration.days} days`,
-      maxAltitude: `${basicTrek.altitude} ft`,
+      slug: dbTrek.slug,
+      name: dbTrek.name,
+      location: dbTrek.location,
+      duration: `${dbTrek.duration_days} days`,
+      maxAltitude: `${dbTrek.altitude} ft`,
       distance: "Detailed distance TBD",
-      grade: basicTrek.difficulty,
-      price: basicTrek.price,
-      baseCamp: basicTrek.location,
-      season: basicTrek.season.join(", "),
+      grade: dbTrek.difficulty,
+      price: dbTrek.price,
+      baseCamp: dbTrek.location,
+      season: dbTrek.season?.join(", "),
       months: "Check fixed departures",
-      railHead: `Nearest station to ${basicTrek.region}`,
-      airport: `Nearest airport in ${basicTrek.region}`,
+      railHead: `Nearest station to ${dbTrek.region}`,
+      airport: `Nearest airport in ${dbTrek.region}`,
       trailType: "Standard Mountain Trail",
-      image: basicTrek.heroImage,
+      image: dbTrek.hero_image,
       overview: {
         description: [
-          `Experience the breathtaking ${basicTrek.name} trek in the majestic ${basicTrek.region} region. This ${basicTrek.duration.days}-day adventure takes you to an impressive altitude of ${basicTrek.altitude} feet.`,
-          `Known for its ${basicTrek.difficulty.toLowerCase()} grade, this trek offers a perfect blend of thrilling ascents and serene natural beauty. Trekking through the ${basicTrek.location} landscape, you'll encounter pristine valleys, dense forests, and potentially snow-capped peaks.`,
-          `Our expert guides ensure a safe and memorable journey. Make sure to prepare adequately for the altitude and weather conditions typical of the ${basicTrek.season.join(" and ")} seasons.`
+          `Experience the breathtaking ${dbTrek.name} trek in the majestic ${dbTrek.region} region. This ${dbTrek.duration_days}-day adventure takes you to an impressive altitude of ${dbTrek.altitude} feet.`,
+          `Known for its ${dbTrek.difficulty?.toLowerCase()} grade, this trek offers a perfect blend of thrilling ascents and serene natural beauty. Trekking through the ${dbTrek.location} landscape, you'll encounter pristine valleys, dense forests, and potentially snow-capped peaks.`,
+          `Our expert guides ensure a safe and memorable journey. Make sure to prepare adequately for the altitude and weather conditions typical of the ${dbTrek.season?.join(" and ")} seasons.`
         ],
         highlights: [
-          { title: "Scenic Trails", description: `Explore the untouched beauty of ${basicTrek.location}.` },
-          { title: "High Altitude Experience", description: `Reach a maximum altitude of ${basicTrek.altitude} ft.` },
-          { title: "Immersive Adventure", description: `Enjoy ${basicTrek.duration.days} days of premium trekking with expert support.` }
+          { title: "Scenic Trails", description: `Explore the untouched beauty of ${dbTrek.location}.` },
+          { title: "High Altitude Experience", description: `Reach a maximum altitude of ${dbTrek.altitude} ft.` },
+          { title: "Immersive Adventure", description: `Enjoy ${dbTrek.duration_days} days of premium trekking with expert support.` }
         ]
       },
       itinerary: genItinerary,
@@ -199,10 +152,10 @@ export default async function TrekDetailsPage({ params }: { params: Promise<{ sl
         ]
       },
       howToReach: {
-        meetingPlace: `Designated pickup point in ${basicTrek.region} (Usually main bus stand or railway station).`,
+        meetingPlace: `Designated pickup point in ${dbTrek.region} (Usually main bus stand or railway station).`,
         dropOff: `Same as pickup point.`,
         options: [
-          `Take an overnight bus from major cities (Delhi/Chandigarh/Dehradun) to ${basicTrek.region}.`,
+          `Take an overnight bus from major cities (Delhi/Chandigarh/Dehradun) to ${dbTrek.region}.`,
           `Hire a private cab or join shared taxis from the nearest railway station or airport.`
         ]
       },
@@ -247,12 +200,32 @@ export default async function TrekDetailsPage({ params }: { params: Promise<{ sl
       },
       faqs: [
         {
-          question: `What is the Best Time to do the ${basicTrek.name}?`,
-          answer: `The best seasons are ${basicTrek.season.join(" and ")}. During these times, the weather is most stable and the views are clear.`
+          question: `What is the Best Time to do the ${dbTrek.name}?`,
+          answer: `The best seasons are ${dbTrek.season?.join(" and ")}. During these times, the weather is most stable and the views are clear.`
         },
         {
-          question: `How difficult is the ${basicTrek.name}?`,
-          answer: `This trek is rated as ${basicTrek.difficulty}. You should prepare accordingly based on the fitness criteria.`
+          question: `How difficult is the ${dbTrek.name}?`,
+          answer: `This trek is rated as ${dbTrek.difficulty}. You should prepare accordingly based on the fitness criteria.`
+        },
+        {
+          question: `What is the maximum altitude reached on this trek?`,
+          answer: `The maximum altitude reached during the ${dbTrek.name} is ${dbTrek.altitude} ft.`
+        },
+        {
+          question: `Is the ${dbTrek.name} safe for beginners?`,
+          answer: `For a ${dbTrek.difficulty} trek, appropriate preparation is required. Beginners can attempt easy to moderate treks, but higher grades require prior experience.`
+        },
+        {
+          question: `Do I need to carry my own food?`,
+          answer: `No, highly nutritious vegetarian meals (along with eggs) are provided during the trek as part of the package.`
+        },
+        {
+          question: `What kind of accommodation is provided?`,
+          answer: `We provide comfortable camping in tents and occasionally homestays/guesthouses on a twin-sharing basis.`
+        },
+        {
+          question: `Is there mobile network connectivity on the trail?`,
+          answer: `Network connectivity is usually available at the base camp, but expect to be completely disconnected while on the trail.`
         }
       ]
     };

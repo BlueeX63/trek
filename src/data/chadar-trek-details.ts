@@ -161,6 +161,26 @@ export const chadarTrekDetails: DetailedTrek = {
   },
   faqs: [
     {
+      question: "What is the best time to do the Chadar Trek (Frozen Zanskar River)?",
+      answer: "The best time to do the Chadar Trek (Frozen Zanskar River) is typically during the Winter season. It offers the most stable weather and clearest views."
+    },
+    {
+      question: "How difficult is the Chadar Trek (Frozen Zanskar River)?",
+      answer: "The Chadar Trek (Frozen Zanskar River) is graded as Difficult. Prior fitness preparation is highly recommended to comfortably enjoy the trail."
+    },
+    {
+      question: "What is the maximum altitude reached?",
+      answer: "The maximum altitude reached during the Chadar Trek (Frozen Zanskar River) is 11123 FT."
+    },
+    {
+      question: "Is this trek safe for beginners?",
+      answer: "For a Difficult trek, fit beginners can attempt it if it's easy-moderate. However, difficult grades require prior trekking experience and good physical stamina."
+    },
+    {
+      question: "Do I need to carry my own food?",
+      answer: "No, nutritious meals are provided during the trek as part of the inclusions. We ensure you are well-fed and energized."
+    },
+    {
       question: "Can I wear normal trekking shoes on the ice?",
       answer: "No, normal trekking shoes will slip on the ice and get wet if the ice breaks. Gumboots are the most effective footwear for the Chadar."
     },

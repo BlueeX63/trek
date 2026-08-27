@@ -9,7 +9,9 @@ interface AppContextType {
   user: User | null;
   logout: () => Promise<void>;
   wishlist: string[];
+  bookmarks: string[];
   toggleWishlist: (slug: string) => Promise<void>;
+  toggleBookmark: (slug: string) => Promise<void>;
   isLoading: boolean;
 }
 
@@ -18,6 +20,7 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [wishlist, setWishlist] = useState<string[]>([]);
+  const [bookmarks, setBookmarks] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
@@ -30,6 +33,16 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     if (!error && data) {
       setWishlist(data.map(item => item.slug));
     }
+
+    const { data: bData, error: bError } = await supabase
+      .from('article_bookmarks')
+      .select('slug')
+      .eq('user_id', userId);
+      
+    if (!bError && bData) {
+      setBookmarks(bData.map(item => item.slug));
+    }
+    
     setIsLoading(false);
   };
 
@@ -56,6 +69,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         fetchWishlist(session.user.id);
       } else {
         setWishlist([]);
+        setBookmarks([]);
         setIsLoading(false);
       }
     });
@@ -96,8 +110,35 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
+  const toggleBookmark = async (slug: string) => {
+    if (!user) {
+      router.push("/signin");
+      return;
+    }
+
+    const isBookmarked = bookmarks.includes(slug);
+    
+    // Optimistic UI update
+    setBookmarks((prev) => 
+      isBookmarked ? prev.filter(item => item !== slug) : [...prev, slug]
+    );
+
+    if (process.env.NEXT_PUBLIC_SUPABASE_URL === 'https://your-project-id.supabase.co') return;
+
+    if (isBookmarked) {
+      await supabase
+        .from('article_bookmarks')
+        .delete()
+        .match({ user_id: user.id, slug });
+    } else {
+      await supabase
+        .from('article_bookmarks')
+        .insert({ user_id: user.id, slug });
+    }
+  };
+
   return (
-    <AppContext.Provider value={{ user, logout, wishlist, toggleWishlist, isLoading }}>
+    <AppContext.Provider value={{ user, logout, wishlist, bookmarks, toggleWishlist, toggleBookmark, isLoading }}>
       {children}
     </AppContext.Provider>
   );

@@ -150,6 +150,22 @@ export const kedarkanthaDetails: DetailedTrek = {
   },
   faqs: [
     {
+      question: "What is the best time to do the Kedarkantha Trek?",
+      answer: "The best time to do the Kedarkantha Trek is typically during the Winter | Spring season. It offers the most stable weather and clearest views."
+    },
+    {
+      question: "How difficult is the Kedarkantha Trek?",
+      answer: "The Kedarkantha Trek is graded as Easy to Moderate. Prior fitness preparation is highly recommended to comfortably enjoy the trail."
+    },
+    {
+      question: "What is the maximum altitude reached?",
+      answer: "The maximum altitude reached during the Kedarkantha Trek is 12500 ft."
+    },
+    {
+      question: "Is this trek safe for beginners?",
+      answer: "For a Easy to Moderate trek, fit beginners can attempt it if it's easy-moderate. However, difficult grades require prior trekking experience and good physical stamina."
+    },
+    {
       question: "Is Kedarkantha a good trek for beginners?",
       answer: "Yes! It is one of the best treks for beginners. However, physical fitness is strictly required as the summit day involves a steep ascent."
     },

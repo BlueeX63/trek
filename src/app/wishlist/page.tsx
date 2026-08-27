@@ -1,7 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useAppContext } from "@/context/AppContext";
-import { treks } from "@/data/treks";
+import { supabase } from "@/lib/supabase";
 import TrekCard from "@/components/TrekCard";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -10,8 +11,60 @@ import { ArrowRight, Compass } from "lucide-react";
 export default function WishlistPage() {
   const { wishlist, user } = useAppContext();
 
-  // Find the actual trek objects based on the slugs
-  const wishlistedTreks = treks.filter(trek => wishlist.includes(trek.slug));
+  const [mounted, setMounted] = useState(false);
+  const [wishlistedTreks, setWishlistedTreks] = useState<any[]>([]);
+  const [loadingTreks, setLoadingTreks] = useState(true);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!user || wishlist.length === 0) {
+      setWishlistedTreks([]);
+      setLoadingTreks(false);
+      return;
+    }
+
+    const fetchWishlist = async () => {
+      setLoadingTreks(true);
+      const { data, error } = await supabase
+        .from('treks')
+        .select('*')
+        .in('slug', wishlist);
+
+      if (!error && data) {
+        // Map to expected local format
+        const mappedTreks = data.map(dbTrek => ({
+          id: dbTrek.id,
+          slug: dbTrek.slug,
+          name: dbTrek.name,
+          location: dbTrek.location,
+          country: dbTrek.country,
+          region: dbTrek.region,
+          altitude: dbTrek.altitude,
+          duration: { days: dbTrek.duration_days, nights: dbTrek.duration_nights },
+          difficulty: dbTrek.difficulty,
+          season: dbTrek.season || [],
+          price: dbTrek.price,
+          heroImage: dbTrek.hero_image,
+          categories: dbTrek.categories || []
+        }));
+        setWishlistedTreks(mappedTreks);
+      }
+      setLoadingTreks(false);
+    };
+
+    fetchWishlist();
+  }, [user, wishlist]);
+
+  if (!mounted || loadingTreks) {
+    return (
+      <div className="min-h-screen bg-[var(--color-paper)] pt-32 pb-24 flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-[var(--color-primary)] border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[var(--color-paper)] pt-32 pb-24 px-6 md:px-12 relative">

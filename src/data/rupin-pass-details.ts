@@ -186,6 +186,18 @@ export const rupinPassDetails: DetailedTrek = {
   },
   faqs: [
     {
+      question: "What is the best time to do the Rupin Pass Trek?",
+      answer: "The best time to do the Rupin Pass Trek is typically during the Summer | Autumn season. It offers the most stable weather and clearest views."
+    },
+    {
+      question: "How difficult is the Rupin Pass Trek?",
+      answer: "The Rupin Pass Trek is graded as Moderate to Difficult. Prior fitness preparation is highly recommended to comfortably enjoy the trail."
+    },
+    {
+      question: "What is the maximum altitude reached?",
+      answer: "The maximum altitude reached during the Rupin Pass Trek is 15350 ft."
+    },
+    {
       question: "What is the Best Time to do Rupin Pass Trek?",
       answer: "The best time is during the summer and autumn months, specifically in May, June, October, and November. The trails are at their best, easy to navigate, and the weather is favorable."
     },

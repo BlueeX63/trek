@@ -92,6 +92,18 @@ export const valleyOfFlowersDetails = {
   ],
   faqs: [
     {
+      question: "What is the best time to do the Valley of Flowers Trek?",
+      answer: "The best time to do the Valley of Flowers Trek is typically during the Monsoon season. It offers the most stable weather and clearest views."
+    },
+    {
+      question: "How difficult is the Valley of Flowers Trek?",
+      answer: "The Valley of Flowers Trek is graded as Easy to Moderate. Prior fitness preparation is highly recommended to comfortably enjoy the trail."
+    },
+    {
+      question: "What is the maximum altitude reached?",
+      answer: "The maximum altitude reached during the Valley of Flowers Trek is 14100 ft."
+    },
+    {
       question: "What is the best time to visit the Valley of Flowers?",
       answer: "The absolute best time to visit the Valley of Flowers is from July to September. During this peak window, the monsoon rains bring thousands of flowers to bloom."
     },
