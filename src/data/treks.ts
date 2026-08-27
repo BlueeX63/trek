@@ -36,7 +36,7 @@ export const treks: Trek[] = [
       'https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     ],
-    categories: ['Uttarakhand', 'Winter', 'Autumn', 'Spiritual', 'January', 'February', 'April', 'October', 'November', 'December']
+    categories: ['Uttarakhand', 'Winter', 'Autumn', 'January', 'February', 'April', 'October', 'November', 'December']
   },
   {
     id: 'ut-2',
@@ -55,7 +55,7 @@ export const treks: Trek[] = [
     gallery: [
       'https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     ],
-    categories: ['Uttarakhand', 'Summer', 'Autumn', 'Spiritual', 'April', 'May', 'June', 'September', 'October', 'November']
+    categories: ['Uttarakhand', 'Summer', 'Autumn', 'April', 'May', 'June', 'September', 'October', 'November']
   },
   {
     id: 'ut-3',
