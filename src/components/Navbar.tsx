@@ -2,13 +2,16 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Menu, X, Heart, User } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { Menu, X, Heart, User, LogOut } from "lucide-react";
+import { useAppContext } from "@/context/AppContext";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+  const { user, logout } = useAppContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,12 +73,33 @@ export default function Navbar() {
           </Link>
           
           <div className="flex items-center gap-6 border-l border-[var(--color-ink)]/10 pl-6 ml-2">
-            <button className={`hover:text-[var(--color-terracotta)] transition-colors ${textClass}`} title="Wishlist">
+            <button 
+              onClick={() => router.push(user ? '/wishlist' : '/signin')}
+              className={`hover:text-[var(--color-terracotta)] transition-colors ${textClass}`} 
+              title="Wishlist"
+            >
               <Heart className="w-[18px] h-[18px]" strokeWidth={1.5} />
             </button>
-            <button className={`hover:text-[var(--color-terracotta)] transition-colors ${textClass}`} title="Profile">
-              <User className="w-[18px] h-[18px]" strokeWidth={1.5} />
-            </button>
+            {user ? (
+              <button 
+                onClick={logout}
+                className={`hover:text-[var(--color-terracotta)] transition-colors ${textClass} flex items-center gap-2`} 
+                title="Logout"
+              >
+                <LogOut className="w-[18px] h-[18px]" strokeWidth={1.5} />
+                <span className="text-[10px] font-sans font-bold uppercase tracking-widest">
+                  {user.user_metadata?.full_name?.split(' ')[0] || user.email?.split('@')[0] || 'User'}
+                </span>
+              </button>
+            ) : (
+              <button 
+                onClick={() => router.push('/signin')}
+                className={`hover:text-[var(--color-terracotta)] transition-colors ${textClass}`} 
+                title="Profile"
+              >
+                <User className="w-[18px] h-[18px]" strokeWidth={1.5} />
+              </button>
+            )}
           </div>
         </div>
 
@@ -83,6 +107,7 @@ export default function Navbar() {
         <button 
           className={`md:hidden z-50 p-2 ${textClass}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>

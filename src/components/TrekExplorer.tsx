@@ -155,23 +155,46 @@ export default function TrekExplorer({ limit, showViewMore }: { limit?: number, 
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-y-12">
-        <AnimatePresence mode="popLayout">
-          {displayedTreks.map((trek, index) => (
-            <motion.div
-              key={trek.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <TrekCard trek={trek} index={index} />
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </div>
+      {displayedTreks.length > 0 ? (
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-y-12">
+          <AnimatePresence mode="popLayout">
+            {displayedTreks.map((trek, index) => (
+              <motion.div
+                key={trek.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <TrekCard trek={trek} index={index} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+      ) : (
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="max-w-7xl mx-auto py-24 flex flex-col items-center justify-center text-center border border-[var(--color-ink)]/10 bg-[var(--color-ink)]/5"
+        >
+          <Search className="w-12 h-12 text-[var(--color-ink)]/30 mb-6" strokeWidth={1} />
+          <h3 className="text-2xl font-serif text-[var(--color-ink)] mb-2">No expeditions found</h3>
+          <p className="text-sm font-sans text-[var(--color-ink)]/60 max-w-md">
+            We couldn't find any treks matching your current search or filters. Try adjusting your search query or clearing some filters.
+          </p>
+          <button 
+            onClick={() => {
+              setSearchQuery("");
+              setActiveFilter("All Treks");
+            }}
+            className="mt-8 text-[10px] font-sans font-bold uppercase tracking-widest text-[var(--color-terracotta)] hover:text-[var(--color-ink)] transition-colors border-b border-[var(--color-terracotta)]/30 pb-1"
+          >
+            Clear Search & Filters
+          </button>
+        </motion.div>
+      )}
 
-      {showViewMore && (
+      {showViewMore && displayedTreks.length > 0 && (
         <div className="max-w-7xl mx-auto mt-16 flex justify-center">
           <Link 
             href={`/expeditions${activeFilter !== "All Treks" ? `?filter=${encodeURIComponent(activeFilter)}` : ""}`} 

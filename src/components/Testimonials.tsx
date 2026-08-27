@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
@@ -48,12 +49,14 @@ export default function Testimonials() {
           <div className="flex gap-4 mt-auto pt-8 border-t border-[var(--color-ink)]/10">
             <button 
               onClick={prev}
+              aria-label="Previous testimonial"
               className="w-12 h-12 border border-[var(--color-ink)]/20 flex items-center justify-center hover:bg-[var(--color-ink)] hover:text-[var(--color-paper)] transition-colors"
             >
               <ChevronLeft className="w-5 h-5" strokeWidth={1} />
             </button>
             <button 
               onClick={next}
+              aria-label="Next testimonial"
               className="w-12 h-12 border border-[var(--color-ink)]/20 flex items-center justify-center hover:bg-[var(--color-ink)] hover:text-[var(--color-paper)] transition-colors"
             >
               <ChevronRight className="w-5 h-5" strokeWidth={1} />
@@ -82,8 +85,15 @@ export default function Testimonials() {
               
               <div className="flex items-center gap-6 mt-auto">
                 <div className="relative w-14 h-14 border border-[var(--color-ink)]/20 p-1">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={REVIEWS[currentIndex].avatar} alt={REVIEWS[currentIndex].name} className="w-full h-full object-cover grayscale" />
+                  <div className="relative w-full h-full">
+                    <Image 
+                      src={REVIEWS[currentIndex].avatar} 
+                      alt={`Avatar of ${REVIEWS[currentIndex].name}`} 
+                      fill
+                      sizes="50px"
+                      className="object-cover grayscale" 
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="font-serif text-xl text-[var(--color-ink)]">{REVIEWS[currentIndex].name}</span>

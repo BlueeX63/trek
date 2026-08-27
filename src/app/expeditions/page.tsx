@@ -1,4 +1,5 @@
 import TrekExplorer from "@/components/TrekExplorer";
+import Image from "next/image";
 
 export default function ExpeditionsPage() {
   return (
@@ -27,11 +28,12 @@ export default function ExpeditionsPage() {
             </div>
           </div>
           <div className="w-full md:w-5/12 aspect-[3/4] relative overflow-hidden">
-             {/* eslint-disable-next-line @next/next/no-img-element */}
-             <img 
+             <Image 
                src="https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=1500&auto=format&fit=crop"
                alt="Mountaineer looking at peaks"
-               className="w-full h-full object-cover grayscale-[20%]"
+               fill
+               sizes="(max-width: 768px) 100vw, 50vw"
+               className="object-cover grayscale-[20%]"
              />
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowDown } from "lucide-react";
+import Image from "next/image";
 
 interface TrekHeroProps {
   title: string;
@@ -14,10 +15,13 @@ export default function TrekHero({ title, image, subtitle }: TrekHeroProps) {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0">
-          <img
+          <Image
             src={image}
-            alt={title}
-            className="w-full h-full object-cover grayscale-[30%] opacity-70 scale-105"
+            alt={`Hero image for ${title}`}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover grayscale-[30%] opacity-70 scale-105"
           />
         </div>
         {/* Gradient overlay for better text readability */}
@@ -42,7 +46,7 @@ export default function TrekHero({ title, image, subtitle }: TrekHeroProps) {
 
       {/* Scroll Down indicator */}
       <div className="absolute bottom-8 left-6 md:left-12 z-20 flex items-center gap-4 text-[var(--color-paper)]/70">
-        <div className="w-10 h-10 border border-[var(--color-paper)]/30 rounded-full flex items-center justify-center">
+        <div aria-hidden="true" className="w-10 h-10 border border-[var(--color-paper)]/30 rounded-full flex items-center justify-center">
           <ArrowDown className="w-4 h-4" />
         </div>
         <span className="text-[10px] font-sans tracking-[0.2em] uppercase font-medium">Scroll to explore</span>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Compass, Users, Tent, Sparkles } from "lucide-react";
 
 const CATEGORIES = [
@@ -45,8 +46,13 @@ export default function ExpeditionCategories() {
                 }`}
               >
                 <div className="absolute inset-0">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={category.image} alt={category.title} className="w-full h-full object-cover grayscale-[30%] opacity-80 group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-1000 ease-out" />
+                  <Image 
+                    src={category.image} 
+                    alt={category.title} 
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover grayscale-[30%] opacity-80 group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-1000 ease-out" 
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)] via-[var(--color-ink)]/40 to-transparent" />
                 </div>
 

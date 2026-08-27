@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Metadata, ResolvingMetadata } from "next";
 import { valleyOfFlowersDetails } from "@/data/valley-of-flowers-details";
 import { rupinPassDetails } from "@/data/rupin-pass-details";
 import { kedarkanthaDetails } from "@/data/kedarkantha-details";
@@ -70,6 +71,36 @@ import TrekCostTerms from "@/components/trek-details/TrekCostTerms";
 import TrekEssentials from "@/components/trek-details/TrekEssentials";
 import TrekCancellation from "@/components/trek-details/TrekCancellation";
 import TrekFAQ from "@/components/trek-details/TrekFAQ";
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { slug } = await params;
+  const basicTrek = treks.find(t => t.slug === slug);
+  
+  if (!basicTrek) {
+    return { title: 'Trek Not Found' };
+  }
+
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: `${basicTrek.name} Trek`,
+    description: `Join the ${basicTrek.name} expedition in ${basicTrek.region}. A ${basicTrek.duration.days}-day trek reaching ${basicTrek.altitude} ft.`,
+    openGraph: {
+      title: `${basicTrek.name} | Xplore The Dreams`,
+      description: `Experience the ${basicTrek.name} trek in ${basicTrek.region}.`,
+      images: [basicTrek.heroImage, ...previousImages],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${basicTrek.name} | Xplore The Dreams`,
+      description: `Experience the ${basicTrek.name} trek in ${basicTrek.region}.`,
+      images: [basicTrek.heroImage],
+    },
+  };
+}
 
 export default async function TrekDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

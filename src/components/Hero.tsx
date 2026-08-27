@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
@@ -9,11 +10,13 @@ export default function Hero() {
       
       {/* Massive Cinematic Image */}
       <div className="absolute inset-0 z-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2500&auto=format&fit=crop"
-          alt="Mountain Peaks"
-          className="w-full h-full object-cover grayscale-[30%] opacity-80"
+          alt="Majestic Mountain Peaks"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover grayscale-[30%] opacity-80"
         />
         {/* Subtle vignette / gradient for text readability at bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)] via-transparent to-transparent opacity-90 z-10" />
@@ -45,8 +48,9 @@ export default function Hero() {
           <Link 
             href="#featured"
             className="group flex items-center gap-4 text-[var(--color-paper)] text-xs uppercase tracking-widest font-semibold"
+            aria-label="Scroll down to Featured Expeditions"
           >
-            <span className="w-12 h-12 border border-[var(--color-paper)]/30 rounded-full flex items-center justify-center group-hover:bg-[var(--color-paper)] group-hover:text-[var(--color-ink)] transition-all duration-500">
+            <span aria-hidden="true" className="w-12 h-12 border border-[var(--color-paper)]/30 rounded-full flex items-center justify-center group-hover:bg-[var(--color-paper)] group-hover:text-[var(--color-ink)] transition-all duration-500">
               <ArrowDown className="w-4 h-4" />
             </span>
             Begin Journey

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { treks } from "@/data/treks";
 
@@ -48,7 +49,7 @@ export default function FeaturedExpedition() {
               className="group inline-flex items-center gap-4 text-[var(--color-ink)] text-sm uppercase tracking-widest font-medium w-fit"
             >
               Explore Itinerary
-              <span className="w-10 h-10 border border-[var(--color-ink)]/20 rounded-full flex items-center justify-center group-hover:bg-[var(--color-ink)] group-hover:text-[var(--color-paper)] transition-all duration-300">
+              <span aria-hidden="true" className="w-10 h-10 border border-[var(--color-ink)]/20 rounded-full flex items-center justify-center group-hover:bg-[var(--color-ink)] group-hover:text-[var(--color-paper)] transition-all duration-300">
                 <ArrowRight className="w-4 h-4" />
               </span>
             </Link>
@@ -56,11 +57,12 @@ export default function FeaturedExpedition() {
 
           {/* Right Image Side - Raw standard img */}
           <div className="w-full md:w-7/12 relative aspect-[4/5] md:aspect-auto md:h-auto min-h-[600px] -ml-0 md:-ml-12 overflow-hidden bg-[var(--color-stone)]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={featuredTrek.heroImage}
-              alt={featuredTrek.name}
-              className="absolute inset-0 w-full h-full object-cover grayscale-[20%] contrast-125 hover:grayscale-0 hover:scale-105 transition-all duration-1000 ease-out"
+              alt={`Featured Expedition: ${featuredTrek.name}`}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover grayscale-[20%] contrast-125 hover:grayscale-0 hover:scale-105 transition-all duration-1000 ease-out"
             />
           </div>
 

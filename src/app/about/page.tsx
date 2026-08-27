@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[var(--color-paper)] pt-32 pb-24">
@@ -28,11 +30,12 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="w-full md:w-5/12 aspect-[3/4] relative overflow-hidden">
-             {/* eslint-disable-next-line @next/next/no-img-element */}
-             <img 
+             <Image 
                src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=1500&auto=format&fit=crop"
                alt="Mountaineer"
-               className="w-full h-full object-cover grayscale-[20%]"
+               fill
+               sizes="(max-width: 768px) 100vw, 50vw"
+               className="object-cover grayscale-[20%]"
              />
           </div>
         </div>
