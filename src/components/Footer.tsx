@@ -29,6 +29,12 @@ const YoutubeIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const FacebookIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+  </svg>
+);
+
 export default function Footer() {
   const pathname = usePathname();
 
@@ -58,6 +64,9 @@ export default function Footer() {
               We craft premium high-altitude expeditions for those seeking extraordinary landscapes without compromising on safety or comfort.
             </p>
             <div className="flex gap-4">
+              <a href="https://www.facebook.com/share/1H9J64uyDG/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
+                <FacebookIcon className="w-4 h-4" />
+              </a>
               <a href="https://www.instagram.com/xplorethedreams" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
                 <InstagramIcon className="w-4 h-4" />
               </a>

@@ -1,6 +1,7 @@
 import { supabase } from "@/lib/supabase";
 import CategoryTrekGrid from "@/components/CategoryTrekGrid";
 import { Sparkles, Users, Tent, Compass } from "lucide-react";
+import Image from "next/image";
 
 // In a real app, this would be fetched from a CMS
 const CATEGORY_DATA: Record<string, any> = {
@@ -89,11 +90,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       {/* Category Hero */}
       <section className="relative h-[60vh] min-h-[500px] w-full bg-[var(--color-ink)] overflow-hidden flex flex-col justify-end">
         <div className="absolute inset-0 z-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={categoryInfo.image}
             alt={categoryInfo.title}
-            className="w-full h-full object-cover grayscale-[30%] opacity-80"
+            fill
+            priority
+            className="object-cover grayscale-[30%] opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)] via-[var(--color-ink)]/60 to-transparent opacity-90 z-10" />
         </div>

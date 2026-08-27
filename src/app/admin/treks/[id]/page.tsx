@@ -73,11 +73,11 @@ export default function TrekForm({ params }: { params: Promise<{ id: string }> }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const value = e.target.type === 'number' ? Number(e.target.value) : e.target.value;
-    setFormData(prev => ({ ...prev, [e.target.name]: value }));
+    setFormData((prev: any) => ({ ...prev, [e.target.name]: value }));
   };
 
   const handleSlugify = () => {
-    setFormData(prev => ({
+    setFormData((prev: any) => ({
       ...prev,
       slug: prev.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '')
     }));
@@ -190,7 +190,7 @@ export default function TrekForm({ params }: { params: Promise<{ id: string }> }
         .from('treks')
         .getPublicUrl(filePath);
 
-      setFormData(prev => ({ ...prev, hero_image: publicUrl }));
+      setFormData((prev: any) => ({ ...prev, hero_image: publicUrl }));
     } catch (err: any) {
       setError(err.message || "Error uploading image");
     } finally {

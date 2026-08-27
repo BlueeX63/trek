@@ -3,7 +3,8 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
+const Footer = dynamic(() => import("@/components/Footer"));
 import { AppProvider } from "@/context/AppContext";
 
 const playfair = Playfair_Display({

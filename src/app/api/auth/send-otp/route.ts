@@ -1,13 +1,38 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import { supabaseAdmin } from '@/lib/supabaseAdmin';
+import crypto from 'crypto';
+
+// Basic in-memory rate limiter to prevent email bombing
+const rateLimitMap = new Map<string, { count: number; timestamp: number }>();
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+const MAX_REQUESTS_PER_WINDOW = 3;
 
 export async function POST(req: Request) {
   try {
     const { email } = await req.json();
 
-    if (!email) {
+    if (!email || typeof email !== 'string') {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
+    }
+
+    // Rate Limiting (A04: Insecure Design)
+    const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown';
+    const rateLimitKey = `${ip}-${email}`;
+    const now = Date.now();
+    const limitData = rateLimitMap.get(rateLimitKey);
+
+    if (limitData && now - limitData.timestamp < RATE_LIMIT_WINDOW_MS) {
+      if (limitData.count >= MAX_REQUESTS_PER_WINDOW) {
+        return NextResponse.json({ error: 'Too many requests. Please try again later.' }, { status: 429 });
+      }
+      limitData.count++;
+    } else {
+      rateLimitMap.set(rateLimitKey, { count: 1, timestamp: now });
     }
 
     // 0. Check if user already exists
@@ -22,8 +47,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'User already exists. Please sign in.' }, { status: 400 });
     }
 
-    // 1. Generate 6 digit OTP
-    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    // 1. Generate secure 6 digit OTP (A02: Cryptographic Failures)
+    const otp = crypto.randomInt(100000, 1000000).toString();
     const expiresAt = new Date();
     expiresAt.setMinutes(expiresAt.getMinutes() + 10); // Expires in 10 mins
 
