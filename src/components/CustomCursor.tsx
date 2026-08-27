@@ -57,7 +57,7 @@ export default function CustomCursor() {
     <>
       <motion.div
         className="fixed top-0 left-0 rounded-full pointer-events-none z-[9999] hidden md:flex items-center justify-center"
-        variants={variants}
+        variants={variants as any}
         animate={cursorVariant}
       >
         {cursorVariant === "explore" && (

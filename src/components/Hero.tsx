@@ -1,90 +1,58 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-
-const BACKGROUND_IMAGES = [
-  "https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2500&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2500&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2500&auto=format&fit=crop"
-];
+import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % BACKGROUND_IMAGES.length);
-    }, 5000); 
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className="relative h-screen w-full bg-[#1B4332] overflow-hidden flex flex-col justify-center pt-20">
+    <section className="relative h-screen min-h-[700px] w-full bg-[var(--color-ink)] overflow-hidden flex flex-col justify-end">
       
-      {/* Sliding Background Images */}
+      {/* Massive Cinematic Image */}
       <div className="absolute inset-0 z-0">
-        <AnimatePresence initial={false}>
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-            className="absolute inset-0"
-          >
-            <img
-              src={BACKGROUND_IMAGES[currentIndex]}
-              alt="Mountain Peaks"
-              className="w-full h-full object-cover opacity-60"
-            />
-          </motion.div>
-        </AnimatePresence>
-        {/* Soft luxury overlay */}
-        <div className="absolute inset-0 bg-[#1B4332]/40 z-10" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2500&auto=format&fit=crop"
+          alt="Mountain Peaks"
+          className="w-full h-full object-cover grayscale-[30%] opacity-80"
+        />
+        {/* Subtle vignette / gradient for text readability at bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)] via-transparent to-transparent opacity-90 z-10" />
       </div>
 
-      <div className="relative z-20 w-full max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col items-center text-center">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="max-w-4xl flex flex-col items-center"
-        >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[#F4A261]/20 border border-[#F4A261]/30 text-[#F4A261] text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-sm">
-            Premium Expeditions
-          </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-medium text-white leading-[1.1] tracking-tight mb-8">
-            Experience Absolute <br/>
-            <span className="italic font-light text-[#FDFBF7]/90">Natural Majesty.</span>
+      <div className="relative z-20 w-full px-6 md:px-12 pb-16 md:pb-24 flex flex-col md:flex-row justify-between items-end">
+        
+        {/* Large Typography overlapping the image */}
+        <div className="max-w-5xl">
+          <div className="flex items-center gap-4 mb-8">
+             <div className="w-12 h-[1px] bg-[var(--color-paper)]/50"></div>
+             <span className="text-[10px] font-sans font-semibold tracking-[0.3em] uppercase text-[var(--color-paper)]">
+               The Himalayan Standard
+             </span>
+          </div>
+          
+          <h1 className="text-7xl md:text-[9rem] lg:text-[11rem] font-serif text-[var(--color-paper)] leading-[0.8] tracking-tighter mix-blend-overlay">
+            Natural<br />
+            <span className="italic font-light">Majesty.</span>
           </h1>
-          <p className="text-lg md:text-xl text-[#FDFBF7]/80 max-w-2xl font-light leading-relaxed mb-10">
-            Xplore the Dreams crafts premium high-altitude expeditions for those seeking extraordinary landscapes without compromising on safety or comfort.
+        </div>
+        
+        {/* Minimalist CTA & details */}
+        <div className="flex flex-col items-start md:items-end mt-12 md:mt-0 text-left md:text-right">
+          <p className="text-[var(--color-paper)]/70 max-w-xs font-sans text-sm font-light leading-relaxed mb-8">
+            Curated high-altitude expeditions for those seeking raw wilderness without compromising the aesthetic.
           </p>
           
           <Link 
-            href="/expeditions"
-            className="group flex items-center gap-4 bg-[#F4A261] text-white px-8 py-4 rounded-full font-medium hover:bg-[#E39050] transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"
+            href="#featured"
+            className="group flex items-center gap-4 text-[var(--color-paper)] text-xs uppercase tracking-widest font-semibold"
           >
-            Find Your Expedition
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <span className="w-12 h-12 border border-[var(--color-paper)]/30 rounded-full flex items-center justify-center group-hover:bg-[var(--color-paper)] group-hover:text-[var(--color-ink)] transition-all duration-500">
+              <ArrowDown className="w-4 h-4" />
+            </span>
+            Begin Journey
           </Link>
-        </motion.div>
-      </div>
-      
-      {/* Slide Indicators */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex gap-4">
-        {BACKGROUND_IMAGES.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrentIndex(idx)}
-            className={`h-1.5 rounded-full transition-all duration-500 ${
-              idx === currentIndex ? "w-12 bg-[#F4A261]" : "w-4 bg-white/40 hover:bg-white/70"
-            }`}
-          />
-        ))}
+        </div>
+        
       </div>
     </section>
   );

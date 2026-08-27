@@ -15,7 +15,7 @@ export default function Home() {
       <Intro />
       <ExpeditionStats />
       <ExpeditionCategories />
-      <TrekExplorer />
+      <TrekExplorer limit={8} showViewMore={true} />
       <FeaturedExpedition />
       <ProcessTimeline />
       <Testimonials />

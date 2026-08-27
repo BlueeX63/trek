@@ -1,62 +1,79 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
-import { Clock, Mountain, ArrowRight } from "lucide-react";
+import { ArrowRight, Heart } from "lucide-react";
 import { Trek } from "@/data/treks";
+import { useState } from "react";
 
 export default function TrekCard({ trek, index }: { trek: Trek; index: number }) {
+  const [isWishlisted, setIsWishlisted] = useState(false);
+
   return (
-    <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col h-[450px] border border-[#1B4332]/5 relative">
-      {/* Image Container with Mountain Peak Clip Path */}
-      <div className="relative h-56 w-full overflow-hidden clip-mountain z-10">
-        <Image
+    <Link href={`/treks/${trek.slug}`} className="group flex flex-col h-full border border-[var(--color-ink)]/20 hover:border-[var(--color-ink)] transition-colors duration-500 bg-[var(--color-paper)] p-4 pb-6">
+      
+      {/* Raw Image Container */}
+      <div className="relative aspect-[4/5] w-full overflow-hidden bg-[var(--color-stone)] mb-6">
+        
+        {/* Wishlist Button */}
+        <button 
+          onClick={(e) => {
+            e.preventDefault();
+            setIsWishlisted(!isWishlisted);
+          }}
+          className="absolute top-4 right-4 z-10 w-[30px] h-[30px] flex items-center justify-center bg-[var(--color-paper)]/90 backdrop-blur-sm border border-[var(--color-ink)]/10 hover:bg-[var(--color-paper)] transition-all duration-300"
+        >
+          <Heart 
+            className={`w-[14px] h-[14px] transition-colors duration-300 ${isWishlisted ? 'fill-[var(--color-terracotta)] text-[var(--color-terracotta)]' : 'text-[var(--color-ink)]'}`} 
+            strokeWidth={1.5}
+          />
+        </button>
+
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={trek.heroImage}
           alt={trek.name}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-cover grayscale-[20%] transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1B4332]/80 to-transparent" />
         
         {/* Difficulty Badge */}
-        <div className="absolute top-4 left-4 bg-[#F4A261] text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+        <div className="absolute top-4 left-4 bg-[var(--color-paper)] text-[var(--color-ink)] px-2 py-1 text-[10px] font-sans font-bold uppercase tracking-widest border border-[var(--color-ink)]/10">
           {trek.difficulty}
         </div>
       </div>
 
       {/* Content */}
-      <div className="p-6 flex flex-col flex-1 relative z-20 -mt-6 bg-white rounded-t-3xl pt-8">
-        <div className="flex justify-between items-start mb-2">
-          <div>
-            <span className="text-[#F4A261] text-xs font-bold uppercase tracking-widest">{trek.region}</span>
-            <h3 className="text-2xl font-display font-bold text-[#1B4332] mt-1 line-clamp-1">{trek.name}</h3>
+      <div className="flex flex-col flex-1">
+        <div className="flex justify-between items-start mb-4">
+          <div className="flex flex-col">
+            <span className="text-[var(--color-terracotta)] text-[10px] font-sans font-bold uppercase tracking-widest mb-2 border-b border-[var(--color-terracotta)]/30 pb-1 w-fit">{trek.region}</span>
+            <h3 className="text-3xl font-serif text-[var(--color-ink)] line-clamp-2 leading-tight">{trek.name}</h3>
           </div>
         </div>
 
-        {/* Specs */}
-        <div className="flex gap-4 mt-6">
-          <div className="flex items-center gap-2 text-sm text-[#0A1910]/70 font-medium">
-            <Clock className="w-4 h-4 text-[#F4A261]" />
-            <span>{trek.duration.days}D</span>
+        {/* Specs Table */}
+        <div className="grid grid-cols-2 gap-y-2 mt-4 text-[10px] font-sans tracking-widest uppercase text-[var(--color-ink)]/50">
+          <div className="border-b border-[var(--color-ink)]/10 pb-1 flex justify-between">
+            <span>Duration</span>
+            <span className="text-[var(--color-ink)] font-bold">{trek.duration.days}D</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-[#0A1910]/70 font-medium">
-            <Mountain className="w-4 h-4 text-[#F4A261]" />
-            <span>{trek.altitude.toLocaleString()}'</span>
+          <div className="border-b border-[var(--color-ink)]/10 pb-1 flex justify-between ml-2">
+            <span>Altitude</span>
+            <span className="text-[var(--color-ink)] font-bold">{trek.altitude}'</span>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="mt-auto pt-6 flex items-center justify-between border-t border-[#1B4332]/5">
+        <div className="mt-auto pt-6 flex items-end justify-between">
           <div className="flex flex-col">
-            <span className="text-xs text-[#0A1910]/50 font-medium">Starting from</span>
-            <span className="font-bold text-lg text-[#1B4332]">₹{trek.price.toLocaleString()}</span>
+            <span className="text-[10px] text-[var(--color-ink)]/40 font-sans tracking-widest uppercase mb-1">From</span>
+            <span className="font-serif text-xl text-[var(--color-ink)]">₹{trek.price.toLocaleString()}</span>
           </div>
-          <Link 
-            href={`/treks/${trek.slug}`}
-            className="w-10 h-10 rounded-full bg-[#1B4332]/5 flex items-center justify-center text-[#1B4332] group-hover:bg-[#F4A261] group-hover:text-white transition-colors"
-          >
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          
+          <div className="w-8 h-8 rounded-full border border-[var(--color-ink)] flex items-center justify-center text-[var(--color-ink)] group-hover:bg-[var(--color-ink)] group-hover:text-[var(--color-paper)] transition-all duration-300">
+            <ArrowRight className="w-3 h-3" />
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
