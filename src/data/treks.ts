@@ -1022,9 +1022,9 @@ export const treks: Trek[] = [
     difficulty: 'Moderate',
     season: ['Summer', 'Autumn'],
     price: 22000,
-    heroImage: 'https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500',
+    heroImage: 'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000',
     gallery: [
-      'https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500'
+      'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000'
     ],
     categories: ['Uttarakhand', 'Spiritual', 'Summer', 'Autumn', 'May', 'June', 'September', 'October', 'November']
   },
@@ -1041,9 +1041,9 @@ export const treks: Trek[] = [
     difficulty: 'Moderate',
     season: ['Summer', 'Autumn'],
     price: 35000,
-    heroImage: 'https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500',
+    heroImage: 'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000',
     gallery: [
-      'https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500'
+      'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000'
     ],
     categories: ['Uttarakhand', 'Spiritual', 'Summer', 'Autumn', 'May', 'June', 'September', 'October', 'November']
   },
@@ -1060,9 +1060,9 @@ export const treks: Trek[] = [
     difficulty: 'Moderate to Difficult',
     season: ['Summer', 'Autumn'],
     price: 12000,
-    heroImage: 'https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500',
+    heroImage: 'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000',
     gallery: [
-      'https://images.unsplash.com/photo-1626714486981-9b0c95021db9?q=80&w=2500'
+      'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000'
     ],
     categories: ['Uttarakhand', 'Spiritual', 'Summer', 'Autumn', 'May', 'June', 'September', 'October', 'November']
   },
@@ -1079,9 +1079,9 @@ export const treks: Trek[] = [
     difficulty: 'Difficult',
     season: ['Winter'],
     price: 25000,
-    heroImage: 'https://images.unsplash.com/photo-1544198365-f5d60b6d819c?q=80&w=2500',
+    heroImage: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2000',
     gallery: [
-      'https://images.unsplash.com/photo-1544198365-f5d60b6d819c?q=80&w=2500'
+      'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2000'
     ],
     categories: ['Ladakh', 'Winter', 'January', 'February']
   },
@@ -1098,9 +1098,9 @@ export const treks: Trek[] = [
     difficulty: 'Moderate to Difficult',
     season: ['Summer'],
     price: 28000,
-    heroImage: 'https://images.unsplash.com/photo-1598583492589-9a1d13fbeba2?q=80&w=2500',
+    heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000',
     gallery: [
-      'https://images.unsplash.com/photo-1598583492589-9a1d13fbeba2?q=80&w=2500'
+      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000'
     ],
     categories: ['Ladakh', 'Summer', 'June', 'July', 'August', 'September']
   }
