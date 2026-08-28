@@ -14,6 +14,7 @@ const LOCATIONS = [
     tagline: "God's Own Country",
     description: "Serene backwaters, lush tea gardens, and pristine beaches. Experience the perfect blend of nature and culture in an unhurried paradise.",
     image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=2000",
+    attractions: ["Munnar Tea Gardens", "Alleppey Backwaters", "Wayanad Forests", "Fort Kochi"]
   },
   {
     id: "goa",
@@ -21,6 +22,7 @@ const LOCATIONS = [
     tagline: "Sun, Sand & Sea",
     description: "Explore vibrant beaches, historic Portuguese architecture, and lively culture in India's favorite coastal paradise.",
     image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=2000",
+    attractions: ["Baga Beach", "Dudhsagar Falls", "Basilica of Bom Jesus", "Anjuna Flea Market"]
   },
   {
     id: "kashmir",
@@ -28,6 +30,7 @@ const LOCATIONS = [
     tagline: "Paradise on Earth",
     description: "Majestic snow-capped peaks, serene Dal Lake, and breathtaking valleys that look straight out of a painting.",
     image: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=2000",
+    attractions: ["Dal Lake", "Gulmarg Gondola", "Pahalgam Valley", "Sonamarg Glaciers"]
   },
   {
     id: "rishikesh",
@@ -35,6 +38,7 @@ const LOCATIONS = [
     tagline: "Yoga Capital of the World",
     description: "The perfect mix of spiritual retreats by the holy Ganges and thrilling adventure sports like white-water rafting.",
     image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?q=80&w=2000",
+    attractions: ["Triveni Ghat", "Laxman Jhula", "Neelkanth Mahadev", "River Rafting"]
   },
   {
     id: "mussoorie",
@@ -42,6 +46,7 @@ const LOCATIONS = [
     tagline: "Queen of the Hills",
     description: "Colonial charm, stunning waterfalls, and panoramic Himalayan views make this a classic hill station getaway.",
     image: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=2000",
+    attractions: ["Kempty Falls", "Mall Road", "Lal Tibba", "Gun Hill Point"]
   },
   {
     id: "kanatal",
@@ -49,6 +54,7 @@ const LOCATIONS = [
     tagline: "Offbeat Serenity",
     description: "Escape the crowds. Quiet trails, dense pine forests, and raw, untouched mountain vistas await you.",
     image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000",
+    attractions: ["Surkanda Devi Temple", "Tehri Dam", "Kaudia Forest", "Eco Park"]
   }
 ];
 
@@ -106,13 +112,14 @@ export default function CustomizeTripPage() {
                 </div>
 
                 {/* Image Section */}
-                <div className="w-full lg:w-[60%] relative z-10 group">
-                  <div className="relative w-full aspect-[4/5] lg:aspect-[3/4] overflow-hidden bg-[var(--color-stone)]">
+                <div className="w-full sm:w-[80%] md:w-[70%] lg:w-[45%] relative z-10 group mx-auto lg:mx-0">
+                  <div className="relative w-full aspect-[4/5] overflow-hidden bg-[var(--color-stone)]">
                     <Image 
                       src={loc.image}
                       alt={loc.name}
                       fill
-                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      unoptimized
+                      sizes="(max-width: 1024px) 100vw, 45vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-1000 ease-[0.22,1,0.36,1]"
                     />
                     {/* Subtle grain/overlay */}
@@ -121,7 +128,7 @@ export default function CustomizeTripPage() {
                 </div>
 
                 {/* Content Section */}
-                <div className="w-full lg:w-[40%] flex flex-col justify-center relative z-10">
+                <div className="w-full sm:w-[80%] md:w-[70%] lg:w-[45%] flex flex-col justify-center relative z-10 mx-auto lg:mx-0">
                   <div className="flex items-center gap-4 mb-8">
                     <div className="w-8 h-px bg-[var(--color-ink)]/30"></div>
                     <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[var(--color-ink)]/50">
@@ -133,9 +140,18 @@ export default function CustomizeTripPage() {
                     {loc.name}
                   </h2>
                   
-                  <p className="text-base md:text-lg text-[var(--color-ink)]/60 font-light leading-relaxed mb-12 max-w-md">
+                  <p className="text-base md:text-lg text-[var(--color-ink)]/60 font-light leading-relaxed mb-8 max-w-md">
                     {loc.description}
                   </p>
+
+                  {/* Main Attractions */}
+                  <div className="flex flex-wrap gap-2 mb-12 max-w-md">
+                    {loc.attractions.map((attraction, i) => (
+                      <span key={i} className="text-xs font-semibold px-4 py-2 border border-[var(--color-ink)]/10 rounded-full text-[var(--color-ink)]/70 bg-[var(--color-ink)]/5">
+                        {attraction}
+                      </span>
+                    ))}
+                  </div>
                   
                   {/* Elegant WhatsApp Link */}
                   <a 

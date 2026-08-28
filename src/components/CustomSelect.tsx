@@ -9,9 +9,10 @@ interface CustomSelectProps {
   options: string[];
   placeholder: string;
   icon?: React.ReactNode;
+  className?: string;
 }
 
-export default function CustomSelect({ value, onChange, options, placeholder, icon }: CustomSelectProps) {
+export default function CustomSelect({ value, onChange, options, placeholder, icon, className = "" }: CustomSelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -31,10 +32,10 @@ export default function CustomSelect({ value, onChange, options, placeholder, ic
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full bg-transparent border border-[var(--color-ink)]/20 px-4 py-2 pl-10 pr-10 text-sm font-sans focus:outline-none focus:border-[var(--color-primary)] transition-colors text-[var(--color-ink)] flex items-center justify-between text-left hover:border-[var(--color-ink)]/40"
+        className={`w-full bg-transparent border border-[var(--color-ink)]/20 py-2 pr-10 text-sm font-sans focus:outline-none focus:border-[var(--color-primary)] transition-colors text-[var(--color-ink)] flex items-center justify-between text-left hover:border-[var(--color-ink)]/40 ${icon ? 'pl-10' : 'pl-4'} ${className}`}
       >
         {icon && <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-ink)]/40 pointer-events-none">{icon}</div>}
-        <span className="truncate">{value === "All" ? placeholder : value}</span>
+        <span className="truncate">{value === "All" || !value ? placeholder : value}</span>
         <ChevronDown className={`absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-ink)]/40 transition-transform duration-300 pointer-events-none ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 

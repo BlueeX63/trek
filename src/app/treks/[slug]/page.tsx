@@ -262,6 +262,7 @@ export default async function TrekDetailsPage({ params }: { params: Promise<{ sl
       <TrekStickyNav />
 
       <TrekOverview 
+        trekName={trekData.name}
         description={trekData.overview.description}
         highlights={trekData.overview.highlights}
         stats={stats}

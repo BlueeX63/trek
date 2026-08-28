@@ -6,6 +6,7 @@ import { supabase } from "@/lib/supabase";
 import { ArrowLeft, Save, Loader2, Code, Plus, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { use } from "react";
+import CustomSelect from "@/components/CustomSelect";
 
 export default function TrekForm({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
@@ -264,14 +265,13 @@ export default function TrekForm({ params }: { params: Promise<{ id: string }> }
 
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-widest text-[var(--color-ink)]/50">Region</label>
-                <select name="region" value={formData.region} onChange={handleChange} className="w-full p-3 border border-[var(--color-ink)]/10 rounded outline-none bg-white">
-                  <option value="">Select Region</option>
-                  <option value="Uttarakhand">Uttarakhand</option>
-                  <option value="Himachal Pradesh">Himachal Pradesh</option>
-                  <option value="Kashmir">Kashmir</option>
-                  <option value="Ladakh">Ladakh</option>
-                  <option value="Nepal">Nepal</option>
-                </select>
+                <CustomSelect
+                  value={formData.region || ""}
+                  onChange={(val) => setFormData({ ...formData, region: val === "All" ? "" : val })}
+                  options={["Uttarakhand", "Himachal Pradesh", "Kashmir", "Ladakh"]}
+                  placeholder="Select Region"
+                  className="bg-white p-3 border border-[var(--color-ink)]/10 rounded"
+                />
               </div>
 
               <div className="space-y-2">
@@ -281,13 +281,13 @@ export default function TrekForm({ params }: { params: Promise<{ id: string }> }
 
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-widest text-[var(--color-ink)]/50">Difficulty</label>
-                <select name="difficulty" value={formData.difficulty} onChange={handleChange} className="w-full p-3 border border-[var(--color-ink)]/10 rounded outline-none bg-white">
-                  <option value="Easy">Easy</option>
-                  <option value="Easy to Moderate">Easy to Moderate</option>
-                  <option value="Moderate">Moderate</option>
-                  <option value="Moderate to Difficult">Moderate to Difficult</option>
-                  <option value="Difficult">Difficult</option>
-                </select>
+                <CustomSelect
+                  value={formData.difficulty || "Moderate"}
+                  onChange={(val) => setFormData({ ...formData, difficulty: val === "All" ? "Moderate" : val })}
+                  options={["Easy", "Easy to Moderate", "Moderate", "Moderate to Difficult", "Difficult", "Pro"]}
+                  placeholder="Select Difficulty"
+                  className="bg-white p-3 border border-[var(--color-ink)]/10 rounded"
+                />
               </div>
 
               <div className="space-y-2">

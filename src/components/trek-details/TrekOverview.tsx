@@ -14,9 +14,14 @@ interface TrekOverviewProps {
     label: string;
     value: string;
   }[];
+  trekName?: string;
 }
 
-export default function TrekOverview({ description, highlights, stats }: TrekOverviewProps) {
+export default function TrekOverview({ description, highlights, stats, trekName }: TrekOverviewProps) {
+  const isTour = trekName?.toLowerCase().includes("tour");
+  const isExpedition = trekName?.toLowerCase().includes("expedition");
+  const entityType = isTour ? "Tour" : isExpedition ? "Expedition" : "Trek";
+
   return (
     <section id="overview" className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-16 scroll-mt-24 bg-[var(--color-paper)]">
       <div className="flex flex-col lg:flex-row gap-16 border-t border-[var(--color-ink)]/10 pt-16">
@@ -29,7 +34,7 @@ export default function TrekOverview({ description, highlights, stats }: TrekOve
             </div>
             
             <h2 className="text-4xl md:text-6xl font-serif text-[var(--color-ink)] mb-8 leading-tight">
-              A Look at the Trek
+              A Look at the {entityType}
             </h2>
             
             <div className="prose prose-lg text-[var(--color-ink)]/70 font-sans font-light leading-relaxed mb-16 max-w-none">

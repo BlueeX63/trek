@@ -6,6 +6,7 @@ import { supabase } from "@/lib/supabase";
 import { ArrowLeft, Save, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { use } from "react";
+import CustomSelect from "@/components/CustomSelect";
 
 export default function ArticleForm({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
@@ -154,7 +155,13 @@ export default function ArticleForm({ params }: { params: Promise<{ id: string }
 
           <div className="space-y-2">
             <label className="text-xs font-bold uppercase tracking-widest text-[var(--color-ink)]/50">Category</label>
-            <input required type="text" name="category" value={formData.category} onChange={handleChange} className="w-full p-3 border border-[var(--color-ink)]/10 rounded outline-none" placeholder="E.g., Expedition Logs" />
+            <CustomSelect
+              value={formData.category || ""}
+              onChange={(val) => setFormData({ ...formData, category: val === "All" ? "" : val })}
+              options={["Culture & History", "Expedition Logs", "Gear & Prep", "Opinion", "Guides", "Interviews"]}
+              placeholder="Select Category"
+              className="bg-white p-3 border border-[var(--color-ink)]/10 rounded"
+            />
           </div>
 
           <div className="space-y-2">

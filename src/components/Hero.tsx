@@ -28,10 +28,10 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)] via-transparent to-transparent opacity-90 z-10" />
       </div>
 
-      <div className="relative z-20 w-full px-6 md:px-12 pb-16 md:pb-24 flex flex-col md:flex-row justify-between items-end">
+      <div className="relative z-20 w-full px-6 md:px-12 pb-16 md:pb-24 flex flex-col xl:flex-row justify-between items-end gap-16 xl:gap-24">
 
         {/* Large Typography overlapping the image */}
-        <div className="max-w-5xl">
+        <div className="w-full xl:w-auto flex-1">
 
 
           {/* Awwwards Style Typography */}
@@ -54,7 +54,7 @@ export default function Hero() {
                 </span>
               </div>
 
-              <span className="font-sans font-black uppercase text-[6rem] md:text-[12rem] lg:text-[16rem] leading-[0.75] tracking-tighter mt-4 md:mt-8 ml-[-10px] md:ml-[-20px] drop-shadow-2xl">
+              <span className="font-sans font-black uppercase text-[6rem] md:text-[11rem] lg:text-[15rem] leading-[0.75] tracking-tighter mt-4 md:mt-8 ml-[-10px] md:ml-[-20px] drop-shadow-2xl">
                 DREAMS
               </span>
             </h1>
@@ -62,32 +62,28 @@ export default function Hero() {
         </div>
 
         {/* Minimalist CTA & details */}
-        <div className="flex flex-col items-start md:items-end mt-12 md:mt-0 text-left md:text-right">
-          <p className="text-[var(--color-paper)]/70 max-w-xs font-sans text-sm font-light leading-relaxed mb-8">
+        <div className="flex flex-col items-center sm:items-start xl:items-end mt-20 xl:mt-0 text-center sm:text-left xl:text-right shrink-0 relative z-30 pb-4 w-full xl:w-auto">
+          <p className="text-[var(--color-paper)]/70 max-w-xs font-sans text-sm font-light leading-relaxed mb-8 mx-auto sm:mx-0">
             Curated high-altitude expeditions for those seeking raw wilderness without compromising the aesthetic.
           </p>
 
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 w-full sm:w-auto">
             <a
               href="https://wa.me/919520557784"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-4 text-[var(--color-paper)] text-xs uppercase tracking-widest font-semibold"
+              className="group flex items-center justify-center gap-3 bg-[var(--color-primary)] text-[var(--color-ink)] px-7 py-4 rounded-full text-xs uppercase tracking-widest font-bold hover:scale-105 hover:bg-[var(--color-paper)] transition-all duration-300 shadow-[0_0_30px_rgba(255,192,0,0.3)] w-full sm:w-auto"
             >
-              <span className="w-12 h-12 border border-[var(--color-paper)]/30 rounded-full flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:border-[var(--color-primary)] group-hover:text-[var(--color-ink)] transition-all duration-500">
-                <WhatsappIcon className="w-4 h-4" />
-              </span>
+              <WhatsappIcon className="w-4 h-4 shrink-0" />
               Get in touch
             </a>
 
             <Link
               href="#featured"
-              className="group flex items-center gap-4 text-[var(--color-paper)] text-xs uppercase tracking-widest font-semibold"
+              className="group flex items-center justify-center gap-3 bg-[var(--color-paper)]/10 backdrop-blur-md border border-[var(--color-paper)]/30 text-[var(--color-paper)] px-7 py-4 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-[var(--color-paper)] hover:text-[var(--color-ink)] hover:scale-105 transition-all duration-300 w-full sm:w-auto"
               aria-label="Scroll down to Featured Expeditions"
             >
-              <span aria-hidden="true" className="w-12 h-12 border border-[var(--color-paper)]/30 rounded-full flex items-center justify-center group-hover:bg-[var(--color-paper)] group-hover:text-[var(--color-ink)] transition-all duration-500">
-                <ArrowDown className="w-4 h-4" />
-              </span>
+              <ArrowDown className="w-4 h-4 shrink-0 group-hover:translate-y-1 transition-transform duration-300" />
               Begin Journey
             </Link>
           </div>
