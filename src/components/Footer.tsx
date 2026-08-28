@@ -44,19 +44,19 @@ export default function Footer() {
 
   return (
     <footer className="bg-[var(--color-ink)] text-[var(--color-paper)] pt-20 pb-12 px-6 md:px-12 relative overflow-hidden z-20 border-t border-[var(--color-paper)]/10">
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12 mb-32">
-          
+
           {/* Brand Column */}
           <div className="lg:col-span-5 pr-8">
-            <Link href="/" className="inline-flex mb-8">
-              <div className="relative w-40 h-14 md:w-48 md:h-16">
+            <Link href="/" className="inline-flex mb-8 bg-white px-3 py-2 rounded-xl">
+              <div className="relative w-40 h-12 md:w-56 md:h-16">
                 <Image
                   src="/logo.png"
                   alt="Xplore The Dreams Logo"
                   fill
-                  className="object-contain object-left"
+                  className="object-contain object-center"
                 />
               </div>
             </Link>

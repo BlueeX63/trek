@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
@@ -15,6 +15,22 @@ export default function Navbar() {
   const router = useRouter();
   const { user, logout } = useAppContext();
   const isAdmin = user?.email?.toLowerCase() === process.env.NEXT_PUBLIC_ADMIN_EMAIL?.toLowerCase() || user?.user_metadata?.role === 'admin';
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setProfileDropdownOpen(false);
+      }
+    };
+    
+    if (profileDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [profileDropdownOpen]);
 
 
   useEffect(() => {
@@ -85,7 +101,7 @@ export default function Navbar() {
           
           <div className="flex items-center gap-6 border-l border-[var(--color-ink)]/10 pl-6 ml-2">
             {user ? (
-              <div className="relative">
+              <div className="relative" ref={dropdownRef}>
                 <button 
                   onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
                   className={`hover:text-[var(--color-primary)] transition-colors ${textClass} flex items-center gap-2`} 
@@ -99,10 +115,6 @@ export default function Navbar() {
                 
                 {profileDropdownOpen && (
                   <>
-                    <div 
-                      className="fixed inset-0 z-40"
-                      onClick={() => setProfileDropdownOpen(false)}
-                    />
                     <div className="absolute right-0 mt-6 w-48 bg-[var(--color-paper)] border border-[var(--color-ink)]/10 rounded-lg shadow-xl py-2 z-50 flex flex-col">
                       <Link 
                         href="/wishlist" 

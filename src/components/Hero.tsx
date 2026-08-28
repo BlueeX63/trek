@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="relative z-20 w-full px-6 md:px-12 pb-16 md:pb-24 flex flex-col xl:flex-row justify-between items-end gap-16 xl:gap-24">
 
         {/* Large Typography overlapping the image */}
-        <div className="w-full xl:w-auto flex-1">
+        <div className="w-full xl:w-auto flex-1 min-w-0">
 
 
           {/* Awwwards Style Typography */}
@@ -43,18 +43,18 @@ export default function Hero() {
 
             {/* Foreground Scattered Text */}
             <h1 className="relative z-10 flex flex-col text-[var(--color-paper)] mix-blend-overlay w-full pt-12 md:pt-24">
-              <span className="font-serif italic font-light text-7xl md:text-[10rem] lg:text-[13rem] leading-[0.7] ml-4 md:ml-12">
+              <span className="font-serif italic font-light text-[clamp(4.5rem,10vw,13rem)] leading-[0.7] ml-4 md:ml-12">
                 xplore
               </span>
 
-              <div className="flex items-center gap-6 mt-8 md:mt-12 ml-24 md:ml-64 z-20">
+              <div className="flex items-center gap-6 mt-8 md:mt-12 ml-16 md:ml-48 lg:ml-64 z-20">
                 <div className="w-12 md:w-24 h-[2px] bg-[var(--color-primary)]" />
                 <span className="font-sans font-black uppercase tracking-[0.6em] text-lg md:text-3xl text-[var(--color-primary)]">
                   The
                 </span>
               </div>
 
-              <span className="font-sans font-black uppercase text-[6rem] md:text-[11rem] lg:text-[15rem] leading-[0.75] tracking-tighter mt-4 md:mt-8 ml-[-10px] md:ml-[-20px] drop-shadow-2xl">
+              <span className="font-sans font-black uppercase text-[clamp(5rem,13vw,15rem)] leading-[0.75] tracking-tighter mt-4 md:mt-8 ml-[-10px] md:ml-[-20px] drop-shadow-2xl">
                 DREAMS
               </span>
             </h1>
