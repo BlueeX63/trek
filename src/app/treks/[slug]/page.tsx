@@ -138,7 +138,7 @@ export default async function TrekDetailsPage({ params }: { params: Promise<{ sl
           { title: "Immersive Adventure", description: `Enjoy ${dbTrek.duration_days} days of premium trekking with expert support.` }
         ]
       },
-      itinerary: genItinerary,
+      itinerary: (dbTrek.itinerary && Array.isArray(dbTrek.itinerary) && dbTrek.itinerary.length > 0) ? dbTrek.itinerary : genItinerary,
       eligibility: {
         ageRequirement: "Minimum 12 years. Prior trekking experience recommended for difficult/extreme grades.",
         fitnessCriteria: [

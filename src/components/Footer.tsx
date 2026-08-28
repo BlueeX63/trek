@@ -56,7 +56,7 @@ export default function Footer() {
                   src="/logo.png"
                   alt="Xplore The Dreams Logo"
                   fill
-                  className="object-contain object-left brightness-0 invert"
+                  className="object-contain object-left"
                 />
               </div>
             </Link>
