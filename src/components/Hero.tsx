@@ -77,7 +77,7 @@ export default function Hero() {
               <span className="w-12 h-12 border border-[var(--color-paper)]/30 rounded-full flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:border-[var(--color-primary)] group-hover:text-[var(--color-ink)] transition-all duration-500">
                 <WhatsappIcon className="w-4 h-4" />
               </span>
-              WhatsApp
+              Get in touch
             </a>
 
             <Link

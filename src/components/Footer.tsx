@@ -43,7 +43,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#2A2A2A] text-[var(--color-paper)] pt-32 pb-12 px-6 md:px-12 relative overflow-hidden z-20">
+    <footer className="bg-[var(--color-ink)] text-[var(--color-paper)] pt-20 pb-12 px-6 md:px-12 relative overflow-hidden z-20 border-t border-[var(--color-paper)]/10">
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12 mb-32">
@@ -56,7 +56,7 @@ export default function Footer() {
                   src="/logo.png"
                   alt="Xplore The Dreams Logo"
                   fill
-                  className="object-contain object-left"
+                  className="object-contain object-left brightness-0 invert"
                 />
               </div>
             </Link>
@@ -88,6 +88,7 @@ export default function Footer() {
               <li><Link href="/categories/kashmir" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Kashmir Trails</Link></li>
               <li><Link href="/categories/ladakh" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Ladakh Expeditions</Link></li>
               <li><Link href="/categories/spiritual" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Spiritual Journeys</Link></li>
+              <li><Link href="/customize-trip" className="text-[var(--color-paper)]/60 hover:text-[var(--color-paper)] transition-colors text-sm font-sans font-light">Customize Your Trip</Link></li>
             </ul>
           </div>
 

@@ -3,11 +3,18 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import Link from "next/link";
-import { Edit, Trash2, Plus } from "lucide-react";
+import { Edit, Trash2, Plus, Search } from "lucide-react";
 
 export default function AdminTreksList() {
   const [treks, setTreks] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredTreks = treks.filter(trek => 
+    trek.name?.toLowerCase().includes(searchQuery.toLowerCase()) || 
+    trek.region?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    trek.slug?.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   useEffect(() => {
     fetchTreks();
@@ -37,17 +44,29 @@ export default function AdminTreksList() {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <div>
           <h1 className="text-3xl font-serif text-[var(--color-ink)] mb-2">Expeditions</h1>
           <p className="text-[var(--color-ink)]/60 font-sans text-sm">Manage your trek listings and details.</p>
         </div>
-        <Link 
-          href="/admin/treks/new" 
-          className="bg-[var(--color-ink)] text-[var(--color-paper)] px-5 py-2.5 rounded text-xs font-sans font-bold uppercase tracking-widest flex items-center gap-2 hover:bg-[var(--color-ink)]/80 transition-colors"
-        >
-          <Plus className="w-4 h-4" /> New Trek
-        </Link>
+        <div className="flex items-center gap-4 w-full md:w-auto">
+          <div className="relative flex-1 md:w-64">
+            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-ink)]/40" />
+            <input
+              type="text"
+              placeholder="Search expeditions..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-9 pr-4 py-2 text-sm font-sans bg-white border border-[var(--color-ink)]/10 rounded focus:outline-none focus:border-[var(--color-primary)] transition-colors"
+            />
+          </div>
+          <Link 
+            href="/admin/treks/new" 
+            className="shrink-0 bg-[var(--color-ink)] text-[var(--color-paper)] px-5 py-2.5 rounded text-xs font-sans font-bold uppercase tracking-widest flex items-center gap-2 hover:bg-[var(--color-ink)]/80 transition-colors"
+          >
+            <Plus className="w-4 h-4" /> New Trek
+          </Link>
+        </div>
       </div>
 
       <div className="bg-white rounded-xl shadow-sm border border-[var(--color-ink)]/5 overflow-hidden">
@@ -63,14 +82,14 @@ export default function AdminTreksList() {
               </tr>
             </thead>
             <tbody className="divide-y divide-[var(--color-ink)]/5 text-sm">
-              {treks.length === 0 ? (
+              {filteredTreks.length === 0 ? (
                 <tr>
                   <td colSpan={5} className="px-6 py-12 text-center text-[var(--color-ink)]/50 italic font-serif">
                     No treks found. Create your first one!
                   </td>
                 </tr>
               ) : (
-                treks.map(trek => (
+                filteredTreks.map(trek => (
                   <tr key={trek.id} className="hover:bg-gray-50/50 transition-colors">
                     <td className="px-6 py-4">
                       <div className="font-semibold text-[var(--color-ink)]">{trek.name}</div>

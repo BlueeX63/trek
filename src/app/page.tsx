@@ -7,6 +7,7 @@ import FeaturedExpedition from "@/components/FeaturedExpedition";
 import Testimonials from "@/components/Testimonials";
 import ExpeditionFAQ from "@/components/ExpeditionFAQ";
 import ProcessTimeline from "@/components/ProcessTimeline";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       {/* <FeaturedExpedition /> */}
       <ProcessTimeline />
       <Testimonials />
+      <WhyChooseUs />
       <ExpeditionFAQ />
     </main>
   );
