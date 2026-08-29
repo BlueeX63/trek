@@ -193,13 +193,13 @@ export const treks: Trek[] = [
     region: 'Uttarakhand',
     coordinates: "30°00' N 79°00' E",
     altitude: 15069,
-    duration: { days: 7, nights: 6 },
-    difficulty: 'Moderate to Difficult',
-    season: ['Spring', 'Summer', 'Autumn'],
-    price: 10500,
+    duration: { days: 2, nights: 1 },
+    difficulty: 'Moderate',
+    season: ['Spring', 'Summer', 'Autumn', 'Winter'],
+    price: 6500,
     heroImage: '/images/uttarakhand/pangarchulla-peak.png',
     gallery: ['/images/uttarakhand/pangarchulla-peak.png'],
-    categories: ['Uttarakhand', 'Summer', 'April']
+    categories: ['Uttarakhand', 'Weekend Getaways', 'Summer', 'Winter', 'Autumn', 'Spring']
   },
   {
     id: 'ut-10',

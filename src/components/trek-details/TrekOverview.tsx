@@ -8,8 +8,8 @@ interface Highlight {
 }
 
 interface TrekOverviewProps {
-  description: string[];
-  highlights: Highlight[];
+  description?: string[] | string;
+  highlights?: (Highlight | string)[];
   stats: {
     label: string;
     value: string;
@@ -21,6 +21,17 @@ export default function TrekOverview({ description, highlights, stats, trekName 
   const isTour = trekName?.toLowerCase().includes("tour");
   const isExpedition = trekName?.toLowerCase().includes("expedition");
   const entityType = isTour ? "Tour" : isExpedition ? "Expedition" : "Trek";
+
+  // Normalize description into array of paragraphs
+  let descriptionArray: string[] = [];
+  if (Array.isArray(description)) {
+    descriptionArray = description.filter(Boolean);
+  } else if (typeof description === "string" && description.trim()) {
+    descriptionArray = [description.trim()];
+  }
+
+  // Normalize highlights
+  const highlightsArray = Array.isArray(highlights) ? highlights : [];
 
   return (
     <section id="overview" className="w-full max-w-[1400px] mx-auto px-6 md:px-12 py-16 scroll-mt-24 bg-[var(--color-paper)]">
@@ -37,33 +48,43 @@ export default function TrekOverview({ description, highlights, stats, trekName 
               A Look at the {entityType}
             </h2>
             
-            <div className="prose prose-lg text-[var(--color-ink)]/70 font-sans font-light leading-relaxed mb-16 max-w-none">
-              {description.map((paragraph, idx) => (
-                <p key={idx} className="mb-4 last:mb-0">{paragraph}</p>
-              ))}
-            </div>
-            
-            <div className="border border-[var(--color-ink)]/10 p-8 lg:p-12 relative">
-              <div className="absolute top-0 left-0 w-2 h-2 bg-[var(--color-primary)] -translate-x-1/2 -translate-y-1/2"></div>
-              
-              <h3 className="text-3xl font-serif text-[var(--color-ink)] mb-8">
-                Highlights
-              </h3>
-              
-              <ul className="grid md:grid-cols-2 gap-y-6 gap-x-8">
-                {highlights.map((highlight, idx) => (
-                  <li key={idx} className="flex items-start gap-4">
-                    <CheckCircle2 className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-1" strokeWidth={1.5} />
-                    <div className="flex flex-col">
-                      {highlight.title && (
-                        <span className="text-[var(--color-ink)] font-sans font-medium text-sm mb-1">{highlight.title}</span>
-                      )}
-                      <span className="text-[var(--color-ink)]/80 font-sans font-light text-sm">{highlight.description}</span>
-                    </div>
-                  </li>
+            {descriptionArray.length > 0 && (
+              <div className="prose prose-lg text-[var(--color-ink)]/70 font-sans font-light leading-relaxed mb-16 max-w-none">
+                {descriptionArray.map((paragraph, idx) => (
+                  <p key={idx} className="mb-4 last:mb-0">{paragraph}</p>
                 ))}
-              </ul>
-            </div>
+              </div>
+            )}
+            
+            {highlightsArray.length > 0 && (
+              <div className="border border-[var(--color-ink)]/10 p-8 lg:p-12 relative">
+                <div className="absolute top-0 left-0 w-2 h-2 bg-[var(--color-primary)] -translate-x-1/2 -translate-y-1/2"></div>
+                
+                <h3 className="text-3xl font-serif text-[var(--color-ink)] mb-8">
+                  Highlights
+                </h3>
+                
+                <ul className="grid md:grid-cols-2 gap-y-6 gap-x-8">
+                  {highlightsArray.map((highlight, idx) => {
+                    const isObj = typeof highlight === "object" && highlight !== null;
+                    const title = isObj ? (highlight as any).title : undefined;
+                    const desc = isObj ? (highlight as any).description : String(highlight);
+
+                    return (
+                      <li key={idx} className="flex items-start gap-4">
+                        <CheckCircle2 className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-1" strokeWidth={1.5} />
+                        <div className="flex flex-col">
+                          {title && (
+                            <span className="text-[var(--color-ink)] font-sans font-medium text-sm mb-1">{title}</span>
+                          )}
+                          <span className="text-[var(--color-ink)]/80 font-sans font-light text-sm">{desc}</span>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
 
