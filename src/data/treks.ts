@@ -71,7 +71,14 @@ export const treks: Trek[] = [
     price: 9000,
     heroImage: '/images/uttarakhand/kuari-pass.jpg',
     gallery: [
-      '/images/uttarakhand/kuari-pass.jpg'
+      '/images/Uttrakhand Trek_s/Auli/Auli 1.webp',
+      '/images/Uttrakhand Trek_s/Auli/Auli 2.webp',
+      '/images/Uttrakhand Trek_s/Auli/Auli 3.webp',
+      '/images/Uttrakhand Trek_s/Auli/Auli 4.webp',
+      '/images/Uttrakhand Trek_s/Auli/Auli 5.webp',
+      '/images/Uttrakhand Trek_s/Auli/Auli 6.webp',
+      '/images/Uttrakhand Trek_s/Auli/Auli 7.webp',
+      '/images/Uttrakhand Trek_s/Auli/Auli 8.webp'
     ],
     categories: ['Uttarakhand', 'Winter', 'Summer', 'Autumn', 'January', 'February', 'April', 'May', 'June', 'September', 'October', 'November', 'December']
   },
@@ -141,7 +148,15 @@ export const treks: Trek[] = [
     season: ['Spring', 'Summer', 'Monsoon', 'Autumn'],
     price: 9000,
     heroImage: '/images/uttarakhand/valley-of-flowers.jpg',
-    gallery: ['/images/uttarakhand/valley-of-flowers.jpg'],
+    gallery: [
+      '/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.51_2fac3e87.jpg',
+      '/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.52_4db418ab.jpg',
+      '/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.52_7423eeda.jpg',
+      '/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.52_bcf7b28a.jpg',
+      '/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.53_176206da.jpg',
+      '/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.53_4312171d.jpg',
+      '/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.53_67c936f4.jpg'
+    ],
     categories: ['Uttarakhand', 'Summer', 'Monsoon', 'July', 'August', 'September']
   },
   {
@@ -158,7 +173,15 @@ export const treks: Trek[] = [
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     price: 9000,
     heroImage: '/images/uttarakhand/brahmatal.jpg',
-    gallery: ['/images/uttarakhand/brahmatal.jpg'],
+    gallery: [
+      '/images/Uttrakhand Trek_s/Brahamtal/Brahamtaal 1.jpg',
+      '/images/Uttrakhand Trek_s/Brahamtal/brahmatal 2.jpg',
+      '/images/Uttrakhand Trek_s/Brahamtal/Brahamtal 3.jpg',
+      '/images/Uttrakhand Trek_s/Brahamtal/Brahamtal 4.jpg',
+      '/images/Uttrakhand Trek_s/Brahamtal/Brahmatal 4.webp',
+      '/images/Uttrakhand Trek_s/Brahamtal/Brahamtal 7.jpg',
+      '/images/Uttrakhand Trek_s/Brahamtal/Brahamtal 9.jpg'
+    ],
     categories: ['Uttarakhand', 'Summer', 'Autumn', 'Winter', 'January', 'February', 'April', 'September', 'October', 'November', 'December']
   },
   {
@@ -192,7 +215,14 @@ export const treks: Trek[] = [
     season: ['Spring', 'Summer', 'Autumn'],
     price: 12000,
     heroImage: '/images/uttarakhand/gaumukh-tapovan.png',
-    gallery: ['/images/uttarakhand/gaumukh-tapovan.png'],
+    gallery: [
+      '/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh 1.jpg',
+      '/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh 2.jpg',
+      '/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh 4.jpg',
+      '/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh7.jpg',
+      '/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh 8.jpg',
+      '/images/Uttrakhand Trek_s/Gaumukh Tapovan/fe35ad67-f59e-45dc-b5c7-314094d5c7d1_Gaumukh-Tapovan-Nitish-Waila-1.avif'
+    ],
     categories: ['Uttarakhand', 'Summer', 'Autumn', 'May', 'June', 'September', 'October']
   },
   {
@@ -260,7 +290,13 @@ export const treks: Trek[] = [
     season: ['Spring', 'Summer', 'Autumn'],
     price: 9000,
     heroImage: '/images/uttarakhand/gaumukh-gangotri.jpg',
-    gallery: ['/images/uttarakhand/gaumukh-gangotri.jpg'],
+    gallery: [
+      '/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh 1.jpg',
+      '/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh 2.jpg',
+      '/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh 4.jpg',
+      '/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh7.jpg',
+      '/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh 8.jpg'
+    ],
     categories: ['Uttarakhand', 'Summer', 'Autumn', 'May', 'June', 'September', 'October']
   },
   {
@@ -311,7 +347,15 @@ export const treks: Trek[] = [
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     price: 9000,
     heroImage: '/images/uttarakhand/ali-bedni.png',
-    gallery: ['/images/uttarakhand/ali-bedni.png'],
+    gallery: [
+      '/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Ali Bedni 2.jpg',
+      '/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Ali Bedni Bugyal.avif',
+      '/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Bedni 3.jpg',
+      '/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Bedni 4.avif',
+      '/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Bedni 5.avif',
+      '/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Bedni 8.jpg',
+      '/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Bedni 9.jpg'
+    ],
     categories: ['Uttarakhand', 'Summer', 'Autumn', 'Winter', 'January', 'February', 'April', 'May', 'June', 'September', 'October', 'November', 'December']
   },
   {
@@ -345,7 +389,15 @@ export const treks: Trek[] = [
     season: ['Spring', 'Summer', 'Autumn', 'Winter'],
     price: 3000,
     heroImage: '/images/uttarakhand/nag-tibba.jpg',
-    gallery: ['/images/uttarakhand/nag-tibba.jpg'],
+    gallery: [
+      '/images/Uttrakhand Trek_s/Nagtibba/Nagtibba 1.jpg',
+      '/images/Uttrakhand Trek_s/Nagtibba/Nagtibba 3.jpg',
+      '/images/Uttrakhand Trek_s/Nagtibba/Nagtibba 4.jpg',
+      '/images/Uttrakhand Trek_s/Nagtibba/Nagtibba 5.jpg',
+      '/images/Uttrakhand Trek_s/Nagtibba/Nagtibba 6.jpg',
+      '/images/Uttrakhand Trek_s/Nagtibba/Nagtibba 8.webp',
+      '/images/Uttrakhand Trek_s/Nagtibba/Nagtibba 9.jpg'
+    ],
     categories: ['Uttarakhand', 'Summer', 'Autumn', 'Winter', 'January', 'February', 'March', 'April', 'September', 'October', 'November', 'December']
   },
   {
@@ -430,7 +482,16 @@ export const treks: Trek[] = [
     season: ['Spring', 'Summer', 'Autumn'],
     price: 9000,
     heroImage: '/images/uttarakhand/surya-top.jpg',
-    gallery: ['/images/uttarakhand/surya-top.jpg'],
+    gallery: [
+      '/images/Uttrakhand Trek_s/Surya Top/Surya top 1.jpg',
+      '/images/Uttrakhand Trek_s/Surya Top/Suryatop 2.jpg',
+      '/images/Uttrakhand Trek_s/Surya Top/Surya Top 3.jpg',
+      '/images/Uttrakhand Trek_s/Surya Top/Surya top 4.jpg',
+      '/images/Uttrakhand Trek_s/Surya Top/Surya top 5.jpg',
+      '/images/Uttrakhand Trek_s/Surya Top/Surya top 6.webp',
+      '/images/Uttrakhand Trek_s/Surya Top/Surya top 8.jpg',
+      '/images/Uttrakhand Trek_s/Surya Top/Surya Top 9.jpg'
+    ],
     categories: ['Uttarakhand', 'Summer', 'Autumn', 'May', 'June', 'October', 'November']
   },
   {
@@ -447,7 +508,14 @@ export const treks: Trek[] = [
     season: ['Spring', 'Summer', 'Autumn'],
     price: 9000,
     heroImage: '/images/uttarakhand/phulara-ridge.jpg',
-    gallery: ['/images/uttarakhand/phulara-ridge.jpg'],
+    gallery: [
+      '/images/Uttrakhand Trek_s/Phulara Ridge/Phulara 1.jpg',
+      '/images/Uttrakhand Trek_s/Phulara Ridge/Phulara 2.avif',
+      '/images/Uttrakhand Trek_s/Phulara Ridge/Phulara 3.webp',
+      '/images/Uttrakhand Trek_s/Phulara Ridge/Phulara 5.jpg',
+      '/images/Uttrakhand Trek_s/Phulara Ridge/Phulara 7.webp',
+      '/images/Uttrakhand Trek_s/Phulara Ridge/Phulara 9.webp'
+    ],
     categories: ['Uttarakhand', 'Summer', 'Autumn', 'May', 'June', 'October', 'November']
   },
   {
@@ -515,7 +583,15 @@ export const treks: Trek[] = [
     season: ['Spring', 'Summer', 'Autumn'],
     price: 10500,
     heroImage: '/images/uttarakhand/kedar-tal.png',
-    gallery: ['/images/uttarakhand/kedar-tal.png'],
+    gallery: [
+      '/images/Uttrakhand Trek_s/Kedartal/Kedartal 1.jpg',
+      '/images/Uttrakhand Trek_s/Kedartal/kedartal-2.jpg',
+      '/images/Uttrakhand Trek_s/Kedartal/Kedartal 3.jpg',
+      '/images/Uttrakhand Trek_s/Kedartal/Kedartal- 4.jpeg',
+      '/images/Uttrakhand Trek_s/Kedartal/Kedartal-Trek-5.jpg',
+      '/images/Uttrakhand Trek_s/Kedartal/Kedartal 6.jpg',
+      '/images/Uttrakhand Trek_s/Kedartal/Kedartal 8.avif'
+    ],
     categories: ['Uttarakhand', 'Summer', 'Autumn', 'May', 'June', 'September', 'October']
   },
   {
@@ -685,7 +761,16 @@ export const treks: Trek[] = [
     season: ['Spring', 'Summer', 'Autumn'],
     price: 10500,
     heroImage: '/images/uttarakhand/pindari-glacier.jpg',
-    gallery: ['/images/uttarakhand/pindari-glacier.jpg'],
+    gallery: [
+      '/images/Uttrakhand Trek_s/Pindri Glacier/Pindari 1.webp',
+      '/images/Uttrakhand Trek_s/Pindri Glacier/Pindari 2.jpg',
+      '/images/Uttrakhand Trek_s/Pindri Glacier/Pindari 3.jpg',
+      '/images/Uttrakhand Trek_s/Pindri Glacier/Pindari 4.jpg',
+      '/images/Uttrakhand Trek_s/Pindri Glacier/Pindar 5.jpg',
+      '/images/Uttrakhand Trek_s/Pindri Glacier/Pindar 6.jpg',
+      '/images/Uttrakhand Trek_s/Pindri Glacier/Pindar 7.jpg',
+      '/images/Uttrakhand Trek_s/Pindri Glacier/Pindari 8.jpg'
+    ],
     categories: ['Uttarakhand', 'Summer', 'May']
   },
   // Kashmir
