@@ -15,7 +15,7 @@ export const bhriguLakeDetails: DetailedTrek = {
   railHead: "Chandigarh is the nearest rail head to the base camp",
   airport: "Bhuntar, which is 52 km away from Manali",
   trailType: "Point to point trail | Camping at the same location upon returning.",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: '/images/himachal/bhrigu-lake.jpg',
   overview: {
     description: [
       "The Bhrigu Lake Trek is not just a trek; it's an immersive experience into the heart of the wild. Designed for those who seek both challenge and beauty, this trail promises spectacular panoramic vistas at every turn. It is the perfect escape to reconnect with nature in its most pristine and powerful form.",

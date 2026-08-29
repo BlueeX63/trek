@@ -48,14 +48,12 @@ async function seed() {
     try {
       // dynamically import using tsx loader
       const mod = await import(`./src/data/${file}`);
-      // Find the exported object that ends with 'Data'
-      const exportName = Object.keys(mod).find(k => k.endsWith('Data'));
+      const exportName = Object.keys(mod).find(k => k.endsWith('Data') || k.endsWith('Details') || (mod[k] && typeof mod[k] === 'object' && mod[k].slug));
       if (exportName) {
-        // We can link it back to the trek by slug.
-        // Wait, how do we know the slug? Usually the file name is {slug}-details.ts.
-        // There might be exceptions (e.g. chopta-chandrashila-deoriatal-details.ts -> chopta-chandrashila-deoriatal)
-        const slug = file.replace('-details.ts', '');
-        allDetails[slug] = mod[exportName];
+        const detailObj = mod[exportName];
+        const slug = detailObj.slug || file.replace('-details.ts', '');
+        allDetails[slug] = detailObj;
+        allDetails[file.replace('-details.ts', '')] = detailObj;
       }
     } catch (e) {
       console.warn(`Could not load ${file}:`, e);

@@ -15,7 +15,7 @@ export const bagjiBugyalDetails: DetailedTrek = {
   railHead: "Rishikesh",
   airport: "Jolly Grant Airport, which is 21 km away from Rishikesh",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/uttarakhand/bagji-bugyal.png",
   overview: {
     description: [
       "Embark on a mesmerizing journey with the Bagji Bugyal Trek, where every step unveils a new facet of nature's grandeur. This expedition takes you through diverse landscapes, offering an unparalleled blend of thrill and tranquility. Away from the clamor of the city, you'll find solace among towering peaks and sweeping valleys.",

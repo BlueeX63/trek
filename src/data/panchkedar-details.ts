@@ -15,7 +15,7 @@ export const panchkedarDetails: DetailedTrek = {
   railHead: "Haridwar/Rishikesh is the nearest rail head to the base camp",
   airport: "Jolly Grant Airport, which is 21 km away from Rishikesh",
   trailType: "-",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/uttarakhand/panchkedar.png",
   overview: {
     description: [
       "The Panchkedar Trek & Drive is not just a trek; it's an immersive experience into the heart of the wild. Designed for those who seek both challenge and beauty, this trail promises spectacular panoramic vistas at every turn. It is the perfect escape to reconnect with nature in its most pristine and powerful form.",

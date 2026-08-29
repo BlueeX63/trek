@@ -15,7 +15,7 @@ export const binsarDetails: DetailedTrek = {
   railHead: "Kathgodam",
   airport: "Pantnagar, which is 22 km away from Haldwani",
   trailType: "One way trail | Camping in various locations, starting and ending at the different point.",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/uttarakhand/binsar.jpg",
   overview: {
     description: [
       "Experience the raw, untamed beauty of the wilderness on the Binsar Weekend Trek. Every day on this trail brings a new landscape, from cascading mountain streams to towering snow-capped summits. This trek is an absolute must-do for adventurers looking to capture the ultimate essence of high-altitude exploration.",

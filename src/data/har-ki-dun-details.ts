@@ -15,7 +15,7 @@ export const harKiDunDetails: DetailedTrek = {
   railHead: "Dehradun",
   airport: "Jolly Grant Airport, which is 28 km away from Dehradun",
   trailType: "Point to point trail | Camping at the same location upon returning.",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/uttarakhand/har-ki-dun.jpg",
   overview: {
     description: [
       "Experience the raw, untamed beauty of the wilderness on the Har Ki Dun Trek. Every day on this trail brings a new landscape, from cascading mountain streams to towering snow-capped summits. This trek is an absolute must-do for adventurers looking to capture the ultimate essence of high-altitude exploration.",

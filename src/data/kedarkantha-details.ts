@@ -15,7 +15,7 @@ export const kedarkanthaDetails: DetailedTrek = {
   railHead: "Dehradun",
   airport: "Jolly Grant Airport, Dehradun",
   trailType: "Round trail | Starts and ends at Sankri.",
-  image: "https://images.unsplash.com/photo-1518182170546-076616fdcd80?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/uttarakhand/kedarkantha.jpg",
   overview: {
     description: [
       "Kedarkantha is arguably the most popular winter trek in India. It is famous for its snow-covered trails, frozen lakes, and a thrilling summit climb that rewards you with a 360-degree view of majestic Himalayan peaks.",

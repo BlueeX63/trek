@@ -13,6 +13,7 @@ export const valleyOfFlowersDetails = {
   railHead: "Haridwar/Rishikesh",
   airport: "Jolly Grant Airport, Dehradun",
   trailType: "Point to point trail | Camping at the same location upon returning.",
+  image: "/images/uttarakhand/valley-of-flowers.jpg",
   overview: {
     description: "If you think this trek is only about flowers, you are in for a wonderful surprise. The valley is world-famous because it is home to hundreds of rare plant and flower species. This incredible variety hits you the exact moment you step inside. The 4 km main trail is just as beautiful as people say...",
     highlights: [

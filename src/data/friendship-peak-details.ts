@@ -15,7 +15,7 @@ export const friendshipPeakDetails: DetailedTrek = {
   railHead: "Chandigarh is the nearest rail head to the base camp",
   airport: "Bhuntar, which is 52 km away from Manali",
   trailType: "Summit, Point to point | Scale a peak, Camping at the same location upon returning.",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: '/images/himachal/friendship-peak.jpg',
   overview: {
     description: [
       "Embark on a mesmerizing journey with the Friendship Peak Expedition, where every step unveils a new facet of nature's grandeur. This expedition takes you through diverse landscapes, offering an unparalleled blend of thrill and tranquility. Away from the clamor of the city, you'll find solace among towering peaks and sweeping valleys.",

@@ -15,7 +15,7 @@ export const pinBhabaPassDetails: DetailedTrek = {
   railHead: "Kalka",
   airport: "Jubbarhatti Airport, which is 22 km away from Shimla",
   trailType: "Cross over trail | Start in one valley, traverse the pass, and ends in another valley.",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: '/images/himachal/pin-bhaba-pass.jpg',
   overview: {
     description: [
       "Embark on a mesmerizing journey with the Pin Bhaba Pass Trek, where every step unveils a new facet of nature's grandeur. This expedition takes you through diverse landscapes, offering an unparalleled blend of thrill and tranquility. Away from the clamor of the city, you'll find solace among towering peaks and sweeping valleys.",

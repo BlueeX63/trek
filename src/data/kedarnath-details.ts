@@ -15,7 +15,7 @@ export const kedarnathDetails: DetailedTrek = {
   railHead: "Haridwar/Rishikesh",
   airport: "Jolly Grant Airport, Dehradun",
   trailType: "Pilgrimage Route | Deep Himalayan trek.",
-  image: "https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000",
+  image: "/images/uttarakhand/kedarnath.jpg",
   overview: {
     description: [
       "The Kedarnath Yatra is a profound pilgrimage to one of the twelve Jyotirlingas of Lord Shiva. Located at a staggering altitude of 11,755 feet in the Garhwal Himalayas, the ancient stone temple stands majestically against the snow-capped Kedarnath peaks.",

@@ -15,7 +15,7 @@ export const kuariPassDetails: DetailedTrek = {
   railHead: "Haridwar/Rishikesh is the nearest rail head to the base camp",
   airport: "Jolly Grant Airport, which is 21 km away from Rishikesh",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/uttarakhand/kuari-pass.jpg",
   overview: {
     description: [
       "Discover the hidden treasures of the Himalayas on the Kuari Pass Trek. Renowned for its stunning transitions in scenery, this trek is a visual masterpiece that will leave you breathless. Whether you are navigating dense ancient forests or crossing expansive alpine meadows, the profound silence of the mountains will rejuvenate your soul.",

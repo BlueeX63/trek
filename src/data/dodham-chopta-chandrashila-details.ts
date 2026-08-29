@@ -15,7 +15,7 @@ export const dodhamChoptaChandrashilaDetails: DetailedTrek = {
   railHead: "Haridwar",
   airport: "Dehradun (Jolly Grant)",
   trailType: "Spiritual Pilgrimage & Trek",
-  image: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/uttarakhand/chopta-chandrashila.jpg",
   overview: {
     description: [
       "The Do Dham Yatra with Chopta Chandrashila is a perfect blend of intense spirituality and thrilling adventure. It covers two of the most revered shrines in Hinduism: Kedarnath and Badrinath.",

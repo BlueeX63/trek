@@ -15,7 +15,7 @@ export const charDhamDetails: DetailedTrek = {
   railHead: "Haridwar/Rishikesh",
   airport: "Jolly Grant Airport, Dehradun",
   trailType: "Major Pilgrimage Route | Multi-day road trip with significant high-altitude trekking.",
-  image: "https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000",
+  image: "/images/uttarakhand/char-dham-yatra.jpg",
   overview: {
     description: [
       "The Char Dham Yatra is the most revered pilgrimage circuit in Hinduism, covering four divine sites nestled high in the Garhwal Himalayas: Yamunotri, Gangotri, Kedarnath, and Badrinath.",

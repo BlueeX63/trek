@@ -15,7 +15,7 @@ export const dayaraBugyalDetails: DetailedTrek = {
   railHead: "Dehradun",
   airport: "Jolly Grant Airport, which is 28 km away from Dehradun",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/uttarakhand/dayara-bugyal.jpg",
   overview: {
     description: [
       "The Dayara Bugyal Trek is not just a trek; it's an immersive experience into the heart of the wild. Designed for those who seek both challenge and beauty, this trail promises spectacular panoramic vistas at every turn. It is the perfect escape to reconnect with nature in its most pristine and powerful form.",

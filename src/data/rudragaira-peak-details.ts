@@ -15,7 +15,7 @@ export const rudragairaPeakDetails: DetailedTrek = {
   railHead: "Dehradun",
   airport: "Jolly Grant Airport, which is 21 km away from Rishikesh",
   trailType: "Summit, Circle trail | Scale a peak, Camping in various locations, starting and ending at the same point.",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/uttarakhand/rudragaira-peak.jpg",
   overview: {
     description: [
       "Experience the raw, untamed beauty of the wilderness on the Rudragaira Peak Expedition. Every day on this trail brings a new landscape, from cascading mountain streams to towering snow-capped summits. This trek is an absolute must-do for adventurers looking to capture the ultimate essence of high-altitude exploration.",

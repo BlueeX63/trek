@@ -15,7 +15,7 @@ export const nagTibbaDetails: DetailedTrek = {
   railHead: "Dehradun",
   airport: "Jolly Grant Airport, which is 28 km away from Dehradun",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/uttarakhand/nag-tibba.jpg",
   overview: {
     description: [
       "Discover the hidden treasures of the Himalayas on the Nag Tibba Weekend Trek. Renowned for its stunning transitions in scenery, this trek is a visual masterpiece that will leave you breathless. Whether you are navigating dense ancient forests or crossing expansive alpine meadows, the profound silence of the mountains will rejuvenate your soul.",

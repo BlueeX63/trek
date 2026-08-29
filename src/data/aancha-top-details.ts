@@ -15,7 +15,7 @@ export const aanchaTopDetails: DetailedTrek = {
   railHead: "Dehradun",
   airport: "Jolly Grant Airport, which is 28 km away from Dehradun",
   trailType: "Point to point trail | Camping at the same location upon returning.",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/uttarakhand/aancha-top.webp",
   overview: {
     description: [
       "Embark on a mesmerizing journey with the Aancha Top Trek, where every step unveils a new facet of nature's grandeur. This expedition takes you through diverse landscapes, offering an unparalleled blend of thrill and tranquility. Away from the clamor of the city, you'll find solace among towering peaks and sweeping valleys.",

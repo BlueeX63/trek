@@ -15,7 +15,7 @@ export const buranGhatiDetails: DetailedTrek = {
   railHead: "Kalka",
   airport: "Jubbarhatti Airport, which is 22 km away from Shimla",
   trailType: "Cross over trail | Start in one valley, traverse the pass, and ends in another valley.",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: '/images/himachal/buran-ghati.jpg',
   overview: {
     description: [
       "Experience the raw, untamed beauty of the wilderness on the Buran Ghati Trek. Every day on this trail brings a new landscape, from cascading mountain streams to towering snow-capped summits. This trek is an absolute must-do for adventurers looking to capture the ultimate essence of high-altitude exploration.",

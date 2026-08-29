@@ -15,7 +15,7 @@ export const adiKailashDetails: DetailedTrek = {
   railHead: "Kathgodam",
   airport: "Pantnagar, which is 22 km away from Haldwani",
   trailType: "Mountain car journey",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/uttarakhand/adi-kailash-om-parvat.png",
   overview: {
     description: [
       "The Adi Kailash and Om Parvat is not just a trek; it's an immersive experience into the heart of the wild. Designed for those who seek both challenge and beauty, this trail promises spectacular panoramic vistas at every turn. It is the perfect escape to reconnect with nature in its most pristine and powerful form.",
