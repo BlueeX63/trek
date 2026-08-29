@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const navItems = [
   { id: "overview", label: "Overview" },
@@ -10,12 +10,15 @@ const navItems = [
   { id: "cost-terms", label: "Cost Terms" },
   { id: "essentials", label: "Essentials" },
   { id: "cancellation", label: "Policies" },
-  { id: "faqs", label: "FAQS" },
+  { id: "gallery", label: "Gallery" },
+  { id: "faqs", label: "FAQs" },
 ];
 
 export default function TrekStickyNav() {
   const [activeSection, setActiveSection] = useState("overview");
-  const [isSticky, setIsSticky] = useState(false);
+  const indicatorRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
+  const buttonRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,36 +40,61 @@ export default function TrekStickyNav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Animate the active indicator pill
+  useEffect(() => {
+    const activeBtn = buttonRefs.current.get(activeSection);
+    const indicator = indicatorRef.current;
+    if (activeBtn && indicator) {
+      const { offsetLeft, offsetWidth } = activeBtn;
+      indicator.style.transform = `translateX(${offsetLeft}px)`;
+      indicator.style.width = `${offsetWidth}px`;
+    }
+  }, [activeSection]);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      // Offset by 180px to account for both the main Navbar and this TrekStickyNav
-      const y = element.getBoundingClientRect().top + window.scrollY - 180;
+      // Offset by 90px to account for the top Navbar
+      const y = element.getBoundingClientRect().top + window.scrollY - 90;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="w-full z-40 sticky top-[72px] bg-[var(--color-paper)]/95 backdrop-blur-md py-4 border-b border-[var(--color-ink)]/10 transition-colors">
+    <div className="relative w-full z-20 bg-[var(--color-paper)] border-b border-[var(--color-ink)]/8">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="flex items-center gap-8 overflow-x-auto no-scrollbar pb-2 md:pb-0">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className={`relative py-2 text-[10px] font-sans font-semibold tracking-[0.2em] uppercase whitespace-nowrap transition-colors ${
-                activeSection === item.id 
-                  ? "text-[var(--color-ink)]" 
-                  : "text-[var(--color-ink)]/40 hover:text-[var(--color-ink)]"
-              }`}
-            >
-              {item.label}
-              {activeSection === item.id && (
-                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-[var(--color-primary)]" />
-              )}
-            </button>
-          ))}
-        </div>
+        <nav
+          ref={navRef}
+          className="relative flex items-center gap-1 overflow-x-auto no-scrollbar py-3"
+          role="tablist"
+        >
+          {/* Sliding active indicator */}
+          <div
+            ref={indicatorRef}
+            className="absolute bottom-0 h-[2px] bg-[var(--color-ink)] rounded-full transition-all duration-300 ease-out"
+            style={{ width: 0 }}
+          />
+
+          {navItems.map((item) => {
+            const isActive = activeSection === item.id;
+            return (
+              <button
+                key={item.id}
+                ref={(el) => { if (el) buttonRefs.current.set(item.id, el); }}
+                onClick={() => scrollToSection(item.id)}
+                role="tab"
+                aria-selected={isActive}
+                className={`relative px-4 py-2.5 text-[11px] font-sans font-medium tracking-[0.12em] uppercase whitespace-nowrap transition-all duration-200 rounded-sm cursor-pointer ${
+                  isActive 
+                    ? "text-[var(--color-ink)]" 
+                    : "text-[var(--color-ink)]/35 hover:text-[var(--color-ink)]/70"
+                }`}
+              >
+                {item.label}
+              </button>
+            );
+          })}
+        </nav>
       </div>
     </div>
   );
