@@ -122,30 +122,17 @@ export default function Navbar() {
                   <div className="absolute right-0 mt-3 w-64 bg-[#0F0F0F]/95 backdrop-blur-2xl border border-white/10 text-white rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.5)] p-2 z-[110] flex flex-col origin-top-right animate-in fade-in zoom-in-95 duration-200">
 
                     {/* User Identity Header */}
-                    <div className="p-3 pb-3.5 mb-1 bg-white/[0.03] border border-white/5 rounded-xl">
-                      <div className="flex items-center gap-3">
-                        <div className="relative">
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[var(--color-primary)] to-amber-200 text-[#0F0F0F] flex items-center justify-center font-serif text-base font-bold shadow-md">
-                            {(user.user_metadata?.full_name || user.email || 'U')[0].toUpperCase()}
-                          </div>
-                          <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-[#0F0F0F]" />
-                        </div>
-                        <div className="flex flex-col min-w-0">
-                          <span className="text-xs font-serif font-medium text-white truncate">
-                            {user.user_metadata?.full_name || user.email?.split('@')[0]}
-                          </span>
-                          <span className="text-[10px] font-sans text-white/50 truncate font-light">
-                            {user.email}
-                          </span>
-                        </div>
+                    <div className="p-3 mb-1 bg-white/[0.03] border border-white/5 rounded-xl flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-[var(--color-primary)] text-[#0D0D0D] flex items-center justify-center font-serif text-base font-bold shadow-sm shrink-0">
+                        {(user.user_metadata?.full_name || user.email || 'U')[0].toUpperCase()}
                       </div>
-
-                      <div className="mt-2.5 pt-2 border-t border-white/5 flex items-center justify-between">
-                        <span className="text-[9px] font-sans font-bold tracking-[0.2em] uppercase text-[var(--color-primary)] flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] animate-pulse" />
-                          {isAdmin ? "Expedition Admin" : "Verified Explorer"}
+                      <div className="flex flex-col min-w-0">
+                        <span className="text-sm font-serif font-medium text-white truncate leading-tight">
+                          {user.user_metadata?.full_name || user.email?.split('@')[0]}
                         </span>
-                        <span className="text-[9px] font-sans tracking-widest text-white/40 uppercase">PRO</span>
+                        <span className="text-[10px] font-sans text-white/40 truncate font-light mt-0.5">
+                          {user.email}
+                        </span>
                       </div>
                     </div>
 
