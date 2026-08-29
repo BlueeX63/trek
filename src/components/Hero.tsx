@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2500&auto=format&fit=crop"
-          alt="Majestic Mountain Peaks"
+          alt="Majestic Himalayan Mountain Peaks at Sunset"
           fill
           priority
           sizes="100vw"
@@ -72,6 +72,7 @@ export default function Hero() {
               href="https://wa.me/919520557784"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Get in touch via WhatsApp"
               className="group flex items-center justify-center gap-3 bg-[var(--color-primary)] text-[var(--color-ink)] px-7 py-4 rounded-full text-xs uppercase tracking-widest font-bold hover:scale-105 hover:bg-[var(--color-paper)] transition-all duration-300 shadow-[0_0_30px_rgba(255,192,0,0.3)] w-full sm:w-auto"
             >
               <WhatsappIcon className="w-4 h-4 shrink-0" />

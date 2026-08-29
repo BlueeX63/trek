@@ -15,7 +15,7 @@ export const ladakhBikeTourDetails: DetailedTrek = {
   railHead: "Jammu Tawi (very far, flying to Leh is recommended)",
   airport: "Kushok Bakula Rimpochee Airport, Leh",
   trailType: "Motorcycle Expedition | High-altitude riding.",
-  image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000",
+  image: "/images/ladakh/ladakh-bike-tour.jpg",
   overview: {
     description: [
       "The Leh Ladakh Bike Tour is the ultimate holy grail for motorcycle enthusiasts. Riding through the 'Land of High Passes' on a Royal Enfield offers a sense of absolute freedom amidst some of the most rugged and magnificent landscapes on the planet.",

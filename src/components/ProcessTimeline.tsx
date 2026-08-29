@@ -11,6 +11,39 @@ const STAGES = [
   { num: "05", title: "Return", desc: "Come back changed. Share your memories and get certified." }
 ];
 
+function StageItem({ 
+  stage, 
+  index, 
+  total, 
+  scrollYProgress 
+}: { 
+  stage: { num: string; title: string; desc: string }; 
+  index: number; 
+  total: number; 
+  scrollYProgress: any; 
+}) {
+  const stageOpacity = useTransform(
+    scrollYProgress,
+    [Math.max(0, (index - 1) / total), index / total],
+    [0.3, 1]
+  );
+
+  return (
+    <motion.div
+      style={{ opacity: stageOpacity }}
+      className="flex items-start gap-12 md:gap-16 relative z-10"
+    >
+      <div className="flex-shrink-0 font-serif text-5xl md:text-7xl text-[var(--color-paper)]/20 group-hover:text-[var(--color-primary)] transition-colors duration-500 w-20 text-center bg-[var(--color-ink)] py-2">
+        {stage.num}
+      </div>
+      <div className="pt-2">
+        <h3 className="text-3xl md:text-4xl font-serif text-[var(--color-paper)] mb-4">{stage.title}</h3>
+        <p className="text-[var(--color-paper)]/60 max-w-sm leading-relaxed font-sans font-light">{stage.desc}</p>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function ProcessTimeline() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -36,30 +69,15 @@ export default function ProcessTimeline() {
           />
 
           <div className="flex flex-col gap-24">
-            {STAGES.map((stage, i) => {
-              // eslint-disable-next-line react-hooks/rules-of-hooks
-              const stageOpacity = useTransform(
-                scrollYProgress, 
-                [Math.max(0, (i - 1) / STAGES.length), i / STAGES.length], 
-                [0.3, 1]
-              );
-              
-              return (
-                <motion.div 
-                  key={stage.num}
-                  style={{ opacity: stageOpacity }}
-                  className="flex items-start gap-12 md:gap-16 relative z-10"
-                >
-                  <div className="flex-shrink-0 font-serif text-5xl md:text-7xl text-[var(--color-paper)]/20 group-hover:text-[var(--color-primary)] transition-colors duration-500 w-20 text-center bg-[var(--color-ink)] py-2">
-                    {stage.num}
-                  </div>
-                  <div className="pt-2">
-                    <h3 className="text-3xl md:text-4xl font-serif text-[var(--color-paper)] mb-4">{stage.title}</h3>
-                    <p className="text-[var(--color-paper)]/60 max-w-sm leading-relaxed font-sans font-light">{stage.desc}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
+            {STAGES.map((stage, i) => (
+              <StageItem
+                key={stage.num}
+                stage={stage}
+                index={i}
+                total={STAGES.length}
+                scrollYProgress={scrollYProgress}
+              />
+            ))}
           </div>
         </div>
       </div>

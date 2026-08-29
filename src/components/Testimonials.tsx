@@ -20,12 +20,12 @@ export default function Testimonials() {
           <div className="flex items-center gap-6">
             <span className="text-5xl font-serif text-[var(--color-ink)]">4.9</span>
             <div className="flex flex-col">
-              <div className="flex text-[var(--color-primary)] mb-1">
+              <div className="flex text-amber-500 mb-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" strokeWidth={1} />
                 ))}
               </div>
-              <span className="text-[10px] font-sans font-semibold tracking-[0.3em] uppercase text-[var(--color-ink)]/50">
+              <span className="text-[10px] font-sans font-semibold tracking-[0.3em] uppercase text-[var(--color-ink)]/70">
                 Based on 12,000+ Reviews
               </span>
             </div>
@@ -49,11 +49,11 @@ export default function Testimonials() {
                 </div>
                 <div className="flex flex-col">
                   <span className="font-serif text-lg text-[var(--color-ink)] leading-none mb-1">{review.name}</span>
-                  <span className="text-[9px] font-sans font-bold uppercase tracking-[0.2em] text-[var(--color-ink)]/40">{review.date}</span>
+                  <span className="text-[9px] font-sans font-bold uppercase tracking-[0.2em] text-[var(--color-ink)]/60">{review.date}</span>
                 </div>
               </div>
 
-              <div className="flex text-[var(--color-primary)] mb-6">
+              <div className="flex text-amber-500 mb-6">
                 {[...Array(review.rating)].map((_, i) => (
                   <Star key={i} className="w-3 h-3 fill-current" strokeWidth={1} />
                 ))}

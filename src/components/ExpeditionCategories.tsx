@@ -5,11 +5,11 @@ import Image from "next/image";
 import { Compass, Users, Tent, Sparkles } from "lucide-react";
 
 const CATEGORIES = [
-  { id: "uttarakhand", title: "Uttarakhand", description: "The land of gods and legendary trails.", icon: Compass, image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2000", link: "/categories/uttarakhand", size: "large" },
-  { id: "himachal", title: "Himachal Pradesh", description: "Lush forests & alpine passes.", icon: Tent, image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000", link: "/categories/himachal", size: "small" },
-  { id: "kashmir", title: "Kashmir", description: "Paradise on earth.", icon: Sparkles, image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=2000", link: "/categories/kashmir", size: "small" },
-  { id: "ladakh", title: "Ladakh", description: "The cold desert and high passes.", icon: Users, image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2000", link: "/categories/ladakh", size: "wide" },
-  { id: "spiritual", title: "Spiritual", description: "Journeys of inner awakening.", icon: Sparkles, image: "https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000", link: "/categories/spiritual", size: "small" },
+  { id: "uttarakhand", title: "Uttarakhand", description: "The land of gods and legendary trails.", icon: Compass, image: "/images/uttarakhand/kedarkantha-trek.jpg", link: "/categories/uttarakhand", size: "large" },
+  { id: "himachal", title: "Himachal Pradesh", description: "Lush forests & alpine passes.", icon: Tent, image: "/images/himachal/hampta-pass.jpg", link: "/categories/himachal", size: "small" },
+  { id: "kashmir", title: "Kashmir", description: "Paradise on earth.", icon: Sparkles, image: "/images/kashmir/kashmir-great-lakes.jpg", link: "/categories/kashmir", size: "small" },
+  { id: "ladakh", title: "Ladakh", description: "The cold desert and high passes.", icon: Users, image: "/images/ladakh/chadar-trek.jpg", link: "/categories/ladakh", size: "wide" },
+  { id: "spiritual", title: "Spiritual", description: "Journeys of inner awakening.", icon: Sparkles, image: "/images/uttarakhand/kedarnath.jpg", link: "/categories/spiritual", size: "small" },
   { id: "customize", title: "Customize Your Trip", description: "Bespoke itineraries for hand-picked destinations.", icon: Compass, image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2000", link: "/customize-trip", size: "full" }
 ];
 

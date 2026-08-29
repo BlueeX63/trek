@@ -52,13 +52,13 @@ export default function TrekCard({ trek, index }: { trek: Trek; index: number })
       <div className="flex flex-col flex-1">
         <div className="flex justify-between items-start mb-5">
           <div className="flex flex-col">
-            <span className="text-[var(--color-primary)] text-[10px] font-sans font-bold uppercase tracking-[0.2em] mb-3 border-b border-[var(--color-primary)]/30 pb-1 w-fit">{trek.region}</span>
-            <h3 className="text-[32px] font-serif text-[var(--color-ink)] line-clamp-2 leading-[1.1] tracking-tight group-hover:text-[var(--color-primary)] transition-colors duration-300">{trek.name}</h3>
+            <span className="text-amber-800 text-[10px] font-sans font-bold uppercase tracking-[0.2em] mb-3 border-b border-amber-800/30 pb-1 w-fit">{trek.region}</span>
+            <h3 className="text-[32px] font-serif text-[var(--color-ink)] line-clamp-2 leading-[1.1] tracking-tight group-hover:text-amber-800 transition-colors duration-300">{trek.name}</h3>
           </div>
         </div>
 
         {/* Specs Table */}
-        <div className="grid grid-cols-2 gap-y-3 mt-4 text-[10px] font-sans tracking-[0.15em] uppercase text-[var(--color-ink)]/50">
+        <div className="grid grid-cols-2 gap-y-3 mt-4 text-[10px] font-sans tracking-[0.15em] uppercase text-[var(--color-ink)]/70">
           <div className="border-b border-[var(--color-ink)]/10 pb-1.5 flex justify-between pr-2">
             <span>Duration</span>
             <span className="text-[var(--color-ink)] font-bold">{trek.duration.days}D</span>
@@ -72,7 +72,7 @@ export default function TrekCard({ trek, index }: { trek: Trek; index: number })
         {/* Footer */}
         <div className="mt-auto pt-8 flex items-end justify-between">
           <div className="flex flex-col">
-            <span className="text-[10px] text-[var(--color-ink)]/40 font-sans tracking-[0.2em] uppercase mb-1">Starting From</span>
+            <span className="text-[10px] text-[var(--color-ink)]/60 font-sans tracking-[0.2em] uppercase mb-1">Starting From</span>
             <span className="font-serif text-2xl text-[var(--color-ink)] leading-none">₹{trek.price.toLocaleString()}</span>
           </div>
           

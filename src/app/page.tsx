@@ -1,13 +1,22 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
-import ExpeditionStats from "@/components/ExpeditionStats";
-import ExpeditionCategories from "@/components/ExpeditionCategories";
-import TrekExplorer from "@/components/TrekExplorer";
-import FeaturedExpedition from "@/components/FeaturedExpedition";
-import Testimonials from "@/components/Testimonials";
-import ExpeditionFAQ from "@/components/ExpeditionFAQ";
-import ProcessTimeline from "@/components/ProcessTimeline";
-import WhyChooseUs from "@/components/WhyChooseUs";
+
+const ExpeditionCategories = dynamic(() => import("@/components/ExpeditionCategories"), {
+  loading: () => <div className="min-h-[600px] w-full bg-[var(--color-paper)]" />
+});
+const ProcessTimeline = dynamic(() => import("@/components/ProcessTimeline"), {
+  loading: () => <div className="min-h-[600px] w-full bg-[var(--color-ink)]" />
+});
+const Testimonials = dynamic(() => import("@/components/Testimonials"), {
+  loading: () => <div className="min-h-[500px] w-full bg-[var(--color-paper)]" />
+});
+const WhyChooseUs = dynamic(() => import("@/components/WhyChooseUs"), {
+  loading: () => <div className="min-h-[500px] w-full bg-[var(--color-ink)]" />
+});
+const ExpeditionFAQ = dynamic(() => import("@/components/ExpeditionFAQ"), {
+  loading: () => <div className="min-h-[600px] w-full bg-[var(--color-paper)]" />
+});
 
 export default function Home() {
   return (

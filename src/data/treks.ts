@@ -31,9 +31,9 @@ export const treks: Trek[] = [
     difficulty: 'Easy to Moderate',
     season: ['Winter', 'Spring', 'Autumn'],
     price: 8500,
-    heroImage: '/images/uttarakhand/kedarkantha.jpg',
+    heroImage: '/images/uttarakhand/kedarkantha-trek.jpg',
     gallery: [
-      '/images/uttarakhand/kedarkantha.jpg'
+      '/images/uttarakhand/kedarkantha-trek.jpg'
     ],
     categories: ['Uttarakhand', 'Winter', 'Autumn', 'January', 'February', 'April', 'October', 'November', 'December']
   },
@@ -702,7 +702,7 @@ export const treks: Trek[] = [
     difficulty: 'Moderate to Difficult',
     season: ['Summer', 'Monsoon'],
     price: 18500,
-    heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    heroImage: '/images/kashmir/kashmir-great-lakes.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
@@ -722,7 +722,7 @@ export const treks: Trek[] = [
     difficulty: 'Moderate',
     season: ['Summer', 'Monsoon'],
     price: 15500,
-    heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    heroImage: '/images/kashmir/tarsar-marsar.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     ],
@@ -742,7 +742,7 @@ export const treks: Trek[] = [
     difficulty: 'Moderate to Difficult',
     season: ['Summer', 'Monsoon', 'Autumn'],
     price: 9500,
-    heroImage: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    heroImage: '/images/kashmir/doodhpathri-trek.jpg',
     gallery: [],
     categories: ['Kashmir', 'Summer', 'Monsoon', 'Autumn', 'August']
   },
@@ -759,7 +759,7 @@ export const treks: Trek[] = [
     difficulty: 'Moderate to Difficult',
     season: ['Summer', 'Monsoon'],
     price: 16500,
-    heroImage: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    heroImage: '/images/kashmir/nafran-valley.jpg',
     gallery: [],
     categories: ['Kashmir', 'Summer', 'Monsoon', 'July', 'August']
   },
@@ -777,7 +777,7 @@ export const treks: Trek[] = [
     difficulty: 'Moderate',
     season: ['Summer', 'Autumn'],
     price: 16000,
-    heroImage: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    heroImage: '/images/kashmir/guraz-valley.jpg',
     gallery: [],
     categories: ['Kashmir', 'Summer', 'Autumn', 'July', 'August', 'September']
   },
@@ -794,7 +794,7 @@ export const treks: Trek[] = [
     difficulty: 'Moderate',
     season: ['Summer', 'Autumn'],
     price: 13000,
-    heroImage: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    heroImage: '/images/kashmir/bodpathri-trek.jpg',
     gallery: [],
     categories: ['Kashmir', 'Summer', 'Autumn', 'July', 'August', 'September']
   },
@@ -811,7 +811,7 @@ export const treks: Trek[] = [
     difficulty: 'Easy to Moderate',
     season: ['Summer'],
     price: 7500,
-    heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    heroImage: '/images/kashmir/tulian-lake.jpg',
     gallery: [],
     categories: ['Kashmir', 'Summer', 'June', 'July', 'August', 'September']
   },
@@ -828,7 +828,7 @@ export const treks: Trek[] = [
     difficulty: 'Difficult',
     season: ['Summer'],
     price: 22000,
-    heroImage: 'https://images.unsplash.com/photo-1527842891421-42eec6e703ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    heroImage: '/images/kashmir/warwan-valley.jpg',
     gallery: [],
     categories: ['Kashmir', 'Summer', 'July', 'August', 'September']
   },
@@ -845,7 +845,7 @@ export const treks: Trek[] = [
     difficulty: 'Moderate to Difficult',
     season: ['Summer', 'Autumn'],
     price: 18000,
-    heroImage: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    heroImage: '/images/kashmir/brammah-valley.jpg',
     gallery: [],
     categories: ['Kashmir', 'Summer', 'Autumn', 'July', 'August', 'September']
   },
@@ -862,7 +862,7 @@ export const treks: Trek[] = [
     difficulty: 'Easy to Moderate',
     season: ['Winter', 'Spring'],
     price: 6500,
-    heroImage: 'https://images.unsplash.com/photo-1542317148-8b4eec4cb396?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    heroImage: '/images/kashmir/marchoi-trek.jpg',
     gallery: [],
     categories: ['Kashmir', 'Winter', 'Spring', 'January', 'February', 'March', 'April', 'November', 'December']
   },
@@ -1181,7 +1181,7 @@ export const treks: Trek[] = [
     difficulty: 'Moderate',
     season: ['Summer'],
     price: 15000,
-    heroImage: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    heroImage: '/images/kashmir/amarnath-yatra.jpg',
     gallery: [],
     categories: ['Kashmir', 'Spiritual', 'Summer', 'July', 'August']
   },
@@ -1215,9 +1215,9 @@ export const treks: Trek[] = [
     difficulty: 'Difficult',
     season: ['Winter'],
     price: 25000,
-    heroImage: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2000',
+    heroImage: '/images/ladakh/chadar-trek.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2000'
+      '/images/ladakh/chadar-trek.jpg'
     ],
     categories: ['Ladakh', 'Winter', 'January', 'February']
   },
@@ -1234,9 +1234,9 @@ export const treks: Trek[] = [
     difficulty: 'Moderate to Difficult',
     season: ['Summer'],
     price: 28000,
-    heroImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000',
+    heroImage: '/images/ladakh/ladakh-bike-tour.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000'
+      '/images/ladakh/ladakh-bike-tour.jpg'
     ],
     categories: ['Ladakh', 'Summer', 'June', 'July', 'August', 'September']
   }

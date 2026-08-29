@@ -15,7 +15,7 @@ export const amarnathDetails: DetailedTrek = {
   railHead: "Jammu",
   airport: "Srinagar",
   trailType: "Pilgrimage Trail",
-  image: "https://images.unsplash.com/photo-1542317148-8b4eec4cb396?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/kashmir/amarnath-yatra.jpg",
   overview: {
     description: [
       "The Amarnath Yatra is one of the most revered pilgrimages in Hinduism, dedicated to Lord Shiva. The journey takes you to the holy Amarnath Cave, situated high in the mountains of Jammu and Kashmir, where the legendary ice Shiva Lingam naturally forms every year.",

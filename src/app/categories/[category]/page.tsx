@@ -10,35 +10,35 @@ const CATEGORY_DATA: Record<string, any> = {
     description: "Explore the legendary Garhwal and Kumaon Himalayas. Home to pristine meadows, ancient temples, and some of the most iconic trekking trails in India.",
     icon: Compass,
     filterFn: (query: any) => query.eq('region', 'Uttarakhand'),
-    image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2000"
+    image: "/images/uttarakhand/kedarkantha-trek.jpg"
   },
   himachal: {
     title: "Himachal Treks",
     description: "Journey through lush pine forests, dramatic alpine passes, and the rugged terrain of Spiti and Lahaul.",
     icon: Tent,
     filterFn: (query: any) => query.eq('region', 'Himachal Pradesh'),
-    image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000"
+    image: "/images/himachal/hampta-pass.jpg"
   },
   kashmir: {
     title: "Kashmir Treks",
     description: "Trek the paradise on earth. Discover alpine lakes, vast meadows, and the unparalleled beauty of the Kashmir valley.",
     icon: Sparkles,
     filterFn: (query: any) => query.eq('region', 'Kashmir'),
-    image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=2000"
+    image: "/images/kashmir/kashmir-great-lakes.jpg"
   },
   ladakh: {
     title: "Ladakh Treks",
     description: "Venture into the cold desert. Experience stark lunar landscapes, high altitude passes, and deep Buddhist culture.",
     icon: Users,
     filterFn: (query: any) => query.eq('region', 'Ladakh'),
-    image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2000"
+    image: "/images/ladakh/chadar-trek.jpg"
   },
   spiritual: {
     title: "Spiritual Journeys",
     description: "Follow the ancient pilgrimage routes. Treks that offer both physical challenge and profound spiritual awakening.",
     icon: Sparkles,
     filterFn: (query: any) => query.contains('categories', '["Spiritual"]'),
-    image: "https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=2000"
+    image: "/images/uttarakhand/kedarnath.jpg"
   }
 };
 
@@ -95,6 +95,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             alt={categoryInfo.title}
             fill
             priority
+            loading="eager"
+            sizes="100vw"
             className="object-cover grayscale-[30%] opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)] via-[var(--color-ink)]/60 to-transparent opacity-90 z-10" />

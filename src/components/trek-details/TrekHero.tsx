@@ -20,6 +20,7 @@ export default function TrekHero({ title, image, subtitle }: TrekHeroProps) {
             alt={`Hero image for ${title}`}
             fill
             priority
+            loading="eager"
             sizes="100vw"
             className="object-cover grayscale-[30%] opacity-70 scale-105"
           />

@@ -15,7 +15,7 @@ export const gurazValleyDetails: DetailedTrek = {
   railHead: "Jammu",
   airport: "Srinagar",
   trailType: "Circular trail | Starting and ending at Dawar.",
-  image: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/kashmir/guraz-valley.jpg",
   overview: {
     description: [
       "The Gurez (or Guraz) Valley trek is a journey into one of the most remote and beautiful parts of Kashmir. Nestled high in the Himalayas, it is renowned for its stunning landscapes, traditional log houses, and the pristine Kishanganga River.",

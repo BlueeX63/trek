@@ -15,7 +15,7 @@ export const bodpathriDetails: DetailedTrek = {
   railHead: "Jammu",
   airport: "Srinagar",
   trailType: "Alpine Lake Trek",
-  image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/kashmir/bodpathri-trek.jpg",
   overview: {
     description: [
       "The Bodpathri Trek explores the hidden alpine lakes nestled in the Pir Panjal range. Starting from the famous meadows of Doodhpathri, this trek is an offbeat alternative to the Kashmir Great Lakes.",

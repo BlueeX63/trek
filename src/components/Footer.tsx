@@ -56,6 +56,7 @@ export default function Footer() {
                   src="/logo.png"
                   alt="Xplore The Dreams Logo"
                   fill
+                  sizes="(max-width: 768px) 160px, 224px"
                   className="object-contain object-center"
                 />
               </div>
@@ -64,16 +65,16 @@ export default function Footer() {
               We craft premium high-altitude expeditions for those seeking extraordinary landscapes without compromising on safety or comfort.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.facebook.com/share/1H9J64uyDG/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
+              <a href="https://www.facebook.com/share/1H9J64uyDG/" target="_blank" rel="noopener noreferrer" aria-label="Visit Xplore The Dreams on Facebook" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
                 <FacebookIcon className="w-4 h-4" />
               </a>
-              <a href="https://www.instagram.com/xplorethedreams" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
+              <a href="https://www.instagram.com/xplorethedreams" target="_blank" rel="noopener noreferrer" aria-label="Visit Xplore The Dreams on Instagram" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
                 <InstagramIcon className="w-4 h-4" />
               </a>
-              <a href="https://www.linkedin.com/in/xplore-the-dreams-6977b3329?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
+              <a href="https://www.linkedin.com/in/xplore-the-dreams-6977b3329?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="Visit Xplore The Dreams on LinkedIn" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
                 <LinkedinIcon className="w-4 h-4" />
               </a>
-              <a href="https://www.youtube.com/xplorethedreams" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
+              <a href="https://www.youtube.com/xplorethedreams" target="_blank" rel="noopener noreferrer" aria-label="Visit Xplore The Dreams on YouTube" className="w-10 h-10 border border-[var(--color-paper)]/20 flex items-center justify-center hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">
                 <YoutubeIcon className="w-4 h-4" />
               </a>
             </div>

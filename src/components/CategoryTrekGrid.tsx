@@ -46,7 +46,7 @@ export default function CategoryTrekGrid({ initialTreks }: { initialTreks: Trek[
     <section className="py-12 md:py-24 px-6 md:px-12 max-w-[1400px] mx-auto">
       
       {/* Controls Header */}
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-16 border-b border-[var(--color-ink)]/10 pb-6 gap-6 relative z-50">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-16 border-b border-[var(--color-ink)]/10 pb-6 gap-6 relative z-30">
         
         <div>
           <h2 className="text-3xl font-serif text-[var(--color-ink)]">
@@ -65,11 +65,12 @@ export default function CategoryTrekGrid({ initialTreks }: { initialTreks: Trek[
             <input 
               type="text" 
               placeholder="Search treks..."
+              aria-label="Search treks"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-transparent border border-[var(--color-ink)]/20 px-4 py-2 pl-10 text-sm font-sans focus:outline-none focus:border-[var(--color-primary)] transition-colors placeholder-[var(--color-ink)]/30 text-[var(--color-ink)]"
             />
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-ink)]/40" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-ink)]/40 pointer-events-none" aria-hidden="true" />
           </div>
 
           {/* Difficulty Filter */}

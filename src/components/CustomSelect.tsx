@@ -32,6 +32,8 @@ export default function CustomSelect({ value, onChange, options, placeholder, ic
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-label={placeholder}
         className={`w-full bg-transparent border border-[var(--color-ink)]/20 py-2 pr-10 text-sm font-sans focus:outline-none focus:border-[var(--color-primary)] transition-colors text-[var(--color-ink)] flex items-center justify-between text-left hover:border-[var(--color-ink)]/40 ${icon ? 'pl-10' : 'pl-4'} ${className}`}
       >
         {icon && <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-ink)]/40 pointer-events-none">{icon}</div>}

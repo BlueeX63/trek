@@ -10,11 +10,13 @@ import { AppProvider } from "@/context/AppContext";
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+  display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     description: 'Experience curated high-altitude expeditions and premium mountaineering. We redefine the adventure with raw wilderness and uncompromising safety.',
     siteName: 'Xplore The Dreams',
     images: [{
-      url: 'https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=1200&auto=format&fit=crop',
+      url: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
       width: 1200,
       height: 630,
       alt: 'Xplore The Dreams Hero Image',
@@ -45,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Xplore The Dreams | Curated Expeditions',
     description: 'Experience curated high-altitude expeditions and premium mountaineering.',
-    images: ['https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=1200&auto=format&fit=crop'],
+    images: ['https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'],
   },
   robots: {
     index: true,
@@ -60,6 +62,33 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  themeColor: '#0D0D0D',
+  width: 'device-width',
+  initialScale: 1,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Xplore The Dreams',
+  url: 'https://xplorethedreams.com',
+  logo: 'https://xplorethedreams.com/logo.png',
+  description: 'Curated high-altitude expeditions, Himalayan trekking, and mountaineering.',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+91-9520557784',
+    contactType: 'customer service',
+    areaServed: 'IN',
+    availableLanguage: ['English', 'Hindi'],
+  },
+  sameAs: [
+    'https://www.instagram.com/xplorethedreams',
+    'https://www.facebook.com/share/1H9J64uyDG/',
+    'https://www.youtube.com/xplorethedreams',
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -67,6 +96,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${playfair.variable} ${inter.variable} antialiased bg-[#F0EFEA] text-[#0D0D0D] min-h-screen flex flex-col font-sans selection:bg-[#FFC000] selection:text-black relative`}
       >

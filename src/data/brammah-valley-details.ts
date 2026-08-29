@@ -15,7 +15,7 @@ export const brammahValleyDetails: DetailedTrek = {
   railHead: "Jammu",
   airport: "Srinagar",
   trailType: "Out and Back",
-  image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/kashmir/brammah-valley.jpg",
   overview: {
     description: [
       "The Brammah Valley trek takes you into the heart of Kishtwar National Park, an area famous for its dramatic peaks, dense forests, and untamed rivers.",

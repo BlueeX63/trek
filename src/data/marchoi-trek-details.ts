@@ -15,7 +15,7 @@ export const marchoiTrekDetails: DetailedTrek = {
   railHead: "Jammu",
   airport: "Srinagar",
   trailType: "Out and Back",
-  image: "https://images.unsplash.com/photo-1542317148-8b4eec4cb396?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/kashmir/marchoi-trek.jpg",
   overview: {
     description: [
       "The Marchoi Trek is one of the best winter treks in Kashmir. Starting from the historical village of Naranag, it offers a magical snowy trail through the dense pine forests of the Wangat Valley.",

@@ -15,7 +15,7 @@ export const tulianLakeDetails: DetailedTrek = {
   railHead: "Jammu",
   airport: "Srinagar",
   trailType: "Out and Back",
-  image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80",
+  image: "/images/kashmir/tulian-lake.jpg",
   overview: {
     description: [
       "The Tulian Lake trek is a magnificent short trek starting from Pahalgam, leading to a turquoise alpine lake shaped like a figure eight.",

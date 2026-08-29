@@ -54,7 +54,7 @@ export default function ExpeditionFAQ() {
               className={`px-6 py-3 text-[10px] font-sans font-bold tracking-widest uppercase transition-all duration-300 border ${
                 activeCategory === cat 
                   ? "bg-[var(--color-ink)] text-[var(--color-paper)] border-[var(--color-ink)]" 
-                  : "bg-transparent text-[var(--color-ink)]/60 border-[var(--color-ink)]/20 hover:border-[var(--color-ink)]/50 hover:text-[var(--color-ink)]"
+                  : "bg-transparent text-[var(--color-ink)]/75 border-[var(--color-ink)]/20 hover:border-[var(--color-ink)]/50 hover:text-[var(--color-ink)]"
               }`}
             >
               {cat}
@@ -67,12 +67,13 @@ export default function ExpeditionFAQ() {
             <div key={index} className="border-b border-[var(--color-ink)]/10">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                aria-expanded={openIndex === index}
                 className="w-full py-8 flex items-center justify-between text-left group cursor-pointer hover:cursor-pointer"
               >
-                <span className={`text-xl md:text-2xl font-serif transition-colors pr-8 ${openIndex === index ? 'text-[var(--color-primary)]' : 'text-[var(--color-ink)] group-hover:text-[var(--color-ink)]/70'}`}>
+                <span className={`text-xl md:text-2xl font-serif transition-colors pr-8 ${openIndex === index ? 'text-amber-800' : 'text-[var(--color-ink)] group-hover:text-[var(--color-ink)]/70'}`}>
                   {faq.question}
                 </span>
-                <div className={`flex-shrink-0 transition-colors ${openIndex === index ? 'text-[var(--color-primary)]' : 'text-[var(--color-ink)]/30 group-hover:text-[var(--color-ink)]/50'}`}>
+                <div className={`flex-shrink-0 transition-colors ${openIndex === index ? 'text-amber-800' : 'text-[var(--color-ink)]/40 group-hover:text-[var(--color-ink)]/70'}`}>
                   {openIndex === index ? <Minus className="w-5 h-5" strokeWidth={1} /> : <Plus className="w-5 h-5" strokeWidth={1} />}
                 </div>
               </button>
@@ -86,7 +87,7 @@ export default function ExpeditionFAQ() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <p className="pb-8 text-[var(--color-ink)]/70 font-sans font-light leading-relaxed max-w-3xl">
+                    <p className="pb-8 text-[var(--color-ink)]/80 font-sans font-light leading-relaxed max-w-3xl">
                       {faq.answer}
                     </p>
                   </motion.div>
