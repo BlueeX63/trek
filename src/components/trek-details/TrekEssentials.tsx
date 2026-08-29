@@ -4,7 +4,7 @@ import { Backpack } from "lucide-react";
 
 interface TrekEssentialsProps {
   essentials: {
-    basicGear: string[];
+    basicGear?: string[];
   };
 }
 
@@ -33,7 +33,7 @@ export default function TrekEssentials({ essentials }: TrekEssentialsProps) {
         </h3>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
-          {essentials.basicGear.map((item, idx) => (
+          {(essentials.basicGear || []).map((item, idx) => (
             <div key={idx} className="flex items-start gap-4 bg-[var(--color-paper)] p-6 border border-[var(--color-ink)]/5 hover:border-[var(--color-primary)]/30 transition-colors">
               <div className="w-2 h-2 rounded-full bg-[var(--color-primary)] mt-1.5 shrink-0"></div>
               <span className="text-[var(--color-ink)]/80 font-sans font-light text-sm">{item}</span>

@@ -4,9 +4,9 @@ import { AlertTriangle, Clock } from "lucide-react";
 
 interface TrekCancellationProps {
   cancellation: {
-    policies: { timeFrame: string; refundOptions: string[] }[];
-    emergencyCases: string;
-    notes: string[];
+    policies?: { timeFrame: string; refundOptions: string[] }[];
+    emergencyCases?: string;
+    notes?: string[];
   };
 }
 
@@ -29,7 +29,7 @@ export default function TrekCancellation({ cancellation }: TrekCancellationProps
         
         {/* Timeline Policies */}
         <div className="flex flex-col gap-8">
-          {cancellation.policies.map((policy, idx) => (
+          {(cancellation.policies || []).map((policy, idx) => (
             <div key={idx} className="bg-[var(--color-paper)] border border-[var(--color-ink)]/10 p-8 relative">
               <div className="absolute top-0 left-0 w-1 h-full bg-[var(--color-ink)]/10"></div>
               
@@ -66,7 +66,7 @@ export default function TrekCancellation({ cancellation }: TrekCancellationProps
           <div className="bg-[var(--color-paper)] border border-[var(--color-ink)]/10 p-8">
             <h3 className="font-serif text-xl text-[var(--color-ink)] mb-6">Important Notes</h3>
             <ul className="space-y-4">
-              {cancellation.notes.map((note, idx) => (
+              {(cancellation.notes || []).map((note, idx) => (
                 <li key={idx} className="flex gap-3 items-start border-b border-[var(--color-ink)]/5 pb-4 last:border-0 last:pb-0">
                   <span className="text-[var(--color-ink)]/40 font-serif text-sm">{(idx + 1).toString().padStart(2, '0')}</span>
                   <span className="text-[var(--color-ink)]/70 font-sans font-light text-sm">{note}</span>

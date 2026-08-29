@@ -14,6 +14,7 @@ import TrekHowToReach from "@/components/trek-details/TrekHowToReach";
 import TrekCostTerms from "@/components/trek-details/TrekCostTerms";
 import TrekEssentials from "@/components/trek-details/TrekEssentials";
 import TrekCancellation from "@/components/trek-details/TrekCancellation";
+import TrekGallery from "@/components/trek-details/TrekGallery";
 import TrekFAQ from "@/components/trek-details/TrekFAQ";
 
 export const revalidate = 0;
@@ -241,13 +242,18 @@ export default async function TrekDetailsPage({ params }: { params: Promise<{ sl
     { label: "Trail Type", value: trekData.trailType },
   ];
 
+  // Extract all unique images (hero_image + gallery)
+  const rawGallery = Array.isArray(dbTrek.gallery) ? dbTrek.gallery : [];
+  const allImages = Array.from(new Set([dbTrek.hero_image, ...rawGallery].filter(Boolean)));
+
   return (
     <main className="flex min-h-screen flex-col w-full bg-[var(--color-paper)]">
       <ScrollToTop />
       <TrekHero 
         title={trekData.name}
         subtitle="Himalayan Standard"
-        image={trekData.image || ""}
+        image={allImages[0] || trekData.image || ""}
+        images={allImages.length > 0 ? allImages : [trekData.image || ""]}
       />
       
       <TrekQuickInfo 
@@ -296,6 +302,10 @@ export default async function TrekDetailsPage({ params }: { params: Promise<{ sl
 
       {trekData.cancellation && (
         <TrekCancellation cancellation={trekData.cancellation} />
+      )}
+
+      {allImages.length > 0 && (
+        <TrekGallery images={allImages} trekName={trekData.name} />
       )}
 
       {trekData.faqs && trekData.faqs.length > 0 && (

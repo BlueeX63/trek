@@ -19,7 +19,7 @@ export const articles: Article[] = [
     readTime: '6 min read',
     author: 'Dr. Rohan Sharma',
     date: 'August 12, 2024',
-    image: 'https://images.unsplash.com/photo-1544198365-f5d60b6d8190?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80',
+    image: '/images/uttarakhand/pangarchulla-peak.png',
     content: [
       'High altitude trekking is as much a mental game as it is a physical one. However, the most critical factor that determines the success of your expedition is often something entirely out of your conscious control: acclimatization.',
       'When you ascend above 8,000 feet, the barometric pressure drops, and with it, the number of oxygen molecules in the air you breathe. Your body immediately begins to compensate. Your heart rate increases, your breathing deepens, and over a few days, your kidneys secrete a hormone called erythropoietin, which stimulates the production of more red blood cells.',
@@ -36,7 +36,7 @@ export const articles: Article[] = [
     readTime: '5 min read',
     author: 'Vikram Singh',
     date: 'July 28, 2024',
-    image: 'https://images.unsplash.com/photo-1518134346374-184f9d21cea2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80',
+    image: '/images/ladakh/chadar-trek.jpg',
     content: [
       'The weather in the Himalayas is notoriously fickle. You can start your morning in freezing temperatures, sweat under a scorching midday sun, and be caught in a violent snowstorm by afternoon. The secret to managing these extremes is the layering system.',
       'The system consists of three main components: the base layer, the mid-layer, and the outer shell. Each has a specific and crucial function.',
@@ -54,7 +54,7 @@ export const articles: Article[] = [
     readTime: '8 min read',
     author: 'Ananya Desai',
     date: 'September 05, 2024',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    image: '/images/ladakh/ladakh-bike-tour.jpg',
     content: [
       'Zanskar is not a place you simply visit; it is a place you endure, and in return, it strips away the noise of modern life until all that remains is silence and scale.',
       'Cut off from the rest of the world for nearly six months a year by deep snows on the high passes, the Zanskar valley maintains a raw, primordial energy. The landscape is a study in contrasts: arid, jagged peaks of ochre and purple plunge into the raging, silt-laden waters of the Zanskar river.',
@@ -71,7 +71,7 @@ export const articles: Article[] = [
     readTime: '4 min read',
     author: 'EcoTrek Initiative',
     date: 'June 18, 2024',
-    image: 'https://images.unsplash.com/photo-1542259009477-d625272157b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80',
+    image: '/images/uttarakhand/valley-of-flowers.jpg',
     content: [
       'The Himalayas are vast, giving the illusion of invulnerability. However, the high-altitude ecosystem is incredibly fragile. Soil formation takes centuries, and vegetation grows at a glacial pace. A single piece of litter can persist for decades, and a trampled alpine meadow might not recover in our lifetime.',
       'The core principle of Leave No Trace (LNT) is simple: leave the place exactly as you found it, or better. But applying this in the Himalayas requires specific knowledge.',
@@ -88,7 +88,7 @@ export const articles: Article[] = [
     readTime: '7 min read',
     author: 'Karma Tenzin',
     date: 'October 30, 2024',
-    image: 'https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80',
+    image: '/images/uttarakhand/adi-kailash-om-parvat.png',
     content: [
       'To the Western world, the Yeti or "Abominable Snowman" is a cryptid, a monster of pop culture, fodder for sensationalist documentaries. But to the indigenous people of the Himalayas, the Yeti is deeply woven into the fabric of their spiritual and cultural worldview.',
       'In Tibetan and Sherpa folklore, the Yeti is not necessarily a flesh-and-blood beast, but a spiritual entity, a guardian of the high peaks, or sometimes, a manifestation of the wild, untamed forces of nature itself.',

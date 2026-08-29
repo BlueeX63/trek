@@ -30,6 +30,8 @@ export interface DetailedTrek {
   airport: string;
   trailType: string;
   image?: string;
+  gallery?: string[];
+  images?: string[];
   
   overview: {
     description: string[];

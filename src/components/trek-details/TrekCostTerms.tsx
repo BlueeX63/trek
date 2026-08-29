@@ -3,8 +3,8 @@
 import { Check, X } from "lucide-react";
 
 interface TrekCostTermsProps {
-  inclusions: string[];
-  exclusions: string[];
+  inclusions?: string[];
+  exclusions?: string[];
 }
 
 export default function TrekCostTerms({ inclusions, exclusions }: TrekCostTermsProps) {
@@ -32,7 +32,7 @@ export default function TrekCostTerms({ inclusions, exclusions }: TrekCostTermsP
             Inclusions
           </h3>
           <ul className="space-y-4">
-            {inclusions.map((item, idx) => (
+            {(inclusions || []).map((item, idx) => (
               <li key={idx} className="flex gap-4 items-start pb-4 border-b border-[var(--color-ink)]/5 last:border-0">
                 <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] mt-2 shrink-0"></div>
                 <span className="text-[var(--color-ink)]/70 font-sans font-light text-sm leading-relaxed">{item}</span>
@@ -50,7 +50,7 @@ export default function TrekCostTerms({ inclusions, exclusions }: TrekCostTermsP
             Exclusions
           </h3>
           <ul className="space-y-4">
-            {exclusions.map((item, idx) => (
+            {(exclusions || []).map((item, idx) => (
               <li key={idx} className="flex gap-4 items-start pb-4 border-b border-[var(--color-ink)]/5 last:border-0">
                 <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-ink)]/20 mt-2 shrink-0"></div>
                 <span className="text-[var(--color-ink)]/70 font-sans font-light text-sm leading-relaxed">{item}</span>

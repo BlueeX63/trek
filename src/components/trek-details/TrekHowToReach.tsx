@@ -4,9 +4,9 @@ import { MapPin, Navigation, Map } from "lucide-react";
 
 interface TrekHowToReachProps {
   howToReach: {
-    meetingPlace: string;
-    dropOff: string;
-    options: string[];
+    meetingPlace?: string;
+    dropOff?: string;
+    options?: string[];
   };
 }
 
@@ -35,10 +35,10 @@ export default function TrekHowToReach({ howToReach }: TrekHowToReachProps) {
             </div>
             
             <h3 className="text-[10px] font-sans font-semibold tracking-[0.2em] uppercase text-[var(--color-paper)]/50 mb-2">Meeting Point</h3>
-            <p className="font-serif text-2xl mb-8 relative z-10">{howToReach.meetingPlace}</p>
+            <p className="font-serif text-2xl mb-8 relative z-10">{howToReach.meetingPlace || "Contact for details"}</p>
             
             <h3 className="text-[10px] font-sans font-semibold tracking-[0.2em] uppercase text-[var(--color-paper)]/50 mb-2 border-t border-[var(--color-paper)]/20 pt-6">Drop Off</h3>
-            <p className="font-serif text-xl relative z-10">{howToReach.dropOff}</p>
+            <p className="font-serif text-xl relative z-10">{howToReach.dropOff || "Same as meeting point"}</p>
           </div>
         </div>
 
@@ -51,7 +51,7 @@ export default function TrekHowToReach({ howToReach }: TrekHowToReachProps) {
             </h3>
             
             <ul className="flex flex-col gap-6">
-              {howToReach.options.map((option, idx) => (
+              {(howToReach.options || []).map((option, idx) => (
                 <li key={idx} className="flex gap-6 items-start pb-6 border-b border-[var(--color-ink)]/5 last:border-0 last:pb-0">
                   <span className="text-[var(--color-ink)]/30 font-serif text-3xl leading-none mt-1">{(idx + 1).toString().padStart(2, '0')}</span>
                   <span className="text-[var(--color-ink)]/80 font-sans font-light text-sm leading-relaxed">{option}</span>

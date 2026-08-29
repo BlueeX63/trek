@@ -5,9 +5,9 @@ import { Calculator } from "lucide-react";
 
 interface TrekEligibilityProps {
   eligibility: {
-    ageRequirement: string;
-    fitnessCriteria: string[];
-    healthAwareness: string[];
+    ageRequirement?: string;
+    fitnessCriteria?: string[];
+    healthAwareness?: string[];
   };
 }
 
@@ -54,12 +54,12 @@ export default function TrekEligibility({ eligibility }: TrekEligibilityProps) {
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-2 border-b border-[var(--color-ink)]/10 pb-6">
             <span className="font-serif text-xl text-[var(--color-ink)]">Age Requirement</span>
-            <span className="text-[var(--color-ink)]/60 text-sm font-light">{eligibility.ageRequirement}</span>
+            <span className="text-[var(--color-ink)]/60 text-sm font-light">{eligibility.ageRequirement || "No specific age requirement listed."}</span>
           </div>
           <div className="flex flex-col gap-2 border-b border-[var(--color-ink)]/10 pb-6">
             <span className="font-serif text-xl text-[var(--color-ink)]">Fitness Criteria</span>
             <ul className="text-[var(--color-ink)]/60 text-sm font-light list-disc list-inside space-y-2">
-              {eligibility.fitnessCriteria.map((item, idx) => (
+              {(eligibility.fitnessCriteria || []).map((item, idx) => (
                 <li key={idx}>{item}</li>
               ))}
             </ul>
@@ -67,7 +67,7 @@ export default function TrekEligibility({ eligibility }: TrekEligibilityProps) {
           <div className="flex flex-col gap-2 border-b border-[var(--color-ink)]/10 pb-6">
             <span className="font-serif text-xl text-[var(--color-ink)]">Health & Awareness</span>
             <ul className="text-[var(--color-ink)]/60 text-sm font-light list-disc list-inside space-y-2">
-              {eligibility.healthAwareness.map((item, idx) => (
+              {(eligibility.healthAwareness || []).map((item, idx) => (
                 <li key={idx}>{item}</li>
               ))}
             </ul>
