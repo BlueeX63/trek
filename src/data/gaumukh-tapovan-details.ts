@@ -16,6 +16,15 @@ export const gaumukhTapovanDetails: DetailedTrek = {
   airport: "Jolly Grant Airport, which is 28 km away from Dehradun",
   trailType: "Point to point trail | Camping at the same location upon returning.",
   image: "/images/uttarakhand/gaumukh-tapovan.png",
+  gallery: [
+      "/images/uttarakhand/gaumukh-tapovan.png",
+      "/images/Uttrakhand Trek_s/Gaumukh Tapovan/fe35ad67-f59e-45dc-b5c7-314094d5c7d1_Gaumukh-Tapovan-Nitish-Waila-1.avif",
+      "/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh 1.jpg",
+      "/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh 2.jpg",
+      "/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh 4.jpg",
+      "/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh 8.jpg",
+      "/images/Uttrakhand Trek_s/Gaumukh Tapovan/Gaumukh7.jpg"
+  ],
   overview: {
     description: [
       "Embark on a mesmerizing journey with the Gaumukh Tapovan Trek, where every step unveils a new facet of nature's grandeur. This expedition takes you through diverse landscapes, offering an unparalleled blend of thrill and tranquility. Away from the clamor of the city, you'll find solace among towering peaks and sweeping valleys.",

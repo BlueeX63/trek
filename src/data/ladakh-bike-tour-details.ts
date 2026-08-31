@@ -16,6 +16,17 @@ export const ladakhBikeTourDetails: DetailedTrek = {
   airport: "Kushok Bakula Rimpochee Airport, Leh",
   trailType: "Motorcycle Expedition | High-altitude riding.",
   image: "/images/ladakh/ladakh-bike-tour.jpg",
+  gallery: [
+      "/images/ladakh/ladakh-bike-tour.jpg",
+      "/images/ladakh bike tour-more/WhatsApp Image 2026-08-30 at 10.58.58 AM.jpeg",
+      "/images/ladakh bike tour-more/WhatsApp Image 2026-08-30 at 10.58.59 AM (1).jpeg",
+      "/images/ladakh bike tour-more/WhatsApp Image 2026-08-30 at 10.58.59 AM (2).jpeg",
+      "/images/ladakh bike tour-more/WhatsApp Image 2026-08-30 at 10.58.59 AM.jpeg",
+      "/images/ladakh bike tour-more/WhatsApp Image 2026-08-30 at 10.59.00 AM (1).jpeg",
+      "/images/ladakh bike tour-more/WhatsApp Image 2026-08-30 at 10.59.00 AM.jpeg",
+      "/images/ladakh bike tour-more/WhatsApp Image 2026-08-30 at 10.59.01 AM (1).jpeg",
+      "/images/ladakh bike tour-more/WhatsApp Image 2026-08-30 at 10.59.01 AM.jpeg"
+  ],
   overview: {
     description: [
       "The Leh Ladakh Bike Tour is the ultimate holy grail for motorcycle enthusiasts. Riding through the 'Land of High Passes' on a Royal Enfield offers a sense of absolute freedom amidst some of the most rugged and magnificent landscapes on the planet.",

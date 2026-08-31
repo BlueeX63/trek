@@ -16,6 +16,22 @@ export const choptaChandrashila3DayDetails: DetailedTrek = {
   airport: "Jolly Grant Airport, which is 21 km away from Rishikesh",
   trailType: "Summit, Point to point | Scale a peak, Camping at the same location upon returning.",
   image: "/images/uttarakhand/chopta-chandrashila.jpg",
+  gallery: [
+      "/images/uttarakhand/chopta-chandrashila.jpg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.40 AM (1).jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.40 AM.jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.41 AM (1).jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.41 AM.jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.42 AM.jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.43 AM (1).jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.43 AM.jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.44 AM (1).jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.44 AM.jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.45 AM (1).jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.45 AM.jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.46 AM (1).jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.46 AM.jpeg"
+  ],
   overview: {
     description: [
       "Experience the raw, untamed beauty of the wilderness on the Chopta Chandrashila 3 Day Trek. Every day on this trail brings a new landscape, from cascading mountain streams to towering snow-capped summits. This trek is an absolute must-do for adventurers looking to capture the ultimate essence of high-altitude exploration.",

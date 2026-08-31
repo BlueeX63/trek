@@ -16,6 +16,15 @@ export const phularaRidgeDetails: DetailedTrek = {
   airport: "Jolly Grant Airport, which is 21 km away from Rishikesh",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
   image: "/images/uttarakhand/phulara-ridge.jpg",
+  gallery: [
+      "/images/uttarakhand/phulara-ridge.jpg",
+      "/images/Uttrakhand Trek_s/Phulara Ridge/Phulara 1.jpg",
+      "/images/Uttrakhand Trek_s/Phulara Ridge/Phulara 2.avif",
+      "/images/Uttrakhand Trek_s/Phulara Ridge/Phulara 3.webp",
+      "/images/Uttrakhand Trek_s/Phulara Ridge/Phulara 5.jpg",
+      "/images/Uttrakhand Trek_s/Phulara Ridge/Phulara 7.webp",
+      "/images/Uttrakhand Trek_s/Phulara Ridge/Phulara 9.webp"
+  ],
   overview: {
     description: [
       "Discover the hidden treasures of the Himalayas on the Phulara Ridge Trek. Renowned for its stunning transitions in scenery, this trek is a visual masterpiece that will leave you breathless. Whether you are navigating dense ancient forests or crossing expansive alpine meadows, the profound silence of the mountains will rejuvenate your soul.",

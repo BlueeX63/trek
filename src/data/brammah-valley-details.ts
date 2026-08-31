@@ -16,6 +16,20 @@ export const brammahValleyDetails: DetailedTrek = {
   airport: "Srinagar",
   trailType: "Out and Back",
   image: "/images/kashmir/brammah-valley.jpg",
+  gallery: [
+      "/images/kashmir/brammah-valley.jpg",
+      "/images/brammah valley-more/WhatsApp Image 2026-08-30 at 11.02.06 AM.jpeg",
+      "/images/brammah valley-more/WhatsApp Image 2026-08-30 at 11.02.07 AM (1).jpeg",
+      "/images/brammah valley-more/WhatsApp Image 2026-08-30 at 11.02.07 AM.jpeg",
+      "/images/brammah valley-more/WhatsApp Image 2026-08-30 at 11.02.08 AM (1).jpeg",
+      "/images/brammah valley-more/WhatsApp Image 2026-08-30 at 11.02.08 AM (2).jpeg",
+      "/images/brammah valley-more/WhatsApp Image 2026-08-30 at 11.02.08 AM.jpeg",
+      "/images/brammah valley-more/WhatsApp Image 2026-08-30 at 11.02.09 AM (1).jpeg",
+      "/images/brammah valley-more/WhatsApp Image 2026-08-30 at 11.02.09 AM (2).jpeg",
+      "/images/brammah valley-more/WhatsApp Image 2026-08-30 at 11.02.09 AM.jpeg",
+      "/images/brammah valley-more/WhatsApp Image 2026-08-30 at 11.02.10 AM (1).jpeg",
+      "/images/brammah valley-more/WhatsApp Image 2026-08-30 at 11.02.10 AM.jpeg"
+  ],
   overview: {
     description: [
       "The Brammah Valley trek takes you into the heart of Kishtwar National Park, an area famous for its dramatic peaks, dense forests, and untamed rivers.",

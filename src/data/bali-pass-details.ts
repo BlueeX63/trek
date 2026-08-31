@@ -16,6 +16,17 @@ export const baliPassDetails: DetailedTrek = {
   airport: "Jolly Grant Airport, which is 28 km away from Dehradun",
   trailType: "Cross over trail | Start in one valley, traverse the pass, and ends in another valley.",
   image: "/images/uttarakhand/bali-pass.jpg",
+  gallery: [
+      "/images/uttarakhand/bali-pass.jpg",
+      "/images/bali pass-more/WhatsApp Image 2026-08-30 at 11.18.16 AM (1).jpeg",
+      "/images/bali pass-more/WhatsApp Image 2026-08-30 at 11.18.16 AM (2).jpeg",
+      "/images/bali pass-more/WhatsApp Image 2026-08-30 at 11.18.16 AM.jpeg",
+      "/images/bali pass-more/WhatsApp Image 2026-08-30 at 11.18.17 AM (1).jpeg",
+      "/images/bali pass-more/WhatsApp Image 2026-08-30 at 11.18.17 AM.jpeg",
+      "/images/bali pass-more/WhatsApp Image 2026-08-30 at 11.18.18 AM (1).jpeg",
+      "/images/bali pass-more/WhatsApp Image 2026-08-30 at 11.18.18 AM (2).jpeg",
+      "/images/bali pass-more/WhatsApp Image 2026-08-30 at 11.18.18 AM.jpeg"
+  ],
   overview: {
     description: [
       "Discover the hidden treasures of the Himalayas on the Bali Pass Trek. Renowned for its stunning transitions in scenery, this trek is a visual masterpiece that will leave you breathless. Whether you are navigating dense ancient forests or crossing expansive alpine meadows, the profound silence of the mountains will rejuvenate your soul.",

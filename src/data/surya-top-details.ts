@@ -16,6 +16,24 @@ export const suryaTopDetails: DetailedTrek = {
   airport: "Jolly Grant Airport (28 km from Dehradun)",
   trailType: "One way trail | Camping in various locations, starting and ending at different points.",
   image: "/images/uttarakhand/surya-top.jpg",
+  gallery: [
+      "/images/uttarakhand/surya-top.jpg",
+      "/images/Uttrakhand Trek_s/Surya Top/Surya top 1.jpg",
+      "/images/Uttrakhand Trek_s/Surya Top/Surya Top 3.jpg",
+      "/images/Uttrakhand Trek_s/Surya Top/Surya top 4.jpg",
+      "/images/Uttrakhand Trek_s/Surya Top/Surya top 5.jpg",
+      "/images/Uttrakhand Trek_s/Surya Top/Surya top 6.webp",
+      "/images/Uttrakhand Trek_s/Surya Top/Surya top 8.jpg",
+      "/images/Uttrakhand Trek_s/Surya Top/Surya Top 9.jpg",
+      "/images/Uttrakhand Trek_s/Surya Top/Suryatop 2.jpg",
+      "/images/surya top-more/WhatsApp Image 2026-08-30 at 10.55.13 AM (1).jpeg",
+      "/images/surya top-more/WhatsApp Image 2026-08-30 at 10.55.13 AM.jpeg",
+      "/images/surya top-more/WhatsApp Image 2026-08-30 at 10.55.14 AM (1).jpeg",
+      "/images/surya top-more/WhatsApp Image 2026-08-30 at 10.55.14 AM (2).jpeg",
+      "/images/surya top-more/WhatsApp Image 2026-08-30 at 10.55.14 AM.jpeg",
+      "/images/surya top-more/WhatsApp Image 2026-08-30 at 10.55.15 AM (1).jpeg",
+      "/images/surya top-more/WhatsApp Image 2026-08-30 at 10.55.15 AM.jpeg"
+  ],
   overview: {
     description: [
       "Surya Top is a mesmerizing journey that seamlessly blends the grandeur of snow-clad peaks with the tranquility of sprawling alpine meadows. This trek offers a visual feast that feels almost like stepping into a vibrant, untouched painting where silence is only broken by the whispering wind.",

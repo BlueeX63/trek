@@ -16,6 +16,16 @@ export const kedarTalDetails: DetailedTrek = {
   airport: "Jolly Grant Airport, which is 28 km away from Dehradun",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
   image: "/images/uttarakhand/kedar-tal.png",
+  gallery: [
+      "/images/uttarakhand/kedar-tal.png",
+      "/images/Uttrakhand Trek_s/Kedartal/Kedartal 1.jpg",
+      "/images/Uttrakhand Trek_s/Kedartal/Kedartal 3.jpg",
+      "/images/Uttrakhand Trek_s/Kedartal/Kedartal 6.jpg",
+      "/images/Uttrakhand Trek_s/Kedartal/Kedartal 8.avif",
+      "/images/Uttrakhand Trek_s/Kedartal/Kedartal- 4.jpeg",
+      "/images/Uttrakhand Trek_s/Kedartal/kedartal-2.jpg",
+      "/images/Uttrakhand Trek_s/Kedartal/Kedartal-Trek-5.jpg"
+  ],
   overview: {
     description: [
       "Embark on a mesmerizing journey with the Kedar Tal Trek, where every step unveils a new facet of nature's grandeur. This expedition takes you through diverse landscapes, offering an unparalleled blend of thrill and tranquility. Away from the clamor of the city, you'll find solace among towering peaks and sweeping valleys.",

@@ -16,6 +16,19 @@ export const friendshipPeakDetails: DetailedTrek = {
   airport: "Bhuntar, which is 52 km away from Manali",
   trailType: "Summit, Point to point | Scale a peak, Camping at the same location upon returning.",
   image: '/images/himachal/friendship-peak.jpg',
+  gallery: [
+      "/images/himachal/friendship-peak.jpg",
+      "/images/friendship peak-more/WhatsApp Image 2026-08-30 at 11.13.22 AM (1).jpeg",
+      "/images/friendship peak-more/WhatsApp Image 2026-08-30 at 11.13.22 AM.jpeg",
+      "/images/friendship peak-more/WhatsApp Image 2026-08-30 at 11.13.23 AM (1).jpeg",
+      "/images/friendship peak-more/WhatsApp Image 2026-08-30 at 11.13.23 AM (2).jpeg",
+      "/images/friendship peak-more/WhatsApp Image 2026-08-30 at 11.13.23 AM.jpeg",
+      "/images/friendship peak-more/WhatsApp Image 2026-08-30 at 11.13.24 AM (1).jpeg",
+      "/images/friendship peak-more/WhatsApp Image 2026-08-30 at 11.13.24 AM (2).jpeg",
+      "/images/friendship peak-more/WhatsApp Image 2026-08-30 at 11.13.24 AM.jpeg",
+      "/images/friendship peak-more/WhatsApp Image 2026-08-30 at 11.13.25 AM (1).jpeg",
+      "/images/friendship peak-more/WhatsApp Image 2026-08-30 at 11.13.25 AM.jpeg"
+  ],
   overview: {
     description: [
       "Embark on a mesmerizing journey with the Friendship Peak Expedition, where every step unveils a new facet of nature's grandeur. This expedition takes you through diverse landscapes, offering an unparalleled blend of thrill and tranquility. Away from the clamor of the city, you'll find solace among towering peaks and sweeping valleys.",

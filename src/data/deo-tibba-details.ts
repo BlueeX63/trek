@@ -16,6 +16,18 @@ export const deoTibbaDetails: DetailedTrek = {
   airport: "Bhuntar, which is 52 km away from Manali",
   trailType: "Summit, Point to point | Scale a peak, Camping at the same location upon returning.",
   image: "/images/himachal/deo-tibba-peak.jpg",
+  gallery: [
+      "/images/himachal/deo-tibba-peak.jpg",
+      "/images/deo tibba-more/WhatsApp Image 2026-08-30 at 11.12.41 AM (1).jpeg",
+      "/images/deo tibba-more/WhatsApp Image 2026-08-30 at 11.12.41 AM (2).jpeg",
+      "/images/deo tibba-more/WhatsApp Image 2026-08-30 at 11.12.41 AM.jpeg",
+      "/images/deo tibba-more/WhatsApp Image 2026-08-30 at 11.12.42 AM (1).jpeg",
+      "/images/deo tibba-more/WhatsApp Image 2026-08-30 at 11.12.42 AM (2).jpeg",
+      "/images/deo tibba-more/WhatsApp Image 2026-08-30 at 11.12.42 AM.jpeg",
+      "/images/deo tibba-more/WhatsApp Image 2026-08-30 at 11.12.43 AM (1).jpeg",
+      "/images/deo tibba-more/WhatsApp Image 2026-08-30 at 11.12.43 AM (2).jpeg",
+      "/images/deo tibba-more/WhatsApp Image 2026-08-30 at 11.12.43 AM.jpeg"
+  ],
   overview: {
     description: [
       "Step into a living canvas with the Deo Tibba Peak Expedition. This extraordinary adventure invites you to traverse rugged terrains that seamlessly melt into lush, vibrant grasslands. It's an unforgettable odyssey that rewards your endurance with some of the most dramatic and awe-inspiring views the region has to offer.",

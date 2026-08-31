@@ -14,6 +14,23 @@ export const valleyOfFlowersDetails = {
   airport: "Jolly Grant Airport, Dehradun",
   trailType: "Point to point trail | Camping at the same location upon returning.",
   image: "/images/uttarakhand/valley-of-flowers.jpg",
+  gallery: [
+      "/images/uttarakhand/valley-of-flowers.jpg",
+      "/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.51_2fac3e87.jpg",
+      "/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.52_4db418ab.jpg",
+      "/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.52_7423eeda.jpg",
+      "/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.52_bcf7b28a.jpg",
+      "/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.53_176206da.jpg",
+      "/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.53_4312171d.jpg",
+      "/images/Uttrakhand Trek_s/Valley of Flower_s_/WhatsApp Image 2024-09-19 at 13.29.53_67c936f4.jpg",
+      "/images/valley of flowers-more/WhatsApp Image 2026-08-30 at 10.53.01 AM (1).jpeg",
+      "/images/valley of flowers-more/WhatsApp Image 2026-08-30 at 10.53.01 AM.jpeg",
+      "/images/valley of flowers-more/WhatsApp Image 2026-08-30 at 10.53.02 AM (1).jpeg",
+      "/images/valley of flowers-more/WhatsApp Image 2026-08-30 at 10.53.02 AM (2).jpeg",
+      "/images/valley of flowers-more/WhatsApp Image 2026-08-30 at 10.53.02 AM.jpeg",
+      "/images/valley of flowers-more/WhatsApp Image 2026-08-30 at 10.53.03 AM (1).jpeg",
+      "/images/valley of flowers-more/WhatsApp Image 2026-08-30 at 10.53.03 AM.jpeg"
+  ],
   overview: {
     description: "If you think this trek is only about flowers, you are in for a wonderful surprise. The valley is world-famous because it is home to hundreds of rare plant and flower species. This incredible variety hits you the exact moment you step inside. The 4 km main trail is just as beautiful as people say...",
     highlights: [

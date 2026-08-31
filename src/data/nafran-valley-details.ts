@@ -16,6 +16,15 @@ export const nafranValleyDetails: DetailedTrek = {
   airport: "Srinagar (sheikh ul-alam international)",
   trailType: "One way trail | Camping in various locations, starting and ending at the different point.",
   image: "/images/kashmir/nafran-valley.jpg",
+  gallery: [
+      "/images/kashmir/nafran-valley.jpg",
+      "/images/nafran valley-more/WhatsApp Image 2026-08-30 at 11.04.20 AM (1).jpeg",
+      "/images/nafran valley-more/WhatsApp Image 2026-08-30 at 11.04.20 AM.jpeg",
+      "/images/nafran valley-more/WhatsApp Image 2026-08-30 at 11.04.21 AM (1).jpeg",
+      "/images/nafran valley-more/WhatsApp Image 2026-08-30 at 11.04.21 AM.jpeg",
+      "/images/nafran valley-more/WhatsApp Image 2026-08-30 at 11.04.22 AM (1).jpeg",
+      "/images/nafran valley-more/WhatsApp Image 2026-08-30 at 11.04.22 AM.jpeg"
+  ],
   overview: {
     description: [
       "The Nafran Valley Trek is not just a trek; it's an immersive experience into the heart of the wild. Designed for those who seek both challenge and beauty, this trail promises spectacular panoramic vistas at every turn. It is the perfect escape to reconnect with nature in its most pristine and powerful form.",

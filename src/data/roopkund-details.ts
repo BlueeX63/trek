@@ -16,6 +16,17 @@ export const roopkundDetails: DetailedTrek = {
   airport: "Jolly Grant Airport, which is 21 km away from Rishikesh",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
   image: "/images/uttarakhand/roopkund.jpg",
+  gallery: [
+      "/images/uttarakhand/roopkund.jpg",
+      "/images/roopkund-more/WhatsApp Image 2026-08-30 at 10.52.24 AM (1).jpeg",
+      "/images/roopkund-more/WhatsApp Image 2026-08-30 at 10.52.24 AM (2).jpeg",
+      "/images/roopkund-more/WhatsApp Image 2026-08-30 at 10.52.24 AM.jpeg",
+      "/images/roopkund-more/WhatsApp Image 2026-08-30 at 10.52.25 AM (1).jpeg",
+      "/images/roopkund-more/WhatsApp Image 2026-08-30 at 10.52.25 AM (2).jpeg",
+      "/images/roopkund-more/WhatsApp Image 2026-08-30 at 10.52.25 AM.jpeg",
+      "/images/roopkund-more/WhatsApp Image 2026-08-30 at 10.52.26 AM (1).jpeg",
+      "/images/roopkund-more/WhatsApp Image 2026-08-30 at 10.52.26 AM.jpeg"
+  ],
   overview: {
     description: [
       "Step into a living canvas with the Roopkund Trek. This extraordinary adventure invites you to traverse rugged terrains that seamlessly melt into lush, vibrant grasslands. It's an unforgettable odyssey that rewards your endurance with some of the most dramatic and awe-inspiring views the region has to offer.",

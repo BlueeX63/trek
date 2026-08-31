@@ -16,6 +16,14 @@ export const bhriguLakeDetails: DetailedTrek = {
   airport: "Bhuntar, which is 52 km away from Manali",
   trailType: "Point to point trail | Camping at the same location upon returning.",
   image: '/images/himachal/bhrigu-lake.jpg',
+  gallery: [
+      "/images/himachal/bhrigu-lake.jpg",
+      "/images/bhrigu lake-more/WhatsApp Image 2026-08-30 at 11.09.27 AM (1).jpeg",
+      "/images/bhrigu lake-more/WhatsApp Image 2026-08-30 at 11.09.27 AM.jpeg",
+      "/images/bhrigu lake-more/WhatsApp Image 2026-08-30 at 11.09.28 AM.jpeg",
+      "/images/bhrigu lake-more/WhatsApp Image 2026-08-30 at 11.09.29 AM.jpeg",
+      "/images/bhrigu lake-more/WhatsApp Image 2026-08-30 at 11.09.30 AM.jpeg"
+  ],
   overview: {
     description: [
       "The Bhrigu Lake Trek is not just a trek; it's an immersive experience into the heart of the wild. Designed for those who seek both challenge and beauty, this trail promises spectacular panoramic vistas at every turn. It is the perfect escape to reconnect with nature in its most pristine and powerful form.",

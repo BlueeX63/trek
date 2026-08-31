@@ -16,6 +16,17 @@ export const beasKundDetails: DetailedTrek = {
   airport: "Bhuntar, which is 52 km away from Manali",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
   image: '/images/himachal/beas-kund.jpg',
+  gallery: [
+      "/images/himachal/beas-kund.jpg",
+      "/images/beas-kund/WhatsApp Image 2026-08-30 at 11.08.45 AM.jpeg",
+      "/images/beas-kund/WhatsApp Image 2026-08-30 at 11.08.46 AM (1).jpeg",
+      "/images/beas-kund/WhatsApp Image 2026-08-30 at 11.08.46 AM.jpeg",
+      "/images/beas-kund/WhatsApp Image 2026-08-30 at 11.08.47 AM (1).jpeg",
+      "/images/beas-kund/WhatsApp Image 2026-08-30 at 11.08.47 AM.jpeg",
+      "/images/beas-kund/WhatsApp Image 2026-08-30 at 11.08.48 AM (1).jpeg",
+      "/images/beas-kund/WhatsApp Image 2026-08-30 at 11.08.48 AM.jpeg",
+      "/images/beas-kund/WhatsApp Image 2026-08-30 at 11.08.49 AM.jpeg"
+  ],
   overview: {
     description: [
       "Embark on a mesmerizing journey with the Beas Kund Trek, where every step unveils a new facet of nature's grandeur. This expedition takes you through diverse landscapes, offering an unparalleled blend of thrill and tranquility. Away from the clamor of the city, you'll find solace among towering peaks and sweeping valleys.",

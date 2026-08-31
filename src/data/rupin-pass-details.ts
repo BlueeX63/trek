@@ -16,6 +16,13 @@ export const rupinPassDetails: DetailedTrek = {
   airport: "Jubbarhatti Airport (22 km from Shimla)",
   trailType: "Cross over trail | Start in one valley, traverse the pass, and ends in another valley.",
   image: '/images/himachal/rupin-pass.jpg',
+  gallery: [
+      "/images/himachal/rupin-pass.jpg",
+      "/images/rupin pass-more/WhatsApp Image 2026-08-30 at 11.15.34 AM.jpeg",
+      "/images/rupin pass-more/WhatsApp Image 2026-08-30 at 11.15.35 AM (1).jpeg",
+      "/images/rupin pass-more/WhatsApp Image 2026-08-30 at 11.15.35 AM (2).jpeg",
+      "/images/rupin pass-more/WhatsApp Image 2026-08-30 at 11.15.35 AM.jpeg"
+  ],
   overview: {
     description: [
       "Rupin Pass Trek is one of the most scenic treks in Himachal, it takes you through diverse landscapes, changing from lush green valleys to snow-covered terrains. Every turn during this trek will surprise you with some amazing sceneries, including cascading waterfalls, snow bridges, and panoramic mountain vistas.",

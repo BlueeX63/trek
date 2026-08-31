@@ -16,6 +16,21 @@ export const warwanValleyDetails: DetailedTrek = {
   airport: "Srinagar",
   trailType: "Pass Crossing",
   image: "/images/kashmir/warwan-valley.jpg",
+  gallery: [
+      "/images/kashmir/warwan-valley.jpg",
+      "/images/warwan valley-more/WhatsApp Image 2026-08-30 at 11.00.15 AM (1).jpeg",
+      "/images/warwan valley-more/WhatsApp Image 2026-08-30 at 11.00.15 AM (2).jpeg",
+      "/images/warwan valley-more/WhatsApp Image 2026-08-30 at 11.00.15 AM.jpeg",
+      "/images/warwan valley-more/WhatsApp Image 2026-08-30 at 11.00.16 AM (1).jpeg",
+      "/images/warwan valley-more/WhatsApp Image 2026-08-30 at 11.00.16 AM.jpeg",
+      "/images/warwan valley-more/WhatsApp Image 2026-08-30 at 11.00.17 AM (1).jpeg",
+      "/images/warwan valley-more/WhatsApp Image 2026-08-30 at 11.00.17 AM.jpeg",
+      "/images/warwan valley-more/WhatsApp Image 2026-08-30 at 11.00.18 AM (1).jpeg",
+      "/images/warwan valley-more/WhatsApp Image 2026-08-30 at 11.00.18 AM.jpeg",
+      "/images/warwan valley-more/WhatsApp Image 2026-08-30 at 11.00.19 AM (1).jpeg",
+      "/images/warwan valley-more/WhatsApp Image 2026-08-30 at 11.00.19 AM (2).jpeg",
+      "/images/warwan valley-more/WhatsApp Image 2026-08-30 at 11.00.19 AM.jpeg"
+  ],
   overview: {
     description: [
       "The Warwan Valley Trek is one of the most secluded and epic crossover treks in the Himalayas. It connects the stark, arid landscapes of Zanskar (Suru Valley) with the incredibly lush, green expanse of the Warwan Valley in Kashmir.",

@@ -16,6 +16,14 @@ export const tulianLakeDetails: DetailedTrek = {
   airport: "Srinagar",
   trailType: "Out and Back",
   image: "/images/kashmir/tulian-lake.jpg",
+  gallery: [
+      "/images/kashmir/tulian-lake.jpg",
+      "/images/tulian lake-more/WhatsApp Image 2026-08-30 at 11.07.50 AM (1).jpeg",
+      "/images/tulian lake-more/WhatsApp Image 2026-08-30 at 11.07.50 AM.jpeg",
+      "/images/tulian lake-more/WhatsApp Image 2026-08-30 at 11.07.51 AM (1).jpeg",
+      "/images/tulian lake-more/WhatsApp Image 2026-08-30 at 11.07.51 AM.jpeg",
+      "/images/tulian lake-more/WhatsApp Image 2026-08-30 at 11.07.54 AM.jpeg"
+  ],
   overview: {
     description: [
       "The Tulian Lake trek is a magnificent short trek starting from Pahalgam, leading to a turquoise alpine lake shaped like a figure eight.",

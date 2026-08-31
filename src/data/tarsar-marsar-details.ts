@@ -16,6 +16,17 @@ export const tarsarMarsarDetails: DetailedTrek = {
   airport: "Srinagar (sheikh ul-alam international)",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
   image: "/images/kashmir/tarsar-marsar.jpg",
+  gallery: [
+      "/images/kashmir/tarsar-marsar.jpg",
+      "/images/tarsar marsar-more/WhatsApp Image 2026-08-30 at 11.07.00 AM (1).jpeg",
+      "/images/tarsar marsar-more/WhatsApp Image 2026-08-30 at 11.07.00 AM (2).jpeg",
+      "/images/tarsar marsar-more/WhatsApp Image 2026-08-30 at 11.07.00 AM.jpeg",
+      "/images/tarsar marsar-more/WhatsApp Image 2026-08-30 at 11.07.01 AM.jpeg",
+      "/images/tarsar marsar-more/WhatsApp Image 2026-08-30 at 11.07.02 AM.jpeg",
+      "/images/tarsar marsar-more/WhatsApp Image 2026-08-30 at 11.07.03 AM (1).jpeg",
+      "/images/tarsar marsar-more/WhatsApp Image 2026-08-30 at 11.07.03 AM (2).jpeg",
+      "/images/tarsar marsar-more/WhatsApp Image 2026-08-30 at 11.07.03 AM.jpeg"
+  ],
   overview: {
     description: [
       "Embark on a mesmerizing journey with the Tarsar Marsar Trek, where every step unveils a new facet of nature's grandeur. This expedition takes you through diverse landscapes, offering an unparalleled blend of thrill and tranquility. Away from the clamor of the city, you'll find solace among towering peaks and sweeping valleys.",

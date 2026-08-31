@@ -16,6 +16,17 @@ export const pindariGlacierDetails: DetailedTrek = {
   airport: "Pantnagar, which is 22 km away from Haldwani",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
   image: "/images/uttarakhand/pindari-glacier.jpg",
+  gallery: [
+      "/images/uttarakhand/pindari-glacier.jpg",
+      "/images/Uttrakhand Trek_s/Pindri Glacier/Pindar 5.jpg",
+      "/images/Uttrakhand Trek_s/Pindri Glacier/Pindar 6.jpg",
+      "/images/Uttrakhand Trek_s/Pindri Glacier/Pindar 7.jpg",
+      "/images/Uttrakhand Trek_s/Pindri Glacier/Pindari 1.webp",
+      "/images/Uttrakhand Trek_s/Pindri Glacier/Pindari 2.jpg",
+      "/images/Uttrakhand Trek_s/Pindri Glacier/Pindari 3.jpg",
+      "/images/Uttrakhand Trek_s/Pindri Glacier/Pindari 4.jpg",
+      "/images/Uttrakhand Trek_s/Pindri Glacier/Pindari 8.jpg"
+  ],
   overview: {
     description: [
       "Embark on a mesmerizing journey with the Pindari Glacier Trek, where every step unveils a new facet of nature's grandeur. This expedition takes you through diverse landscapes, offering an unparalleled blend of thrill and tranquility. Away from the clamor of the city, you'll find solace among towering peaks and sweeping valleys.",

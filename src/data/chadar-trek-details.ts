@@ -16,6 +16,18 @@ export const chadarTrekDetails: DetailedTrek = {
   airport: "Kushok Bakula Rimpochee Airport, Leh",
   trailType: "Frozen River Expedition | Trekking on sheet ice.",
   image: "/images/ladakh/chadar-trek.jpg",
+  gallery: [
+      "/images/ladakh/chadar-trek.jpg",
+      "/images/chadar trek-more/WhatsApp Image 2026-08-30 at 10.57.52 AM (1).jpeg",
+      "/images/chadar trek-more/WhatsApp Image 2026-08-30 at 10.57.52 AM (2).jpeg",
+      "/images/chadar trek-more/WhatsApp Image 2026-08-30 at 10.57.52 AM.jpeg",
+      "/images/chadar trek-more/WhatsApp Image 2026-08-30 at 10.57.53 AM (1).jpeg",
+      "/images/chadar trek-more/WhatsApp Image 2026-08-30 at 10.57.53 AM.jpeg",
+      "/images/chadar trek-more/WhatsApp Image 2026-08-30 at 10.57.54 AM (1).jpeg",
+      "/images/chadar trek-more/WhatsApp Image 2026-08-30 at 10.57.54 AM (2).jpeg",
+      "/images/chadar trek-more/WhatsApp Image 2026-08-30 at 10.57.54 AM.jpeg",
+      "/images/chadar trek-more/WhatsApp Image 2026-08-30 at 10.57.55 AM.jpeg"
+  ],
   overview: {
     description: [
       "The Chadar Trek is one of the most unique, thrilling, and glamorous treks in the world. 'Chadar' refers to the blanket of ice that forms over the Zanskar River in the dead of winter, creating the only viable route connecting the isolated Zanskar valley with Leh.",

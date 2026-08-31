@@ -16,6 +16,20 @@ export const marchoiTrekDetails: DetailedTrek = {
   airport: "Srinagar",
   trailType: "Out and Back",
   image: "/images/kashmir/marchoi-trek.jpg",
+  gallery: [
+      "/images/kashmir/marchoi-trek.jpg",
+      "/images/marchoi-more/WhatsApp Image 2026-08-30 at 11.03.38 AM (1).jpeg",
+      "/images/marchoi-more/WhatsApp Image 2026-08-30 at 11.03.38 AM.jpeg",
+      "/images/marchoi-more/WhatsApp Image 2026-08-30 at 11.03.39 AM (1).jpeg",
+      "/images/marchoi-more/WhatsApp Image 2026-08-30 at 11.03.39 AM (2).jpeg",
+      "/images/marchoi-more/WhatsApp Image 2026-08-30 at 11.03.39 AM.jpeg",
+      "/images/marchoi-more/WhatsApp Image 2026-08-30 at 11.03.40 AM (1).jpeg",
+      "/images/marchoi-more/WhatsApp Image 2026-08-30 at 11.03.40 AM (2).jpeg",
+      "/images/marchoi-more/WhatsApp Image 2026-08-30 at 11.03.40 AM.jpeg",
+      "/images/marchoi-more/WhatsApp Image 2026-08-30 at 11.03.41 AM (1).jpeg",
+      "/images/marchoi-more/WhatsApp Image 2026-08-30 at 11.03.41 AM.jpeg",
+      "/images/marchoi-more/WhatsApp Image 2026-08-30 at 11.03.42 AM.jpeg"
+  ],
   overview: {
     description: [
       "The Marchoi Trek is one of the best winter treks in Kashmir. Starting from the historical village of Naranag, it offers a magical snowy trail through the dense pine forests of the Wangat Valley.",

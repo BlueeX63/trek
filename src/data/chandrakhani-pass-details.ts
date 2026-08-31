@@ -16,6 +16,18 @@ export const chandrakhaniPassDetails: DetailedTrek = {
   airport: "Bhuntar, which is 52 km away from Manali",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
   image: '/images/himachal/chandrakhani-pass.jpg',
+  gallery: [
+      "/images/himachal/chandrakhani-pass.jpg",
+      "/images/chandrakhani pass-more/WhatsApp Image 2026-08-30 at 11.11.38 AM (1).jpeg",
+      "/images/chandrakhani pass-more/WhatsApp Image 2026-08-30 at 11.11.38 AM.jpeg",
+      "/images/chandrakhani pass-more/WhatsApp Image 2026-08-30 at 11.11.39 AM (1).jpeg",
+      "/images/chandrakhani pass-more/WhatsApp Image 2026-08-30 at 11.11.39 AM (2).jpeg",
+      "/images/chandrakhani pass-more/WhatsApp Image 2026-08-30 at 11.11.39 AM.jpeg",
+      "/images/chandrakhani pass-more/WhatsApp Image 2026-08-30 at 11.11.40 AM (1).jpeg",
+      "/images/chandrakhani pass-more/WhatsApp Image 2026-08-30 at 11.11.40 AM (2).jpeg",
+      "/images/chandrakhani pass-more/WhatsApp Image 2026-08-30 at 11.11.40 AM.jpeg",
+      "/images/chandrakhani pass-more/WhatsApp Image 2026-08-30 at 11.11.41 AM.jpeg"
+  ],
   overview: {
     description: [
       "Step into a living canvas with the Chandrakhani Pass Trek. This extraordinary adventure invites you to traverse rugged terrains that seamlessly melt into lush, vibrant grasslands. It's an unforgettable odyssey that rewards your endurance with some of the most dramatic and awe-inspiring views the region has to offer.",

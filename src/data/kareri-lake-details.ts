@@ -16,6 +16,17 @@ export const kareriLakeDetails: DetailedTrek = {
   airport: "Kangra Gaggal Airport which is 13km away from Dharamshla",
   trailType: "One way trail | Camping in various locations, starting and ending at the different point.",
   image: '/images/himachal/kareri-lake.jpg',
+  gallery: [
+      "/images/himachal/kareri-lake.jpg",
+      "/images/kareri lake-more/WhatsApp Image 2026-08-30 at 11.14.15 AM (1).jpeg",
+      "/images/kareri lake-more/WhatsApp Image 2026-08-30 at 11.14.15 AM.jpeg",
+      "/images/kareri lake-more/WhatsApp Image 2026-08-30 at 11.14.16 AM (1).jpeg",
+      "/images/kareri lake-more/WhatsApp Image 2026-08-30 at 11.14.16 AM (2).jpeg",
+      "/images/kareri lake-more/WhatsApp Image 2026-08-30 at 11.14.16 AM (3).jpeg",
+      "/images/kareri lake-more/WhatsApp Image 2026-08-30 at 11.14.16 AM.jpeg",
+      "/images/kareri lake-more/WhatsApp Image 2026-08-30 at 11.14.17 AM (1).jpeg",
+      "/images/kareri lake-more/WhatsApp Image 2026-08-30 at 11.14.17 AM.jpeg"
+  ],
   overview: {
     description: [
       "Discover the hidden treasures of the Himalayas on the Kareri Lake Trek. Renowned for its stunning transitions in scenery, this trek is a visual masterpiece that will leave you breathless. Whether you are navigating dense ancient forests or crossing expansive alpine meadows, the profound silence of the mountains will rejuvenate your soul.",

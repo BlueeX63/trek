@@ -16,6 +16,16 @@ export const brahmatalDetails: DetailedTrek = {
   airport: "Jolly Grant Airport, which is 21 km away from Rishikesh",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
   image: "/images/uttarakhand/brahmatal.jpg",
+  gallery: [
+      "/images/uttarakhand/brahmatal.jpg",
+      "/images/Uttrakhand Trek_s/Brahamtal/Brahamtaal 1.jpg",
+      "/images/Uttrakhand Trek_s/Brahamtal/Brahamtal 3.jpg",
+      "/images/Uttrakhand Trek_s/Brahamtal/Brahamtal 4.jpg",
+      "/images/Uttrakhand Trek_s/Brahamtal/Brahamtal 7.jpg",
+      "/images/Uttrakhand Trek_s/Brahamtal/Brahamtal 9.jpg",
+      "/images/Uttrakhand Trek_s/Brahamtal/brahmatal 2.jpg",
+      "/images/Uttrakhand Trek_s/Brahamtal/Brahmatal 4.webp"
+  ],
   overview: {
     description: [
       "Step into a living canvas with the Brahmatal Trek. This extraordinary adventure invites you to traverse rugged terrains that seamlessly melt into lush, vibrant grasslands. It's an unforgettable odyssey that rewards your endurance with some of the most dramatic and awe-inspiring views the region has to offer.",

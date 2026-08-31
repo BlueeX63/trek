@@ -16,6 +16,22 @@ export const choptaChandrashilaDeoriatalDetails: DetailedTrek = {
   airport: "Jolly Grant Airport, which is 21 km away from Rishikesh",
   trailType: "Forest-crossing trekking trail.",
   image: "/images/uttarakhand/chopta-chandrashila.jpg",
+  gallery: [
+      "/images/uttarakhand/chopta-chandrashila.jpg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.40 AM (1).jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.40 AM.jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.41 AM (1).jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.41 AM.jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.42 AM.jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.43 AM (1).jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.43 AM.jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.44 AM (1).jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.44 AM.jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.45 AM (1).jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.45 AM.jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.46 AM (1).jpeg",
+      "/images/chopta chandrashila/WhatsApp Image 2026-08-30 at 10.48.46 AM.jpeg"
+  ],
   overview: {
     description: [
       "Step into a living canvas with the Chopta Chandrashila Tungnath Trek with Deoriatal. This extraordinary adventure invites you to traverse rugged terrains that seamlessly melt into lush, vibrant grasslands. It's an unforgettable odyssey that rewards your endurance with some of the most dramatic and awe-inspiring views the region has to offer.",

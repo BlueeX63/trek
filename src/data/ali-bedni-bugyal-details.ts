@@ -16,6 +16,16 @@ export const aliBedniBugyalDetails: DetailedTrek = {
   airport: "Jolly Grant Airport, which is 21 km away from Rishikesh",
   trailType: "Circle trail | Camping in various locations, starting and ending at the same point.",
   image: "/images/uttarakhand/ali-bedni.png",
+  gallery: [
+      "/images/uttarakhand/ali-bedni.png",
+      "/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Ali Bedni 2.jpg",
+      "/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Ali Bedni Bugyal.avif",
+      "/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Bedni 3.jpg",
+      "/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Bedni 4.avif",
+      "/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Bedni 5.avif",
+      "/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Bedni 8.jpg",
+      "/images/Uttrakhand Trek_s/Ali Bedni Bugyal/Bedni 9.jpg"
+  ],
   overview: {
     description: [
       "Step into a living canvas with the Ali Bedni Bugyal Trek. This extraordinary adventure invites you to traverse rugged terrains that seamlessly melt into lush, vibrant grasslands. It's an unforgettable odyssey that rewards your endurance with some of the most dramatic and awe-inspiring views the region has to offer.",
